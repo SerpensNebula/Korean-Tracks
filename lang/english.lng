@@ -1,0 +1,21 @@
+##grflangid 0x01
+
+# GRF name and description
+STR_GRF_NAME                                      :Korean Tracks 0.1
+STR_GRF_DESC                                      :This is Korean Tracks NewGRF.
+
+# Narrow gauge
+STR_RAILTYPE_N762_70_TRACK_NAME                   :762mm Narrow Gauge Tracks
+STR_RAILTYPE_N762_70_TRACK_DROPDOWN_MENU          :762mm Narrow Gauge Tracks Construction
+STR_RAILTYPE_N762_70_TRACK_TOOLBAR_CAPTION        :Narrow Gauge Track Construction
+STR_RAILTYPE_N762_70_BUILD_VEHICLE_CAPTION        :New Narrow Gauge Vehicle
+STR_RAILTYPE_N762_70_NEW_ENGINE                   :Narrow Gauge Vehicle
+STR_RAILTYPE_N762_70_AUTOREPLACE                  :Narrow Gauge Vehicles
+
+# Low Speed // 120
+STR_LOW_SPEED_TRACK_NAME                 :Low Speed Tracks
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU        :Low Speed Tracks Construction
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION      :Low Speed Tracks Construction
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION      :New Low Speed Tracks
+STR_LOW_SPEED_NEW_ENGINE                 :Low Speed Vehicle
+STR_LOW_SPEED_AUTOREPLACE                :Low Speed Vehicles
