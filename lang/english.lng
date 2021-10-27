@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks alpha0.0.1
+STR_GRF_NAME                                      :Korean Tracks alpha0.0.3
 STR_GRF_DESC                                      :This is Korean Tracks NewGRF.
 
 # Narrow gauge
