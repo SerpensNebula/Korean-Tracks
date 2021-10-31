@@ -334,7 +334,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
     // Define LOW_SPEED
         item(FEAT_RAILTYPES, ko_train_set_LOW_SPEED, 08) {
             property {
-                label:                          "KRLS";
+                label:                          "KLS_";
                 introduction_date:              date(1899, 1, 1);               
                 name:                           string(STR_LOW_SPEED_TRACK_NAME);
                 menu_text:                      string(STR_LOW_SPEED_TRACK_DROPDOWN_MENU);
@@ -483,7 +483,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
     // Define HIGH_SPEED
         item(FEAT_RAILTYPES, ko_train_set_HIGH_SPEED, 15) {
             property {
-                label:                          "KRHS";
+                label:                          "KHS_";
                 introduction_date:              date(2000, 1, 1);               
                 name:                           string(STR_HIGH_SPEED_TRACK_NAME);
                 menu_text:                      string(STR_HIGH_SPEED_TRACK_DROPDOWN_MENU);
