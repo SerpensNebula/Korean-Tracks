@@ -1,7 +1,7 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 기찻길 alpha0.0.3
+STR_GRF_NAME                                      :한국 기찻길 alpha0.0.4
 STR_GRF_DESC                                      :한국 기찻길 NewGRF입니다. 
 
 # Narrow gauge
@@ -13,9 +13,17 @@ STR_RAILTYPE_N762_70_NEW_ENGINE                   :협궤 선로 차량
 STR_RAILTYPE_N762_70_AUTOREPLACE                  :협궤 선로 차량
 
 # Low Speed // 120
-STR_LOW_SPEED_TRACK_NAME                 :저속선 선로
-STR_LOW_SPEED_TRACK_DROPDOWN_MENU        :저속선 선로 건설
-STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION      :저속선 선로 건설
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION      :새 저속선 선로 차량
-STR_LOW_SPEED_NEW_ENGINE                 :저속선 선로 차량
-STR_LOW_SPEED_AUTOREPLACE                :저속선 선로 차량
+STR_LOW_SPEED_TRACK_NAME                          :저속선 선로
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :저속선 선로 건설
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :저속선 선로 건설
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 저속선 선로 차량
+STR_LOW_SPEED_NEW_ENGINE                          :저속선 선로 차량
+STR_LOW_SPEED_AUTOREPLACE                         :저속선 선로 차량
+
+# High Speed // 430
+STR_HIGH_SPEED_TRACK_NAME                         :고속선 선로
+STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :고속선 선로 건설
+STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :고속선 선로 건설
+STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :새 고속선 선로 차량
+STR_HIGH_SPEED_NEW_ENGINE                         :고속선 선로 차량
+STR_HIGH_SPEED_AUTOREPLACE                        :고속선 선로 차량
