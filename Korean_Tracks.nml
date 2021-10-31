@@ -151,7 +151,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
     }
 
 // Define NARROW_762
-    item(FEAT_RAILTYPES, ko_train_set_N762_70, 01) {
+    item(FEAT_RAILTYPES, ko_train_set_N762_70, 07) {
         property {
             name:                           string(STR_RAILTYPE_N762_70_TRACK_NAME);
             label:                          "KRNR";
@@ -167,7 +167,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
             speed_limit:                    70 km/h;
             construction_cost:              4;
             maintenance_cost:               12;
-            sort_order:                     10;
+            sort_order:                     07;
 
             railtype_flags:                 bitmask();
             alternative_railtype_list:      ["RAIL"];
@@ -240,42 +240,43 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
             [1050,   80,   64,   31,  -31,    0]   // combi all
         }
 
-    // Tracks for tunnel
+    // Tunnels
         spriteset(set_LOW_SPEED_track_tunnel_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
             [   0,  120,   64,   39,  -31,   -8]   // ↙
             [  70,  120,   64,   31,  -31,    0]   // ↖
             [ 140,  120,   64,   31,  -31,    0]   // ↗
             [ 210,  120,   64,   39,  -31,   -8]   // ↘
         }
-        spriteset(set_LOW_SPEED_track_tunnel_underlay_snow, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  170,   64,   39,  -31,   -8]   // ↙
-            [  70,  170,   64,   23,  -31,    0]   // ↖
-            [ 140,  170,   64,   23,  -31,    0]   // ↗
-            [ 210,  170,   64,   39,  -32,   -8]   // ↘
-        }
+
         spriteset(set_LOW_SPEED_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 280,  170,   64,   39,  -31,   -8]   // ↙
-            [ 350,  170,   64,   23,  -31,    0]   // ↖
-            [ 420,  170,   64,   23,  -31,    0]   // ↗
-            [ 490,  170,   64,   39,  -32,   -8]   // ↘
+            [   0,  170,   64,   39,  -31,   -8]   // ↙
+            [  70,  170,   64,   31,  -31,    0]   // ↖
+            [ 140,  170,   64,   31,  -31,    0]   // ↗
+            [ 210,  170,   64,   39,  -31,   -8]   // ↘
         }
 
-    // Tunnel overlay
-        spriteset(set_LOW_SPEED_track_tunnel_overlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 280,  120,   64,   39,  -31,  -39]   // ↙
-            [ 350,  120,   64,   39,  -31,  -39]   // ↖
-            [ 420,  120,   64,   39,  -31,  -39]   // ↗
-            [ 490,  120,   64,   39,  -31,  -39]   // ↘
+        spriteset(set_LOW_SPEED_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+            [   0,  220,   64,   39,  -31,   -8]   // ↙
+            [  70,  220,   64,   31,  -31,    0]   // ↖
+            [ 140,  220,   64,   31,  -31,    0]   // ↗
+            [ 210,  220,   64,   39,  -31,   -8]   // ↘
+        }
+
+        spriteset(set_LOW_SPEED_track_tunnel_underlay_snow, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+            [   0,  270,   64,   39,  -31,   -8]   // ↙
+            [  70,  270,   64,   31,  -31,    0]   // ↖
+            [ 140,  270,   64,   31,  -31,    0]   // ↗
+            [ 210,  270,   64,   39,  -31,   -8]   // ↘
         }
 
     // Depot
         spriteset(set_LOW_SPEED_track_depot, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  220,   64,   44,  -31,  -17]   // SE entry
-            [  70,  220,   64,   44,   -9,  -28]   // SE
-            [ 140,  220,   64,   44,  -31,  -17]   // SW entry
-            [ 210,  220,   64,   44,  -53,  -28]   // SW
-            [ 280,  220,   64,   44,  -53,  -28]   // NE
-            [ 350,  220,   64,   44,   -9,  -28]   // NW
+            [   0,  320,   64,   44,  -31,  -17]   // SE entry
+            [  70,  320,   64,   44,   -9,  -28]   // SE
+            [ 140,  320,   64,   44,  -31,  -17]   // SW entry
+            [ 210,  320,   64,   44,  -53,  -28]   // SW
+            [ 280,  320,   64,   44,  -53,  -28]   // NE
+            [ 350,  320,   64,   44,   -9,  -28]   // NW
         }
 
     // Bridge surfaces (uses track_underlay's sprites)
@@ -289,37 +290,37 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
         }
 
     // Level crossing
-
         spriteset(set_LOW_SPEED_track_crossing_close, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 560,  120,   64,   31,  -31,    0]
-            [ 630,  120,   64,   31,  -31,    0]
-            [ 850,  120,    8,   19,   -2,  -17]   // N
-            [ 860,  120,   28,   29,   -4,  -16]
-            [ 890,  120,   35,   25,  -25,  -17]   // E
-            [ 930,  120,    8,   19,   -1,  -15]
-            [ 940,  120,   35,   21,   -4,  -16]   // W
-            [ 980,  120,    8,   19,   -3,  -17]
-            [ 990,  120,    8,   19,   -4,  -15]   // S
-            [1000,  120,   28,   21,  -21,  -18]
+            [ 700,  120,   64,   31,  -31,    0]
+            [ 770,  120,   64,   31,  -31,    0]
+            [ 840,  120,    5,   13,    0,  -10]   // N
+            [ 850,  120,   23,   22,   -5,  -10]
+            [ 880,  120,   29,   18,  -24,  -10]   // E
+            [ 910,  120,    5,   13,   -3,  -10]
+            [ 920,  120,   29,   16,    0,  -11]   // W
+            [ 950,  120,    5,   13,   -3,  -10]
+            [ 960,  120,    5,   13,    0,  -10]   // S
+            [ 970,  120,   23,   17,  -19,  -14]
         }
         spriteset(set_LOW_SPEED_track_crossing_open, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 560,  120,   64,   31,  -31,    0]
-            [ 630,  120,   64,   31,  -31,    0]
-            [ 850,  160,    8,   19,   -2,  -17]
-            [ 860,  160,    9,   39,   -4,  -34]
-            [ 890,  160,   10,   41,    0,  -39]
-            [ 930,  160,    8,   19,   -1,  -15]
-            [ 940,  160,   10,   41,   -4,  -36]
-            [ 980,  160,    8,   19,   -3,  -17]
-            [ 990,  160,    8,   19,   -4,  -15]
-            [1000,  160,    9,   43,   -2,  -40]
+            [ 700,  120,   64,   31,  -31,    0]
+            [ 770,  120,   64,   31,  -31,    0]
+            [ 840,  150,    5,   13,    0,  -10]
+            [ 850,  150,    8,   27,   -6,  -22]
+            [ 880,  150,    8,   29,   -3,  -26]
+            [ 910,  150,    5,   13,   -3,  -10]
+            [ 920,  150,    8,   28,    0,  -23]
+            [ 950,  150,    5,   13,   -3,  -10]
+            [ 960,  150,    5,   13,    0,  -10]
+            [ 970,  150,    8,   29,   -3,  -26]
         }
 
     // Graphic for terrain
         switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_track_tunnel_underlay, terrain_type) {
             TILETYPE_NORMAL:                    set_LOW_SPEED_track_tunnel_underlay;
-            TILETYPE_SNOW:                      set_LOW_SPEED_track_tunnel_underlay_snow;
             TILETYPE_DESERT:                    set_LOW_SPEED_track_tunnel_underlay_desert;
+            TILETYPE_RAIN_FOREST:               set_LOW_SPEED_track_tunnel_underlay_rain;
+            TILETYPE_SNOW:                      set_LOW_SPEED_track_tunnel_underlay_snow;            
             set_LOW_SPEED_track_tunnel_underlay;
         }
 
@@ -331,7 +332,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
         }
 
     // Define LOW_SPEED
-        item(FEAT_RAILTYPES, ko_train_set_LOW_SPEED, 02) {
+        item(FEAT_RAILTYPES, ko_train_set_LOW_SPEED, 08) {
             property {
                 label:                          "KRLS";
                 introduction_date:              date(1899, 1, 1);               
@@ -347,7 +348,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
                 speed_limit:                    121 km/h;
                 construction_cost:              8;
                 maintenance_cost:               16;
-                sort_order:                     11;
+                sort_order:                     08;
 
                 railtype_flags:                 bitmask();
                 alternative_railtype_list:      ["RAIL"];
@@ -359,9 +360,156 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
                 track_overlay:                  set_LOW_SPEED_track_overlay;
                 underlay:                       set_LOW_SPEED_track_underlay;
                 tunnels:                        sw_LOW_SPEED_track_tunnel_underlay;
-                tunnel_overlay:                 set_LOW_SPEED_track_tunnel_overlay;
                 depots:                         set_LOW_SPEED_track_depot;
                 bridge_surfaces:                set_LOW_SPEED_track_bridge;
                 level_crossings:                sw_LOW_SPEED_track_level_crossing;
+            }
+        }
+
+// HIGH_SPEED
+    // GUI
+        spriteset(set_HIGH_SPEED_gui, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,    0,    8,   18,    7,    0]   // ↕
+            [  15,    0,   20,   16,    1,    2]   // ↗
+            [  48,    0,   20,   12,    1,    6]   // ↔
+            [  80,    0,   20,   16,    1,    2]   // ↘
+            [ 112,    0,   20,   16,    1,    2]   // x
+            [ 144,    0,   20,   20,    0,    0]   // depot
+            [ 176,    0,   20,   20,    0,    0]   // tunnel
+            [ 208,    0,   20,   18,    0,    0]   // convert
+            [ 240,    0,   20,   29,    0,    0]   // ↕ cursor
+            [ 272,    0,   26,   28,    0,    0]   // ↗ cursor
+            [ 304,    0,   27,   28,    0,    0]   // ↔ cursor
+            [ 336,    0,   26,   31,    0,    0]   // ↘ cursor
+            [ 368,    0,   26,   31,    0,    0]   // x cursor
+            [ 400,    0,   32,   32,    0,    0]   // depot cursor
+            [ 445,    0,   27,   32,    0,    0]   // tunnel cursor
+            [ 480,    0,   29,   29,    0,    0]   // convert cursor
+        }
+
+    // Tracks overlay
+        spriteset(set_HIGH_SPEED_track_overlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,   40,   64,   31,  -31,    0]   // ↗↙
+            [  70,   40,   64,   31,  -31,    0]   // ↖↘
+            [ 140,   40,   64,   31,  -31,    0]   // ↔U
+            [ 210,   40,   64,   31,  -31,    0]   // ↔D
+            [ 280,   40,   64,   31,  -31,    0]   // ↕R
+            [ 350,   40,   64,   31,  -31,    0]   // ↕L
+            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   40,   64,   23,  -30,    0]   // ↘ slope up 
+            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+    // Tracks underlay
+        spriteset(set_HIGH_SPEED_track_underlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,   80,   64,   31,  -31,    0]   // ↗↙
+            [  70,   80,   64,   31,  -31,    0]   // ↖↘
+            [ 140,   80,   64,   31,  -31,    0]   // ↔U
+            [ 210,   80,   64,   31,  -31,    0]   // ↔D
+            [ 280,   80,   64,   31,  -31,    0]   // ↕R
+            [ 350,   80,   64,   31,  -31,    0]   // ↕L
+            [ 420,   80,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   80,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   80,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   80,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,   80,   64,   31,  -31,    0]   // +
+            [ 770,   80,   64,   31,  -31,    0]   // combi SW
+            [ 840,   80,   64,   31,  -31,    0]   // combi NE
+            [ 910,   80,   64,   31,  -31,    0]   // combi SE
+            [ 980,   80,   64,   31,  -31,    0]   // combi NW
+            [1050,   80,   64,   31,  -31,    0]   // combi all
+        }
+
+    // Tunnels
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,  120,   64,   39,  -31,   -8]   // ↙
+            [  70,  120,   64,   31,  -31,    0]   // ↖
+            [ 140,  120,   64,   31,  -31,    0]   // ↗
+            [ 210,  120,   64,   39,  -31,   -8]   // ↘
+        }
+
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,  170,   64,   39,  -31,   -8]   // ↙
+            [  70,  170,   64,   31,  -31,    0]   // ↖
+            [ 140,  170,   64,   31,  -31,    0]   // ↗
+            [ 210,  170,   64,   39,  -31,   -8]   // ↘
+        }
+
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,  220,   64,   39,  -31,   -8]   // ↙
+            [  70,  220,   64,   31,  -31,    0]   // ↖
+            [ 140,  220,   64,   31,  -31,    0]   // ↗
+            [ 210,  220,   64,   39,  -31,   -8]   // ↘
+        }
+
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay_snow, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,  270,   64,   39,  -31,   -8]   // ↙
+            [  70,  270,   64,   31,  -31,    0]   // ↖
+            [ 140,  270,   64,   31,  -31,    0]   // ↗
+            [ 210,  270,   64,   39,  -31,   -8]   // ↘
+        }
+
+    // Depot
+        spriteset(set_HIGH_SPEED_track_depot, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,  320,   64,   44,  -31,  -17]   // SE entry
+            [  70,  320,   64,   44,   -9,  -28]   // SE
+            [ 140,  320,   64,   44,  -31,  -17]   // SW entry
+            [ 210,  320,   64,   44,  -53,  -28]   // SW
+            [ 280,  320,   64,   44,  -53,  -28]   // NE
+            [ 350,  320,   64,   44,   -9,  -28]   // NW
+        }
+
+    // Bridge surfaces (uses track_underlay's sprites)
+        spriteset(set_HIGH_SPEED_track_bridge, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            [   0,   80,   64,   31,  -31,    0]   // ↗↙
+            [  70,   80,   64,   31,  -31,    0]   // ↖↘
+            [ 420,   80,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   80,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   80,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   80,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+        // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_HIGH_SPEED_track_tunnel_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_HIGH_SPEED_track_tunnel_underlay;
+            TILETYPE_DESERT:                    set_HIGH_SPEED_track_tunnel_underlay_desert;
+            TILETYPE_RAIN_FOREST:               set_HIGH_SPEED_track_tunnel_underlay_rain;
+            TILETYPE_SNOW:                      set_HIGH_SPEED_track_tunnel_underlay_snow;
+            set_LOW_SPEED_track_tunnel_underlay;
+        }
+    
+
+    // Define HIGH_SPEED
+        item(FEAT_RAILTYPES, ko_train_set_HIGH_SPEED, 15) {
+            property {
+                label:                          "KRHS";
+                introduction_date:              date(2000, 1, 1);               
+                name:                           string(STR_HIGH_SPEED_TRACK_NAME);
+                menu_text:                      string(STR_HIGH_SPEED_TRACK_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_HIGH_SPEED_NEW_ENGINE);
+                autoreplace_text:               string(STR_HIGH_SPEED_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    430 km/h;
+                construction_cost:              64;
+                maintenance_cost:               24;
+                sort_order:                     15;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+                alternative_railtype_list:      ["ELRL"];
+                compatible_railtype_list:       ["ELRL"];
+            }
+
+            graphics {
+                gui:                            set_HIGH_SPEED_gui;
+                track_overlay:                  set_HIGH_SPEED_track_overlay;
+                underlay:                       set_HIGH_SPEED_track_underlay;
+                tunnels:                        sw_HIGH_SPEED_track_tunnel_underlay;
+                depots:                         set_HIGH_SPEED_track_depot;
+                bridge_surfaces:                set_HIGH_SPEED_track_bridge;
             }
         }
