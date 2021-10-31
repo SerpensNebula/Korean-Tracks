@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks alpha0.0.3
+STR_GRF_NAME                                      :Korean Tracks alpha0.0.4
 STR_GRF_DESC                                      :This is Korean Tracks NewGRF.
 
 # Narrow gauge
@@ -13,9 +13,17 @@ STR_RAILTYPE_N762_70_NEW_ENGINE                   :Narrow Gauge Vehicle
 STR_RAILTYPE_N762_70_AUTOREPLACE                  :Narrow Gauge Vehicles
 
 # Low Speed // 120
-STR_LOW_SPEED_TRACK_NAME                 :Low Speed Tracks
-STR_LOW_SPEED_TRACK_DROPDOWN_MENU        :Low Speed Tracks Construction
-STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION      :Low Speed Tracks Construction
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION      :New Low Speed Tracks
-STR_LOW_SPEED_NEW_ENGINE                 :Low Speed Vehicle
-STR_LOW_SPEED_AUTOREPLACE                :Low Speed Vehicles
+STR_LOW_SPEED_TRACK_NAME                          :Low Speed Tracks
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :Low Speed Tracks Construction
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :Low Speed Tracks Construction
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Tracks
+STR_LOW_SPEED_NEW_ENGINE                          :Low Speed Vehicle
+STR_LOW_SPEED_AUTOREPLACE                         :Low Speed Vehicles
+
+# High Speed // 430
+STR_HIGH_SPEED_TRACK_NAME                         :High Speed Tracks
+STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :High Speed Tracks Construction
+STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :High Speed Tracks Construction
+STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :New High Speed Tracks
+STR_HIGH_SPEED_NEW_ENGINE                         :High Speed Vehicle
+STR_HIGH_SPEED_AUTOREPLACE                        :High Speed Vehicles
