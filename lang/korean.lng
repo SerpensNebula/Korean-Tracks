@@ -1,7 +1,7 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 기찻길 alpha0.0.4
+STR_GRF_NAME                                      :한국 기찻길 alpha0.0.5
 STR_GRF_DESC                                      :한국 기찻길 NewGRF입니다. 
 
 # Narrow gauge
