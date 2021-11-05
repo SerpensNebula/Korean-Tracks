@@ -3,7 +3,7 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :211027;
+        version                            :211105;
         min_compatible_version             :0;
     }
 
