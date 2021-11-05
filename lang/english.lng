@@ -16,9 +16,17 @@ STR_RAILTYPE_N762_70_AUTOREPLACE                  :Narrow Gauge Vehicles
 STR_LOW_SPEED_TRACK_NAME                          :Low Speed Tracks
 STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :Low Speed Tracks Construction
 STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :Low Speed Tracks Construction
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Tracks
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Vehicle
 STR_LOW_SPEED_NEW_ENGINE                          :Low Speed Vehicle
 STR_LOW_SPEED_AUTOREPLACE                         :Low Speed Vehicles
+
+# Main Line // 180
+STR_MAIN_LINE_TRACK_NAME                          :Main Line Tracks
+STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :Main Line Tracks Construction
+STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :Main Line Tracks Construction
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :New Main Line Vehicle
+STR_MAIN_LINE_NEW_ENGINE                          :Main Line Vehicle
+STR_MAIN_LINE_AUTOREPLACE                         :Main Line Vehicles
 
 # High Speed // 430
 STR_HIGH_SPEED_TRACK_NAME                         :High Speed Tracks
