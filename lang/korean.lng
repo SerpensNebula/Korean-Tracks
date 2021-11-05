@@ -13,12 +13,20 @@ STR_RAILTYPE_N762_70_NEW_ENGINE                   :협궤 선로 차량
 STR_RAILTYPE_N762_70_AUTOREPLACE                  :협궤 선로 차량
 
 # Low Speed // 120
-STR_LOW_SPEED_TRACK_NAME                          :저속선 선로
-STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :저속선 선로 건설
-STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :저속선 선로 건설
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 저속선 선로 차량
-STR_LOW_SPEED_NEW_ENGINE                          :저속선 선로 차량
-STR_LOW_SPEED_AUTOREPLACE                         :저속선 선로 차량
+STR_LOW_SPEED_TRACK_NAME                          :기존선 선로
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :기존선 선로 건설
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :기존선 선로 건설
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 기존선 선로 차량
+STR_LOW_SPEED_NEW_ENGINE                          :기존선 선로 차량
+STR_LOW_SPEED_AUTOREPLACE                         :기존선 선로 차량
+
+# Main Line // 180
+STR_MAIN_LINE_TRACK_NAME                          :개량선 선로
+STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :개량선 선로 건설
+STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :개량선 선로 건설
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :새 개량선 선로 차량
+STR_MAIN_LINE_NEW_ENGINE                          :개량선 선로 차량
+STR_MAIN_LINE_AUTOREPLACE                         :개량선 선로 차량
 
 # High Speed // 430
 STR_HIGH_SPEED_TRACK_NAME                         :고속선 선로
