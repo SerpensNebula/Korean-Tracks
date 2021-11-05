@@ -4,7 +4,7 @@
 한국 기찻길 NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
 
 
-- 선로 목록 (item ID)
+- 선로 목록 (Label)
   - 762mm 협궤 선로 ("KRNR")
   - 기존선 선로 ("KLS_")
   - 도시철도/지하철 선로 ("KMTR")
