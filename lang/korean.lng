@@ -1,7 +1,7 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 기찻길 alpha0.0.5
+STR_GRF_NAME                                      :한국 기찻길 alpha0.6
 STR_GRF_DESC                                      :한국 기찻길 NewGRF입니다. 
 
 # Narrow gauge
@@ -16,22 +16,38 @@ STR_RAILTYPE_N762_70_AUTOREPLACE                  :협궤 선로 차량
 STR_LOW_SPEED_TRACK_NAME                          :기존선 선로
 STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :기존선 선로 건설
 STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :기존선 선로 건설
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 기존선 선로 차량
-STR_LOW_SPEED_NEW_ENGINE                          :기존선 선로 차량
-STR_LOW_SPEED_AUTOREPLACE                         :기존선 선로 차량
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 기존선 차량
+STR_LOW_SPEED_NEW_ENGINE                          :기존선 차량
+STR_LOW_SPEED_AUTOREPLACE                         :기존선 차량
 
 # Main Line // 180
 STR_MAIN_LINE_TRACK_NAME                          :개량선 선로
 STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :개량선 선로 건설
 STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :개량선 선로 건설
-STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :새 개량선 선로 차량
-STR_MAIN_LINE_NEW_ENGINE                          :개량선 선로 차량
-STR_MAIN_LINE_AUTOREPLACE                         :개량선 선로 차량
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :새 개량선 차량
+STR_MAIN_LINE_NEW_ENGINE                          :개량선 차량
+STR_MAIN_LINE_AUTOREPLACE                         :개량선 차량
+
+# Electrified Main Line // 180
+STR_MAIN_LINE_ELEC_TRACK_NAME                     :개량선 전기선로
+STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :개량선 전기선로 건설
+STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :개량선 전기선로 건설
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :새 개량선 전기 차량
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :개량선 전기 차량
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :개량선 전기 차량
 
 # High Speed // 430
 STR_HIGH_SPEED_TRACK_NAME                         :고속선 선로
 STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :고속선 선로 건설
 STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :고속선 선로 건설
-STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :새 고속선 선로 차량
-STR_HIGH_SPEED_NEW_ENGINE                         :고속선 선로 차량
-STR_HIGH_SPEED_AUTOREPLACE                        :고속선 선로 차량
+STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :새 고속선 차량
+STR_HIGH_SPEED_NEW_ENGINE                         :고속선 차량
+STR_HIGH_SPEED_AUTOREPLACE                        :고속선 차량
+
+# Metro Line
+STR_METRO_LINE_TRACK_NAME                         :도시철도 선로
+STR_METRO_LINE_TRACK_DROPDOWN_MENU                :도시철도 선로 건설
+STR_METRO_LINE_TRACK_TOOLBAR_CAPTION              :도시철도 선로 건설
+STR_METRO_LINE_BUILD_VEHICLE_CAPTION              :새 도시철도 차량
+STR_METRO_LINE_NEW_ENGINE                         :도시철도 차량
+STR_METRO_LINE_AUTOREPLACE                        :도시철도 차량
