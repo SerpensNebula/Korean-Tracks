@@ -756,7 +756,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
                 speed_limit:                    180 km/h;
                 construction_cost:              16;
                 maintenance_cost:               18;
-                sort_order:                     08;
+                sort_order:                     17;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
                 alternative_railtype_list:      ["RAIL","KDS_","ELRL","KHS_","KMTR"];
@@ -953,7 +953,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
                 speed_limit:                    0 km/h; // 430km/h
                 construction_cost:              96;
                 maintenance_cost:               24;
-                sort_order:                     15;
+                sort_order:                     20;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
                 alternative_railtype_list:      ["RAIL","KDS_","ELRL","KHS_","KMTR"];
@@ -1210,7 +1210,7 @@ spriteset(set_N762_70_track_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png")
                 speed_limit:                    121 km/h;
                 construction_cost:              16;
                 maintenance_cost:               18;
-                sort_order:                     20;
+                sort_order:                     25;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
                 alternative_railtype_list:      ["RAIL","KDS_","ELRL","KHS_","KMTR"];
