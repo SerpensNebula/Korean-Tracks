@@ -1,37 +1,53 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks alpha0.0.5
+STR_GRF_NAME                                      :Korean Tracks alpha0.6
 STR_GRF_DESC                                      :This is Korean Tracks NewGRF.
 
 # Narrow gauge
 STR_RAILTYPE_N762_70_TRACK_NAME                   :762mm Narrow Gauge Tracks
 STR_RAILTYPE_N762_70_TRACK_DROPDOWN_MENU          :762mm Narrow Gauge Tracks Construction
 STR_RAILTYPE_N762_70_TRACK_TOOLBAR_CAPTION        :Narrow Gauge Track Construction
-STR_RAILTYPE_N762_70_BUILD_VEHICLE_CAPTION        :New Narrow Gauge Vehicle
+STR_RAILTYPE_N762_70_BUILD_VEHICLE_CAPTION        :New Narrow Gauge Vehicles
 STR_RAILTYPE_N762_70_NEW_ENGINE                   :Narrow Gauge Vehicle
 STR_RAILTYPE_N762_70_AUTOREPLACE                  :Narrow Gauge Vehicles
 
 # Low Speed // 120
-STR_LOW_SPEED_TRACK_NAME                          :Low Speed Tracks
-STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :Low Speed Tracks Construction
-STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :Low Speed Tracks Construction
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Vehicle
+STR_LOW_SPEED_TRACK_NAME                          :Low Speed Railway
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :Low Speed Railway Construction
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :Low Speed Railway Construction
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Vehicles
 STR_LOW_SPEED_NEW_ENGINE                          :Low Speed Vehicle
 STR_LOW_SPEED_AUTOREPLACE                         :Low Speed Vehicles
 
 # Main Line // 180
-STR_MAIN_LINE_TRACK_NAME                          :Main Line Tracks
-STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :Main Line Tracks Construction
-STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :Main Line Tracks Construction
-STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :New Main Line Vehicle
+STR_MAIN_LINE_TRACK_NAME                          :Main Line Railway
+STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :Main Line Railway Construction
+STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :Main Line Railway Construction
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :New Main Line Vehicles
 STR_MAIN_LINE_NEW_ENGINE                          :Main Line Vehicle
 STR_MAIN_LINE_AUTOREPLACE                         :Main Line Vehicles
 
+# Electrified Main Line // 180
+STR_MAIN_LINE_ELEC_TRACK_NAME                     :Electrified Main Line Railway
+STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :Electrified Main Line Railway Construction
+STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :Electrified Main Line Railway Construction
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Main Line Vehicles
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :Electrified Main Line Vehicle
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :Electrified Main Line Vehicles
+
 # High Speed // 430
-STR_HIGH_SPEED_TRACK_NAME                         :High Speed Tracks
-STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :High Speed Tracks Construction
-STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :High Speed Tracks Construction
-STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :New High Speed Tracks
+STR_HIGH_SPEED_TRACK_NAME                         :High Speed Railway
+STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :High Speed Railway Construction
+STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :High Speed Railway Construction
+STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :New High Speed Vehicles
 STR_HIGH_SPEED_NEW_ENGINE                         :High Speed Vehicle
 STR_HIGH_SPEED_AUTOREPLACE                        :High Speed Vehicles
+
+# Metro Line
+STR_METRO_LINE_TRACK_NAME                         :Metro Railway
+STR_METRO_LINE_TRACK_DROPDOWN_MENU                :Metro Railway Construction
+STR_METRO_LINE_TRACK_TOOLBAR_CAPTION              :Metro Railway Construction
+STR_METRO_LINE_BUILD_VEHICLE_CAPTION              :New Metro Vehicles
+STR_METRO_LINE_NEW_ENGINE                         :Metro Vehicle
+STR_METRO_LINE_AUTOREPLACE                        :Metro Vehicles
