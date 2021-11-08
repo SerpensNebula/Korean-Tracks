@@ -1,5 +1,5 @@
 # Korean-Tracks
-![001](https://user-images.githubusercontent.com/75788864/139593712-8015d642-9528-42db-8538-c3b98e3d63e6.png)
+![제목 없음](https://user-images.githubusercontent.com/75788864/140800902-7cda2018-c59d-4b19-a41c-087cafdcc1c7.png)
 
 한국 기찻길 NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
 
