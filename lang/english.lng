@@ -1,16 +1,16 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks alpha0.6
+STR_GRF_NAME                                      :Korean Tracks beta0.1.0
 STR_GRF_DESC                                      :This is Korean Tracks NewGRF.
 
 # Narrow gauge
 STR_RAILTYPE_N762_70_TRACK_NAME                   :762mm Narrow Gauge Tracks
 STR_RAILTYPE_N762_70_TRACK_DROPDOWN_MENU          :762mm Narrow Gauge Tracks Construction
-STR_RAILTYPE_N762_70_TRACK_TOOLBAR_CAPTION        :Narrow Gauge Track Construction
-STR_RAILTYPE_N762_70_BUILD_VEHICLE_CAPTION        :New Narrow Gauge Vehicles
-STR_RAILTYPE_N762_70_NEW_ENGINE                   :Narrow Gauge Vehicle
-STR_RAILTYPE_N762_70_AUTOREPLACE                  :Narrow Gauge Vehicles
+STR_RAILTYPE_N762_70_TRACK_TOOLBAR_CAPTION        :762mm Narrow Gauge Track Construction
+STR_RAILTYPE_N762_70_BUILD_VEHICLE_CAPTION        :New 762mm Narrow Gauge Vehicles
+STR_RAILTYPE_N762_70_NEW_ENGINE                   :762mm Narrow Gauge Vehicle
+STR_RAILTYPE_N762_70_AUTOREPLACE                  :762mm Narrow Gauge Vehicles
 
 # Low Speed // 120
 STR_LOW_SPEED_TRACK_NAME                          :Low Speed Railway
@@ -19,6 +19,14 @@ STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :Low Speed Railway Constructio
 STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Vehicles
 STR_LOW_SPEED_NEW_ENGINE                          :Low Speed Vehicle
 STR_LOW_SPEED_AUTOREPLACE                         :Low Speed Vehicles
+
+# Electrified Low Speed // 120
+STR_LOW_SPEED_ELEC_TRACK_NAME                     :Electrified Low Speed Railway
+STR_LOW_SPEED_ELEC_TRACK_DROPDOWN_MENU            :Electrified Low Speed Railway Construction
+STR_LOW_SPEED_ELEC_TRACK_TOOLBAR_CAPTION          :Electrified Low Speed Railway Construction
+STR_LOW_SPEED_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Low Speed Vehicles
+STR_LOW_SPEED_ELEC_NEW_ENGINE                     :Electrified Low Speed Vehicle
+STR_LOW_SPEED_ELEC_AUTOREPLACE                    :Electrified Low Speed Vehicles
 
 # Main Line // 180
 STR_MAIN_LINE_TRACK_NAME                          :Main Line Railway
