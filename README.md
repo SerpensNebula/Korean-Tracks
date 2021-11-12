@@ -1,5 +1,5 @@
 # Korean-Tracks
-![제목 없음](https://user-images.githubusercontent.com/75788864/140800902-7cda2018-c59d-4b19-a41c-087cafdcc1c7.png)
+![제목 없음](https://user-images.githubusercontent.com/75788864/141462311-5e8323fd-c2ff-4a6f-9c2c-a6afadf46066.png)
 
 한국 기찻길 NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
 
@@ -18,7 +18,7 @@
   - 준고속선:KTX-이음 등 준고속철도
   - 고속선:SRT, KTX 등 고속철도 
   - 도시철도/지하철:대부분의 도시철도/지하철
+
 주의! 
 1. 철도 관련 전문가가 아니기 때문에 자세한 고증은 틀릴 수도 있습니다.
-2. 아직 비공개버전입니다. 그러나 소스코드는 공개하고 있고, grf도 수동으로 다운로드해서 이용하실 수 있습니다.
 
