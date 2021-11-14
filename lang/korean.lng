@@ -1,8 +1,24 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 기찻길 beta0.1.0
+STR_GRF_NAME                                      :한국 기찻길 beta0.1.1
 STR_GRF_DESC                                      :한국 기찻길 NewGRF입니다. 
+
+# Parameters
+STR_PARA_NAME_SPEED_N762_70                       :762mm 협궤 선로 속도제한 (km/h)
+STR_PARA_DESC_SPEED_N762_70                       :762mm 협궤 선로의 제한속도를 정합니다. 기본값은 70 입니다. 0 으로 하면 무제한이 됩니다.
+
+STR_PARA_NAME_SPEED_LOW_SPEED                     :기존선 선로 속도제한 (km/h)
+STR_PARA_DESC_SPEED_LOW_SPEED                     :기존선 선로의 제한속도를 정합니다. 기본값은 121 입니다. 0 으로 하면 무제한이 됩니다.
+
+STR_PARA_NAME_SPEED_MAIN_LINE                     :개량선 선로 속도제한 (km/h)
+STR_PARA_DESC_SPEED_MAIN_LINE                     :개량선 선로의 제한속도를 정합니다. 기본값은 180 입니다. 0 으로 하면 무제한이 됩니다.
+
+STR_PARA_NAME_SPEED_HIGH_SPEED                    :고속선 선로 속도제한 (km/h)
+STR_PARA_DESC_SPEED_HIGH_SPEED                    :고속선 선로의 제한속도를 정합니다. 기본값은 0 입니다. 0 으로 하면 무제한이 됩니다.
+
+STR_PARA_NAME_SPEED_METRO_LINE                    :도시철도 선로 속도제한 (km/h)
+STR_PARA_DESC_SPEED_METRO_LINE                    :도시철도 선로의 제한속도를 정합니다. 기본값은 121 입니다. 0 으로 하면 무제한이 됩니다.
 
 # Narrow gauge
 STR_RAILTYPE_N762_70_TRACK_NAME                   :762mm 협궤 선로
