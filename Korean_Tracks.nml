@@ -3,8 +3,59 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :211112;
+        version                            :211114;
         min_compatible_version             :0;
+        param  1    { //speed parameter of Narrow 762mm
+                    para_speed_N762_70 {
+                    type:       int;
+                    name:       string(STR_PARA_NAME_SPEED_N762_70);
+                    desc:       string(STR_PARA_DESC_SPEED_N762_70);
+                    min_value:  0;
+                    max_value:  5000000;
+                    def_value:  70;
+                    }
+        }            
+        param  2    { //speed parameter of Low Speed
+                    para_speed_LOW_SPEED {
+                    type:       int;
+                    name:       string(STR_PARA_NAME_SPEED_LOW_SPEED);
+                    desc:       string(STR_PARA_DESC_SPEED_LOW_SPEED);
+                    min_value:  0;
+                    max_value:  5000000;
+                    def_value:  121;
+                    }
+        }
+        param  4    { //speed parameter of Main Line
+                    para_speed_MAIN_LINE {
+                    type:       int;
+                    name:       string(STR_PARA_NAME_SPEED_MAIN_LINE);
+                    desc:       string(STR_PARA_DESC_SPEED_MAIN_LINE);
+                    min_value:  0;
+                    max_value:  5000000;
+                    def_value:  180;
+                    }
+        }
+        param  8    { //speed parameter of High Speed
+                    para_speed_HIGH_SPEED {
+                    type:       int;
+                    name:       string(STR_PARA_NAME_SPEED_HIGH_SPEED);
+                    desc:       string(STR_PARA_DESC_SPEED_HIGH_SPEED);
+                    min_value:  0;
+                    max_value:  5000000;
+                    def_value:  0;
+                    }
+        }
+        param 10    { //speed parameter of Metro Line
+                    para_speed_METRO_LINE {
+                    type:       int;
+                    name:       string(STR_PARA_NAME_SPEED_METRO_LINE);
+                    desc:       string(STR_PARA_DESC_SPEED_METRO_LINE);
+                    min_value:  0;
+                    max_value:  5000000;
+                    def_value:  121;
+                    }
+        
+        }
     }
 
 // MARROW 762mm
@@ -167,7 +218,7 @@
 
             station_graphics:               RAILTYPE_STATION_NORMAL;
             acceleration_model:             ACC_MODEL_RAIL;
-            speed_limit:                    70 km/h;
+            speed_limit:                    para_speed_N762_70 km/h;
             construction_cost:              4;
             maintenance_cost:               12;
             sort_order:                     01;
@@ -348,7 +399,7 @@
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    121 km/h;
+                speed_limit:                    para_speed_LOW_SPEED km/h;
                 construction_cost:              8;
                 maintenance_cost:               16;
                 sort_order:                     07;
@@ -575,7 +626,7 @@
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    121 km/h;
+                speed_limit:                    para_speed_LOW_SPEED km/h;
                 construction_cost:              10;
                 maintenance_cost:               18;
                 sort_order:                     08;
@@ -759,7 +810,7 @@
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    180 km/h;
+                speed_limit:                    para_speed_MAIN_LINE km/h;
                 construction_cost:              12;
                 maintenance_cost:               18;
                 sort_order:                     09;
@@ -985,7 +1036,7 @@
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    180 km/h;
+                speed_limit:                    para_speed_MAIN_LINE km/h;
                 construction_cost:              16;
                 maintenance_cost:               20;
                 sort_order:                     17;
@@ -1203,7 +1254,7 @@
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    0 km/h; // 430km/h
+                speed_limit:                    para_speed_HIGH_SPEED km/h; // 430km/h
                 construction_cost:              96;
                 maintenance_cost:               24;
                 sort_order:                     20;
@@ -1359,12 +1410,12 @@
 
     // Depot
         spriteset(set_METRO_LINE_track_depot, "./Korean_Tracks/gfx/METRO_LINE.png") {
-            [   0,  320,   64,   44,  -31,  -17]   // SE entry
-            [  70,  320,   64,   44,   -9,  -28]   // SE
-            [ 140,  320,   64,   44,  -31,  -17]   // SW entry
-            [ 210,  320,   64,   44,  -53,  -28]   // SW
-            [ 280,  320,   64,   44,  -53,  -28]   // NE
-            [ 350,  320,   64,   44,   -9,  -28]   // NW
+            [   0,  320,   64,   47,  -31,  -20]   // SE entry
+            [  70,  320,   64,   47,   -9,  -31]   // SE
+            [ 140,  320,   64,   47,  -31,  -20]   // SW entry
+            [ 210,  320,   64,   47,  -53,  -31]   // SW
+            [ 280,  320,   64,   47,  -53,  -31]   // NE
+            [ 350,  320,   64,   47,   -9,  -31]   // NW
         }
 
     // Fences
@@ -1461,7 +1512,7 @@
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    121 km/h;
+                speed_limit:                    para_speed_METRO_LINE km/h;
                 construction_cost:              16;
                 maintenance_cost:               18;
                 sort_order:                     25;
