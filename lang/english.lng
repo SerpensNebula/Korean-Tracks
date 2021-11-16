@@ -13,7 +13,102 @@ STR_PARA_DESC_SPEED_LOW_SPEED                     :Decides speed limit of low sp
 
 STR_PARA_NAME_SPEED_MAIN_LINE                     :Speed limit on main line and electrified main line tracks (km/h)
 STR_PARA_DESC_SPEED_MAIN_LINE                     :Decides speed limit of main line and electrified main line track. The default value is 180. If 0, it will be unlimited.
+##grflangid 0x01
 
+# GRF name and description
+STR_GRF_NAME                                      :Korean Tracks beta0.1.2
+STR_GRF_DESC                                      :This is Korean Tracks NewGRF.
+
+# Parameters
+STR_PARA_NAME_SPEED_N762_70                       :Speed limit on 762mm narrow gauge tracks (km/h)
+STR_PARA_DESC_SPEED_N762_70                       :Set speed limit on 762mm narrow gauge track. The default value is 70. If 0, it will be unlimited.
+
+STR_PARA_NAME_SPEED_LOW_SPEED                     :Speed limit on low speed and electrified low speed tracks (km/h)
+STR_PARA_DESC_SPEED_LOW_SPEED                     :Set speed limit on low speed and electrified low speed track. The default value is 121. If 0, it will be unlimited.
+
+STR_PARA_NAME_SPEED_MAIN_LINE                     :Speed limit on main line and electrified main line tracks (km/h)
+STR_PARA_DESC_SPEED_MAIN_LINE                     :Set speed limit on main line and electrified main line track. The default value is 180. If 0, it will be unlimited.
+
+STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :Speed limit on semi high speed tracks (km/h)
+STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :Set speed limit on semi high speed track. The default value is 261. If 0, it will be unlimited.
+
+STR_PARA_NAME_SPEED_HIGH_SPEED                    :Speed limit on high speed Tracks (km/h)
+STR_PARA_DESC_SPEED_HIGH_SPEED                    :Set speed limit on high speed Track. The default value is 430. If 0, it will be unlimited.
+
+STR_PARA_NAME_SPEED_METRO_LINE                    :Speed limit on metro tracks (km/h)
+STR_PARA_DESC_SPEED_METRO_LINE                    :Set speed limit on metro track. The default value is 121. If 0, it will be unlimited.
+
+# Narrow gauge
+STR_RAILTYPE_N762_70_TRACK_NAME                   :762mm Narrow Gauge Tracks
+STR_RAILTYPE_N762_70_TRACK_DROPDOWN_MENU          :762mm Narrow Gauge Track Construction
+STR_RAILTYPE_N762_70_TRACK_TOOLBAR_CAPTION        :762mm Narrow Gauge Track Construction
+STR_RAILTYPE_N762_70_BUILD_VEHICLE_CAPTION        :New 762mm Narrow Gauge Vehicles
+STR_RAILTYPE_N762_70_NEW_ENGINE                   :762mm Narrow Gauge Vehicle
+STR_RAILTYPE_N762_70_AUTOREPLACE                  :762mm Narrow Gauge Vehicles
+
+# Low Speed // 120
+STR_LOW_SPEED_TRACK_NAME                          :Low Speed Tracks
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :Low Speed Track Construction
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :Low Speed Track Construction
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :New Low Speed Vehicles
+STR_LOW_SPEED_NEW_ENGINE                          :Low Speed Vehicle
+STR_LOW_SPEED_AUTOREPLACE                         :Low Speed Vehicles
+
+# Electrified Low Speed // 120
+STR_LOW_SPEED_ELEC_TRACK_NAME                     :Low Speed Tracks (Electrified)
+STR_LOW_SPEED_ELEC_TRACK_DROPDOWN_MENU            :Low Speed Track Construction (Electrified)
+STR_LOW_SPEED_ELEC_TRACK_TOOLBAR_CAPTION          :Low Speed Track Construction (Electrified)
+STR_LOW_SPEED_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Low Speed Vehicles
+STR_LOW_SPEED_ELEC_NEW_ENGINE                     :Electrified Low Speed Vehicle
+STR_LOW_SPEED_ELEC_AUTOREPLACE                    :Electrified Low Speed Vehicles
+
+# Main Line // 180
+STR_MAIN_LINE_TRACK_NAME                          :Standard Speed Tracks
+STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :Standard Speed Track Construction
+STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :Standard Speed Track Construction
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :New Main Line Vehicles
+STR_MAIN_LINE_NEW_ENGINE                          :Main Line Vehicle
+STR_MAIN_LINE_AUTOREPLACE                         :Main Line Vehicles
+
+# Electrified Main Line // 180
+STR_MAIN_LINE_ELEC_TRACK_NAME                     :Standard Speed Tracks (Electrified)
+STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :Standard Speed Track Construction (Electrified)
+STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :Standard Speed Track Construction (Electrified)
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Standard Speed Vehicles
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :Electrified Standard Speed Vehicle
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :Electrified Standard Speed Vehicles
+
+# Urban Electrified Main Line // 180
+STR_MAIN_LINE_URBAN_TRACK_NAME                    :Standard Speed Tracks (Urban Electrified)
+STR_MAIN_LINE_URBAN_TRACK_DROPDOWN_MENU           :Standard Speed Track Construction (Urban Electrified)
+STR_MAIN_LINE_URBAN_TRACK_TOOLBAR_CAPTION         :Standard Speed Track Construction (Urban Electrified)
+STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :New Electrified Standard Speed Vehicles
+STR_MAIN_LINE_URBAN_NEW_ENGINE                    :Electrified Standard Speed Vehicle
+STR_MAIN_LINE_URBAN_AUTOREPLACE                   :Electrified Standard Speed Vehicles
+
+# Semi High Speed // 260
+STR_SEMI_HIGH_SPEED_TRACK_NAME                    :Semi High Speed Tracks
+STR_SEMI_HIGH_SPEED_TRACK_DROPDOWN_MENU           :Semi High Speed Track Construction
+STR_SEMI_HIGH_SPEED_TRACK_TOOLBAR_CAPTION         :Semi High Speed Track Construction
+STR_SEMI_HIGH_SPEED_BUILD_VEHICLE_CAPTION         :New Semi High Speed Vehicles
+STR_SEMI_HIGH_SPEED_NEW_ENGINE                    :Semi High Speed Vehicle
+STR_SEMI_HIGH_SPEED_AUTOREPLACE                   :Semi High Speed Vehicles
+
+# High Speed // 430
+STR_HIGH_SPEED_TRACK_NAME                         :High Speed Tracks
+STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :High Speed Track Construction
+STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :High Speed Track Construction
+STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :New High Speed Vehicles
+STR_HIGH_SPEED_NEW_ENGINE                         :High Speed Vehicle
+STR_HIGH_SPEED_AUTOREPLACE                        :High Speed Vehicles
+
+# Metro Line
+STR_METRO_LINE_TRACK_NAME                         :Metro Tracks
+STR_METRO_LINE_TRACK_DROPDOWN_MENU                :Metro Track Construction
+STR_METRO_LINE_TRACK_TOOLBAR_CAPTION              :Metro Track Construction
+STR_METRO_LINE_BUILD_VEHICLE_CAPTION              :New Metro Vehicles
+STR_METRO_LINE_NEW_ENGINE                         :Metro Vehicle
+STR_METRO_LINE_AUTOREPLACE                        :Metro Vehicles
 STR_PARA_NAME_SPEED_HIGH_SPEED                    :Speed limit on high speed Tracks (km/h)
 STR_PARA_DESC_SPEED_HIGH_SPEED                    :Decides speed limit of high speed Track. The default value is 0. If 0, it will be unlimited.
 
