@@ -3,70 +3,74 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :211117;
+        version                            :211121;
+        
         min_compatible_version             :0;
-        param  1    { //speed parameter of Narrow 762mm
-                    para_speed_NARROW_762 {
+            param  1    { // speed parameter of Narrow 762mm
+                para_speed_NARROW_762 {
                     type:       int;
                     name:       string(STR_PARA_NAME_SPEED_NARROW_762);
                     desc:       string(STR_PARA_DESC_SPEED_NARROW_762);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  70;
-                    }
-        }            
-        param  2    { //speed parameter of Low Speed
-                    para_speed_LOW_SPEED {
+                }
+            }   
+
+            param  2    { // speed parameter of Low Speed
+                para_speed_LOW_SPEED {
                     type:       int;
                     name:       string(STR_PARA_NAME_SPEED_LOW_SPEED);
                     desc:       string(STR_PARA_DESC_SPEED_LOW_SPEED);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  121;
-                    }
-        }
-        param  4    { //speed parameter of Main Line
-                    para_speed_MAIN_LINE {
-                    type:       int;
+                }
+            }
+
+            param  4    { // speed parameter of Main Line
+                para_speed_MAIN_LINE {
+                type:       int;
                     name:       string(STR_PARA_NAME_SPEED_MAIN_LINE);
                     desc:       string(STR_PARA_DESC_SPEED_MAIN_LINE);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  180;
-                    }
-        }
-        param  6    { //speed parameter of Semi High Speed
-                    para_speed_SEMI_HIGH_SPEED {
+                }
+            }
+
+            param  6    { // speed parameter of Semi High Speed
+                para_speed_SEMI_HIGH_SPEED {
                     type:       int;
                     name:       string(STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED);
                     desc:       string(STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  261;
-                    }
-        }
-        param  8    { //speed parameter of High Speed
-                    para_speed_HIGH_SPEED {
+                }
+            }
+
+            param  8    { // speed parameter of High Speed
+                para_speed_HIGH_SPEED {
                     type:       int;
                     name:       string(STR_PARA_NAME_SPEED_HIGH_SPEED);
                     desc:       string(STR_PARA_DESC_SPEED_HIGH_SPEED);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  430;
-                    }
-        }
-    
-        param 10    { //speed parameter of Metro Line
-                    para_speed_METRO_LINE {
+                }
+            }
+
+            param 10    { // speed parameter of Metro Line
+                para_speed_METRO_LINE {
                     type:       int;
                     name:       string(STR_PARA_NAME_SPEED_METRO_LINE);
                     desc:       string(STR_PARA_DESC_SPEED_METRO_LINE);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  121;
-                    }
-        
-        }
+                }
+            }
     }
 
 // MARROW 762mm
@@ -235,40 +239,40 @@
             set_NARROW_762_crossing_open;
         }
 
-// Define NARROW_762
-    item(FEAT_RAILTYPES, track_NARROW_762, 01) {
-        property {
-            name:                           string(STR_NARROW_762_NAME);
-            label:                          "KRNR";
-            introduction_date:              date(1899, 1, 1);
-            menu_text:                      string(STR_NARROW_762_DROPDOWN_MENU);
-            toolbar_caption:                string(STR_NARROW_762_TOOLBAR_CAPTION);
-            build_window_caption:           string(STR_NARROW_762_BUILD_VEHICLE_CAPTION);
-            new_engine_text:                string(STR_NARROW_762_NEW_ENGINE);
-            autoreplace_text:               string(STR_NARROW_762_AUTOREPLACE);
+    // Define NARROW_762
+        item(FEAT_RAILTYPES, track_NARROW_762, 01) {
+            property {
+                name:                           string(STR_NARROW_762_NAME);
+                label:                          "KRNR";
+                introduction_date:              date(1899, 1, 1);
+                menu_text:                      string(STR_NARROW_762_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_NARROW_762_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_NARROW_762_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_NARROW_762_NEW_ENGINE);
+                autoreplace_text:               string(STR_NARROW_762_AUTOREPLACE);
 
-            station_graphics:               RAILTYPE_STATION_NORMAL;
-            acceleration_model:             ACC_MODEL_RAIL;
-            speed_limit:                    para_speed_NARROW_762 km/h;
-            construction_cost:              4;
-            maintenance_cost:               12;
-            sort_order:                     01;
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    para_speed_NARROW_762 km/h;
+                construction_cost:              4;
+                maintenance_cost:               12;
+                sort_order:                     01;
 
-            railtype_flags:                 bitmask();
-            alternative_railtype_list:      ["RAIL"];
-        }
+                railtype_flags:                 bitmask();
+                alternative_railtype_list:      ["RAIL"];
+            }
 
-        graphics {
-            gui:                            set_NARROW_762_gui;
-            track_overlay:                  set_NARROW_762_overlay;
-            underlay:                       set_NARROW_762_underlay;
-            tunnels:                        sw_NARROW_762_tunnel_underlay;
-            // tunnel_overlay:              set_NARROW_762_tunnel_overlay;
-            depots:                         set_NARROW_762_depot;
-            bridge_surfaces:                set_NARROW_762_bridge;
-            level_crossings:                sw_NARROW_762_level_crossing;
-            fences:                         set_NARROW_762_fences;
-        }
+            graphics {
+                gui:                            set_NARROW_762_gui;
+                track_overlay:                  set_NARROW_762_overlay;
+                underlay:                       set_NARROW_762_underlay;
+                tunnels:                        sw_NARROW_762_tunnel_underlay;
+                // tunnel_overlay:              set_NARROW_762_tunnel_overlay;
+                depots:                         set_NARROW_762_depot;
+                bridge_surfaces:                set_NARROW_762_bridge;
+                level_crossings:                sw_NARROW_762_level_crossing;
+                fences:                         set_NARROW_762_fences;
+            }
     }
 
 // LOW SPEED
@@ -573,7 +577,7 @@
         spriteset(set_LOW_SPEED_ELEC_track_pylons, "./Korean_Tracks/gfx/LOW_SPEED_ELEC.png") {
             [   0,  545,   11,   26,  -10,  -18]  // ↙
             [  20,  545,   11,   26,    0,  -21]  // ↗
-            [  40,  545,   11,   26,    1,  -17]  // ↘
+            [  40,  545,   11,   26,    1,  -18]  // ↘
             [  60,  545,   11,   26,   -9,  -21]  // ↖
             [  80,  545,   11,   26,    0,  -21]  // ↓
             [ 100,  545,   11,   26,    0,  -22]  // ↑
@@ -1004,7 +1008,7 @@
         spriteset(set_MAIN_LINE_ELEC_track_pylons, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,  920,   11,   26,  -10,  -18]  // ↙
             [  20,  920,   11,   26,    0,  -21]  // ↗
-            [  40,  920,   11,   26,    1,  -17]  // ↘
+            [  40,  920,   11,   26,    1,  -18]  // ↘
             [  60,  920,   11,   26,   -9,  -21]  // ↖
             [  80,  920,   11,   26,    0,  -21]  // ↓
             [ 100,  920,   11,   26,    0,  -22]  // ↑
@@ -1232,7 +1236,7 @@
         spriteset(set_MAIN_LINE_URBAN_track_pylons, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,  920,   11,   26,  -10,  -18]  // ↙
             [  20,  920,   11,   26,    0,  -21]  // ↗
-            [  40,  920,   11,   26,    1,  -17]  // ↘
+            [  40,  920,   11,   26,    1,  -18]  // ↘
             [  60,  920,   11,   26,   -9,  -21]  // ↖
             [  80,  920,   11,   26,    0,  -21]  // ↓
             [ 100,  920,   11,   26,    0,  -22]  // ↑
@@ -1481,7 +1485,7 @@
         spriteset(set_SEMI_HIGH_SPEED_track_pylons, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
             [   0,  545,   11,   26,  -10,  -18]  // ↙
             [  20,  545,   11,   26,    0,  -21]  // ↗
-            [  40,  545,   11,   26,    1,  -17]  // ↘
+            [  40,  545,   11,   26,    1,  -18]  // ↘
             [  60,  545,   11,   26,   -9,  -21]  // ↖
             [  80,  545,   11,   26,    0,  -21]  // ↓
             [ 100,  545,   11,   26,    0,  -22]  // ↑
@@ -1694,16 +1698,15 @@
 
     // Catenary Pylons
         spriteset(set_HIGH_SPEED_track_pylons, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
-            [   0,  545,   11,   26,   -8,  -18]  // ↙
-            [  20,  545,   11,   26,   -2,  -22]  // ↗
-            [  40,  545,   11,   26,   -1,  -18]  // ↘
+            [   0,  545,   11,   26,  -10,  -18]  // ↙
+            [  20,  545,   11,   26,    0,  -21]  // ↗
+            [  40,  545,   11,   26,    1,  -18]  // ↘
             [  60,  545,   11,   26,   -9,  -21]  // ↖
             [  80,  545,   11,   26,    0,  -21]  // ↓
             [ 100,  545,   11,   26,    0,  -22]  // ↑
             [ 120,  545,   11,   26,    0,  -18]  // →
             [ 140,  545,   11,   26,   -9,  -18]  // ←
         }
-
 
     // Depot
         spriteset(set_HIGH_SPEED_track_depot, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
@@ -1913,7 +1916,7 @@
         spriteset(set_METRO_LINE_pylons, "./Korean_Tracks/gfx/METRO_LINE.png") {
             [   0,  545,   11,   26,  -10,  -18]  // ↙
             [  20,  545,   11,   26,    0,  -21]  // ↗
-            [  40,  545,   11,   26,    1,  -17]  // ↘
+            [  40,  545,   11,   26,    1,  -18]  // ↘
             [  60,  545,   11,   26,   -9,  -21]  // ↖
             [  80,  545,   11,   26,    0,  -21]  // ↓
             [ 100,  545,   11,   26,    0,  -22]  // ↑
