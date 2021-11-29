@@ -1,4 +1,13 @@
 # Korean-Tracks-1.0.0
+
+- 스프라이트 작업하실 분들께
+
+작업하시기 전에 먼저 제작의사를 issue를 통해 제게 알려주세요. 
+
+이 깃헙 페이지는 GPLv3를 지키기 위해 공개하고 있는 것이며, 가능하면 스프라이트도 저 혼자 만들 생각입니다. 이렇게 하는 이유는 제가 여러분이 원하는 것을 모두 구현할 수 있을만큼 NML 코딩 실력이 충분하지 못하기 때문입니다(프로그래밍 언어에 대해 문외한임). 
+
+혹시나 스프라이트는 다 만들었는데 정작 제가 구현하지 못할 수도 있는 불상사를 막기 위해 부득이한 조치임을 알려드립니다. - Gamunbi  
+
 ![제목 없음](https://user-images.githubusercontent.com/75788864/141462311-5e8323fd-c2ff-4a6f-9c2c-a6afadf46066.png)
 
 한국 기찻길 NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
