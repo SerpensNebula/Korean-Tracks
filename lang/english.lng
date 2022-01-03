@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks 1.0.1
+STR_GRF_NAME                                      :Korean Tracks 1.1.0
 STR_GRF_DESC                                      :Korean Tracks NewGRF adds train and metro tracks of South Korea. Recommended to use with Korean Train Set NewGRF.
 
 # Parameters - Speed Limit
@@ -54,17 +54,17 @@ STR_MAIN_LINE_AUTOREPLACE                         :Main Line Vehicles
 STR_MAIN_LINE_ELEC_TRACK_NAME                     :Standard Speed Tracks (Electrified)
 STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :Standard Speed Track Construction (Electrified)
 STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :Standard Speed Track Construction (Electrified)
-STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Standard Speed Vehicles
-STR_MAIN_LINE_ELEC_NEW_ENGINE                     :Electrified Standard Speed Vehicle
-STR_MAIN_LINE_ELEC_AUTOREPLACE                    :Electrified Standard Speed Vehicles
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Main Line Vehicles
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :Electrified Main Line Vehicle
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :Electrified Main Line Vehicles
 
 # Urban Electrified Main Line // 180
 STR_MAIN_LINE_URBAN_TRACK_NAME                    :Standard Speed Tracks (Urban Electrified)
 STR_MAIN_LINE_URBAN_TRACK_DROPDOWN_MENU           :Standard Speed Track Construction (Urban Electrified)
 STR_MAIN_LINE_URBAN_TRACK_TOOLBAR_CAPTION         :Standard Speed Track Construction (Urban Electrified)
-STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :New Electrified Standard Speed Vehicles
-STR_MAIN_LINE_URBAN_NEW_ENGINE                    :Electrified Standard Speed Vehicle
-STR_MAIN_LINE_URBAN_AUTOREPLACE                   :Electrified Standard Speed Vehicles
+STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :New Electrified Main Line Vehicles
+STR_MAIN_LINE_URBAN_NEW_ENGINE                    :Electrified Main Line Vehicle
+STR_MAIN_LINE_URBAN_AUTOREPLACE                   :Electrified Main Line Vehicles
 
 # Semi High Speed // 260
 STR_SEMI_HIGH_SPEED_TRACK_NAME                    :Semi High Speed Tracks
@@ -89,3 +89,8 @@ STR_METRO_LINE_TRACK_TOOLBAR_CAPTION              :Metro Track Construction
 STR_METRO_LINE_BUILD_VEHICLE_CAPTION              :New Metro Vehicles
 STR_METRO_LINE_NEW_ENGINE                         :Metro Vehicle
 STR_METRO_LINE_AUTOREPLACE                        :Metro Vehicles
+
+# Objects
+STR_OBJE_NAME_DEPOTS                              :[KTR] Train Depot
+STR_OBJE_NAME_DEPOT_MAINLINE                      :Main Line Train Depot
+STR_OBJE_DESC_DEPOT_MAINLINE                      :Korail Susaek Train Depot, Seoul
