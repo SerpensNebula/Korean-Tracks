@@ -3,9 +3,11 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :211231;
+        version                            :220106;
         
         min_compatible_version             :0;
+
+        // Parameters
             param  1    { // speed parameter of Narrow 762mm
                 para_speed_NARROW_762 {
                     type:       int;
@@ -30,7 +32,7 @@
 
             param  4    { // speed parameter of Main Line
                 para_speed_MAIN_LINE {
-                type:       int;
+                    type:       int;
                     name:       string(STR_PARA_NAME_SPEED_MAIN_LINE);
                     desc:       string(STR_PARA_DESC_SPEED_MAIN_LINE);
                     min_value:  0;
@@ -61,11 +63,11 @@
                 }
             }
 
-            param 10    { // speed parameter of Metro Line
-                para_speed_METRO_LINE {
+            param 10    { // speed parameter of Metro
+                para_speed_METRO {
                     type:       int;
-                    name:       string(STR_PARA_NAME_SPEED_METRO_LINE);
-                    desc:       string(STR_PARA_DESC_SPEED_METRO_LINE);
+                    name:       string(STR_PARA_NAME_SPEED_METRO);
+                    desc:       string(STR_PARA_DESC_SPEED_METRO);
                     min_value:  0;
                     max_value:  6000;
                     def_value:  121;
@@ -108,6 +110,19 @@
             [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
+        spriteset(set_NARROW_762_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,    0,   64,   31,  -31,    0]   // ↗↙
+            [  70,    0,   64,   31,  -31,    0]   // ↖↘
+            [ 140,    0,   64,   31,  -31,    0]   // ↔U
+            [ 210,    0,   64,   31,  -31,    0]   // ↔D
+            [ 280,    0,   64,   31,  -31,    0]   // ↕R
+            [ 350,    0,   64,   31,  -31,    0]   // ↕L
+            [ 420,    0,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,    0,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,    0,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,    0,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
     // Tracks underlay
         spriteset(set_NARROW_762_underlay, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,   80,   64,   31,  -31,    0]   // ↗↙
@@ -128,37 +143,56 @@
             [1050,   80,   64,   31,  -31,    0]   // combi all
         }
 
+        spriteset(set_NARROW_762_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,   40,   64,   31,  -31,    0]   // ↗↙
+            [  70,   40,   64,   31,  -31,    0]   // ↖↘
+            [ 140,   40,   64,   31,  -31,    0]   // ↔U
+            [ 210,   40,   64,   31,  -31,    0]   // ↔D
+            [ 280,   40,   64,   31,  -31,    0]   // ↕R
+            [ 350,   40,   64,   31,  -31,    0]   // ↕L
+            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,   40,   64,   31,  -31,    0]   // +
+            [ 770,   40,   64,   31,  -31,    0]   // combi SW
+            [ 840,   40,   64,   31,  -31,    0]   // combi NE
+            [ 910,   40,   64,   31,  -31,    0]   // combi SE
+            [ 980,   40,   64,   31,  -31,    0]   // combi NW
+            [1050,   40,   64,   31,  -31,    0]   // combi all
+        }
+
     // Tunnels
         spriteset(set_NARROW_762_tunnel_underlay, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,  120,   64,   39,  -31,   -8]   // ↙
             [  70,  120,   64,   31,  -31,    0]   // ↖
             [ 140,  120,   64,   31,  -31,    0]   // ↗
-            [ 210,  120,   64,   39,  -32,   -8]   // ↘
+            [ 210,  120,   64,   39,  -31,   -8]   // ↘
         }
 
         spriteset(set_NARROW_762_tunnel_underlay_desert, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,  170,   64,   39,  -31,   -8]   // ↙
             [  70,  170,   64,   31,  -31,    0]   // ↖
             [ 140,  170,   64,   31,  -31,    0]   // ↗
-            [ 210,  170,   64,   39,  -32,   -8]   // ↘
+            [ 210,  170,   64,   39,  -31,   -8]   // ↘
         }
 
         spriteset(set_NARROW_762_tunnel_underlay_rain, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,  220,   64,   39,  -31,   -8]   // ↙
             [  70,  220,   64,   31,  -31,    0]   // ↖
             [ 140,  220,   64,   31,  -31,    0]   // ↗
-            [ 210,  220,   64,   39,  -32,   -8]   // ↘
+            [ 210,  220,   64,   39,  -31,   -8]   // ↘
         }
 
         spriteset(set_NARROW_762_tunnel_underlay_snow, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,  270,   64,   39,  -31,   -8]   // ↙
             [  70,  270,   64,   31,  -31,    0]   // ↖
             [ 140,  270,   64,   31,  -31,    0]   // ↗
-            [ 210,  270,   64,   39,  -32,   -8]   // ↘
+            [ 210,  270,   64,   39,  -31,   -8]   // ↘
         }
 
     // Fences (empty)
-        spriteset(set_NARROW_762_fences, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_fence, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
@@ -187,6 +221,15 @@
             [ 350,  320,   64,   45,   -9,  -29]   // NW
         }
 
+        spriteset(set_NARROW_762_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,   80,   64,   50,  -31,  -23]   // SE entry
+            [  70,   80,   64,   50,   -9,  -34]   // SE
+            [ 140,   80,   64,   50,  -31,  -23]   // SW entry
+            [ 210,   80,   64,   50,  -53,  -34]   // SW
+            [ 280,   80,   64,   50,  -53,  -34]   // NE
+            [ 350,   80,   64,   50,   -9,  -34]   // NW
+        }
+
     // Bridge surfaces (uses track_underlay's sprites)
         spriteset(set_NARROW_762_bridge, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,   80,   64,   31,  -31,    0]   // ↗↙
@@ -197,8 +240,17 @@
             [ 630,   80,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
+        spriteset(set_NARROW_762_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,   40,   64,   31,  -31,    0]   // ↗↙
+            [  70,   40,   64,   31,  -31,    0]   // ↖↘
+            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
     // Level crossing
-        spriteset(set_NARROW_762_crossing_close, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_level_crossing_close, "./Korean_Tracks/gfx/NARROW_762.png") {
             [ 700,  120,   64,   31,  -31,    0]
             [ 770,  120,   64,   31,  -31,    0]
             [ 840,  120,    5,   13,    0,  -10]   // N
@@ -210,7 +262,8 @@
             [ 960,  120,    5,   13,    0,  -10]   // S
             [ 970,  120,   23,   17,  -19,  -14]
         }
-        spriteset(set_NARROW_762_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png") {
+
+        spriteset(set_NARROW_762_level_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png") {
             [ 700,  120,   64,   31,  -31,    0]
             [ 770,  120,   64,   31,  -31,    0]
             [ 840,  150,    5,   13,    0,  -10]
@@ -223,6 +276,45 @@
             [ 970,  150,    8,   29,   -3,  -26]
         }
 
+        spriteset(set_NARROW_762_level_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,   80,   64,   31,  -31,    0]
+            [ 770,   80,   64,   31,  -31,    0]
+            [ 840,   80,    5,   13,    0,  -10]   // N
+            [ 850,   80,   23,   22,   -5,  -10]
+            [ 880,   80,   29,   18,  -24,  -10]   // E
+            [ 910,   80,    5,   13,   -3,  -10]
+            [ 920,   80,   29,   16,    0,  -11]   // W
+            [ 950,   80,    5,   13,   -3,  -10]
+            [ 960,   80,    5,   13,    0,  -10]   // S
+            [ 970,   80,   23,   17,  -19,  -14]
+        }
+
+        spriteset(set_NARROW_762_level_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,   80,   64,   31,  -31,    0]
+            [ 770,   80,   64,   31,  -31,    0]
+            [ 840,  110,    5,   13,    0,  -10]
+            [ 850,  110,    8,   27,   -6,  -22]
+            [ 880,  110,    8,   29,   -3,  -26]
+            [ 910,  110,    5,   13,   -3,  -10]
+            [ 920,  110,    8,   28,    0,  -23]
+            [ 950,  110,    5,   13,   -3,  -10]
+            [ 960,  110,    5,   13,    0,  -10]
+            [ 970,  110,    8,   29,   -3,  -26]
+        }
+
+    // Level crossing status
+        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_level_crossing, level_crossing_status) {
+            LEVEL_CROSSING_CLOSED:              set_NARROW_762_level_crossing_close;
+            LEVEL_CROSSING_OPEN:                set_NARROW_762_level_crossing_open;
+            set_NARROW_762_level_crossing_open;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_level_crossing_SNOW, level_crossing_status) {
+            LEVEL_CROSSING_CLOSED:              set_NARROW_762_level_crossing_close_SNOW;
+            LEVEL_CROSSING_OPEN:                set_NARROW_762_level_crossing_open_SNOW;
+            set_NARROW_762_level_crossing_open_SNOW;
+        }
+
     // Graphic for terrain
         switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_tunnel_underlay, terrain_type) {
             TILETYPE_NORMAL:                    set_NARROW_762_tunnel_underlay;
@@ -232,13 +324,36 @@
             set_NARROW_762_tunnel_underlay;
         }
 
-    // Level crossing status
-        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_level_crossing, level_crossing_status) {
-            LEVEL_CROSSING_CLOSED:              set_NARROW_762_crossing_close;
-            LEVEL_CROSSING_OPEN:              
-            set_NARROW_762_crossing_open;
+        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_NARROW_762_overlay;
+            TILETYPE_SNOW:                      set_NARROW_762_overlay_SNOW;            
+            set_NARROW_762_overlay;
         }
 
+        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_NARROW_762_underlay;
+            TILETYPE_SNOW:                      set_NARROW_762_underlay_SNOW;            
+            set_NARROW_762_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_NARROW_762_depot;
+            TILETYPE_SNOW:                      set_NARROW_762_depot_SNOW;            
+            set_NARROW_762_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_NARROW_762_bridge, terrain_type) {
+            TILETYPE_NORMAL:                    set_NARROW_762_bridge;
+            TILETYPE_SNOW:                      set_NARROW_762_bridge_SNOW;            
+            set_NARROW_762_bridge;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_set_NARROW_762_level_crossing, terrain_type) {
+            TILETYPE_NORMAL:                    sw_NARROW_762_level_crossing;
+            TILETYPE_SNOW:                      sw_NARROW_762_level_crossing_SNOW;            
+            sw_NARROW_762_level_crossing;
+        }
+    
     // Define NARROW_762
         item(FEAT_RAILTYPES, track_NARROW_762, 00) {
             property {
@@ -264,14 +379,13 @@
 
             graphics {
                 gui:                            set_NARROW_762_gui;
-                track_overlay:                  set_NARROW_762_overlay;
-                underlay:                       set_NARROW_762_underlay;
+                track_overlay:                  sw_NARROW_762_overlay;
+                underlay:                       sw_NARROW_762_underlay;
                 tunnels:                        sw_NARROW_762_tunnel_underlay;
-                // tunnel_overlay:              set_NARROW_762_tunnel_overlay;
-                depots:                         set_NARROW_762_depot;
-                bridge_surfaces:                set_NARROW_762_bridge;
-                level_crossings:                sw_NARROW_762_level_crossing;
-                fences:                         set_NARROW_762_fences;
+                depots:                         sw_NARROW_762_depot;
+                bridge_surfaces:                sw_NARROW_762_bridge;
+                level_crossings:                sw_set_NARROW_762_level_crossing;
+                fences:                         set_NARROW_762_fence;
             }
     }
 
@@ -311,16 +425,16 @@
         }
 
         spriteset(set_LOW_SPEED_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,    0,   64,   31,  -31,    0]   // ↗↙
-            [  70,    0,   64,   31,  -31,    0]   // ↖↘
-            [ 140,    0,   64,   31,  -31,    0]   // ↔U
-            [ 210,    0,   64,   31,  -31,    0]   // ↔D
-            [ 280,    0,   64,   31,  -31,    0]   // ↕R
-            [ 350,    0,   64,   31,  -31,    0]   // ↕L
-            [ 420,    0,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,    0,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,    0,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,    0,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  150,   64,   31,  -31,    0]   // ↗↙
+            [  70,  150,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  150,   64,   31,  -31,    0]   // ↔U
+            [ 210,  150,   64,   31,  -31,    0]   // ↔D
+            [ 280,  150,   64,   31,  -31,    0]   // ↕R
+            [ 350,  150,   64,   31,  -31,    0]   // ↕L
+            [ 420,  150,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  150,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  150,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  150,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Tracks underlay
@@ -344,22 +458,22 @@
         }
 
         spriteset(set_LOW_SPEED_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   40,   64,   31,  -31,    0]   // ↔U
-            [ 210,   40,   64,   31,  -31,    0]   // ↔D
-            [ 280,   40,   64,   31,  -31,    0]   // ↕R
-            [ 350,   40,   64,   31,  -31,    0]   // ↕L
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,   40,   64,   31,  -31,    0]   // +
-            [ 770,   40,   64,   31,  -31,    0]   // combi SW
-            [ 840,   40,   64,   31,  -31,    0]   // combi NE
-            [ 910,   40,   64,   31,  -31,    0]   // combi SE
-            [ 980,   40,   64,   31,  -31,    0]   // combi NW
-            [1050,   40,   64,   31,  -31,    0]   // combi all
+            [   0,  190,   64,   31,  -31,    0]   // ↗↙
+            [  70,  190,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  190,   64,   31,  -31,    0]   // ↔U
+            [ 210,  190,   64,   31,  -31,    0]   // ↔D
+            [ 280,  190,   64,   31,  -31,    0]   // ↕R
+            [ 350,  190,   64,   31,  -31,    0]   // ↕L
+            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  190,   64,   31,  -31,    0]   // +
+            [ 770,  190,   64,   31,  -31,    0]   // combi SW
+            [ 840,  190,   64,   31,  -31,    0]   // combi NE
+            [ 910,  190,   64,   31,  -31,    0]   // combi SE
+            [ 980,  190,   64,   31,  -31,    0]   // combi NW
+            [1050,  190,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -402,12 +516,12 @@
         }
 
         spriteset(set_LOW_SPEED_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,   80,   64,   45,  -31,  -18]   // SE entry
-            [  70,   80,   64,   45,   -9,  -29]   // SE
-            [ 140,   80,   64,   45,  -31,  -18]   // SW entry
-            [ 210,   80,   64,   45,  -53,  -29]   // SW
-            [ 280,   80,   64,   45,  -53,  -29]   // NE
-            [ 350,   80,   64,   45,   -9,  -29]   // NW
+            [   0,  230,   64,   45,  -31,  -18]   // SE entry
+            [  70,  230,   64,   45,   -9,  -29]   // SE
+            [ 140,  230,   64,   45,  -31,  -18]   // SW entry
+            [ 210,  230,   64,   45,  -53,  -29]   // SW
+            [ 280,  230,   64,   45,  -53,  -29]   // NE
+            [ 350,  230,   64,   45,   -9,  -29]   // NW
         }
 
     // Bridge surfaces (uses track_underlay's sprites)
@@ -421,12 +535,12 @@
         }
 
         spriteset(set_LOW_SPEED_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  190,   64,   31,  -31,    0]   // ↗↙
+            [  70,  190,   64,   31,  -31,    0]   // ↖↘
+            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Level crossing
@@ -456,8 +570,8 @@
         }
 
         spriteset(set_LOW_SPEED_track_crossing_SNOW_close, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,   80,   64,   31,  -31,    0]
-            [ 770,   80,   64,   31,  -31,    0]
+            [ 700,  230,   64,   31,  -31,    0]
+            [ 770,  230,   64,   31,  -31,    0]
             [ 840,   80,    5,   13,    0,  -10]   // N
             [ 850,   80,   23,   22,   -5,  -10]
             [ 880,   80,   29,   18,  -24,  -10]   // E
@@ -468,8 +582,8 @@
             [ 970,   80,   23,   17,  -19,  -14]
         }
         spriteset(set_LOW_SPEED_track_crossing_SNOW_open, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,   80,   64,   31,  -31,    0]
-            [ 770,   80,   64,   31,  -31,    0]
+            [ 700,  230,   64,   31,  -31,    0]
+            [ 770,  230,   64,   31,  -31,    0]
             [ 840,  110,    5,   13,    0,  -10]
             [ 850,  110,    8,   27,   -6,  -22]
             [ 880,  110,    8,   29,   -3,  -26]
@@ -604,16 +718,16 @@
         }
 
         spriteset(set_LOW_SPEED_ELEC_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,    0,   64,   31,  -31,    0]   // ↗↙
-            [  70,    0,   64,   31,  -31,    0]   // ↖↘
-            [ 140,    0,   64,   31,  -31,    0]   // ↔U
-            [ 210,    0,   64,   31,  -31,    0]   // ↔D
-            [ 280,    0,   64,   31,  -31,    0]   // ↕R
-            [ 350,    0,   64,   31,  -31,    0]   // ↕L
-            [ 420,    0,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,    0,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,    0,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,    0,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  150,   64,   31,  -31,    0]   // ↗↙
+            [  70,  150,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  150,   64,   31,  -31,    0]   // ↔U
+            [ 210,  150,   64,   31,  -31,    0]   // ↔D
+            [ 280,  150,   64,   31,  -31,    0]   // ↕R
+            [ 350,  150,   64,   31,  -31,    0]   // ↕L
+            [ 420,  150,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  150,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  150,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  150,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Tracks underlay
@@ -637,22 +751,22 @@
         }
 
         spriteset(set_LOW_SPEED_ELEC_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   40,   64,   31,  -31,    0]   // ↔U
-            [ 210,   40,   64,   31,  -31,    0]   // ↔D
-            [ 280,   40,   64,   31,  -31,    0]   // ↕R
-            [ 350,   40,   64,   31,  -31,    0]   // ↕L
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,   40,   64,   31,  -31,    0]   // +
-            [ 770,   40,   64,   31,  -31,    0]   // combi SW
-            [ 840,   40,   64,   31,  -31,    0]   // combi NE
-            [ 910,   40,   64,   31,  -31,    0]   // combi SE
-            [ 980,   40,   64,   31,  -31,    0]   // combi NW
-            [1050,   40,   64,   31,  -31,    0]   // combi all
+            [   0,  190,   64,   31,  -31,    0]   // ↗↙
+            [  70,  190,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  190,   64,   31,  -31,    0]   // ↔U
+            [ 210,  190,   64,   31,  -31,    0]   // ↔D
+            [ 280,  190,   64,   31,  -31,    0]   // ↕R
+            [ 350,  190,   64,   31,  -31,    0]   // ↕L
+            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  190,   64,   31,  -31,    0]   // +
+            [ 770,  190,   64,   31,  -31,    0]   // combi SW
+            [ 840,  190,   64,   31,  -31,    0]   // combi NE
+            [ 910,  190,   64,   31,  -31,    0]   // combi SE
+            [ 980,  190,   64,   31,  -31,    0]   // combi NW
+            [1050,  190,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -739,12 +853,12 @@
         }
 
         spriteset(set_LOW_SPEED_ELEC_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,   80,   64,   45,  -31,  -18]   // SE entry
-            [  70,   80,   64,   45,   -9,  -29]   // SE
-            [ 140,   80,   64,   45,  -31,  -18]   // SW entry
-            [ 210,   80,   64,   45,  -53,  -29]   // SW
-            [ 280,   80,   64,   45,  -53,  -29]   // NE
-            [ 350,   80,   64,   45,   -9,  -29]   // NW
+            [   0,  230,   64,   45,  -31,  -18]   // SE entry
+            [  70,  230,   64,   45,   -9,  -29]   // SE
+            [ 140,  230,   64,   45,  -31,  -18]   // SW entry
+            [ 210,  230,   64,   45,  -53,  -29]   // SW
+            [ 280,  230,   64,   45,  -53,  -29]   // NE
+            [ 350,  230,   64,   45,   -9,  -29]   // NW
         }
     // Bridge surfaces (uses track_underlay's sprites)
         spriteset(set_LOW_SPEED_ELEC_track_bridge, "./Korean_Tracks/gfx/LOW_SPEED_ELEC.png") {
@@ -757,12 +871,12 @@
         }
 
         spriteset(set_LOW_SPEED_ELEC_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  190,   64,   31,  -31,    0]   // ↗↙
+            [  70,  190,   64,   31,  -31,    0]   // ↖↘
+            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Level crossing
@@ -792,8 +906,8 @@
         }
 
         spriteset(set_LOW_SPEED_ELEC_track_crossing_SNOW_close, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,   80,   64,   31,  -31,    0]
-            [ 770,   80,   64,   31,  -31,    0]
+            [ 700,  230,   64,   31,  -31,    0]
+            [ 770,  230,   64,   31,  -31,    0]
             [ 840,   80,    5,   13,    0,  -10]   // N
             [ 850,   80,   23,   22,   -5,  -10]
             [ 880,   80,   29,   18,  -24,  -10]   // E
@@ -804,8 +918,8 @@
             [ 970,   80,   23,   17,  -19,  -14]
         }
         spriteset(set_LOW_SPEED_ELEC_track_crossing_SNOW_open, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,   80,   64,   31,  -31,    0]
-            [ 770,   80,   64,   31,  -31,    0]
+            [ 700,  230,   64,   31,  -31,    0]
+            [ 770,  230,   64,   31,  -31,    0]
             [ 840,  110,    5,   13,    0,  -10]
             [ 850,  110,    8,   27,   -6,  -22]
             [ 880,  110,    8,   29,   -3,  -26]
@@ -942,16 +1056,16 @@
         }
 
         spriteset(set_MAIN_LINE_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  150,   64,   31,  -31,    0]   // ↗↙
-            [  70,  150,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  150,   64,   31,  -31,    0]   // ↔U
-            [ 210,  150,   64,   31,  -31,    0]   // ↔D
-            [ 280,  150,   64,   31,  -31,    0]   // ↕R
-            [ 350,  150,   64,   31,  -31,    0]   // ↕L
-            [ 420,  150,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  150,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  150,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  150,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  300,   64,   31,  -31,    0]   // ↗↙
+            [  70,  300,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  300,   64,   31,  -31,    0]   // ↔U
+            [ 210,  300,   64,   31,  -31,    0]   // ↔D
+            [ 280,  300,   64,   31,  -31,    0]   // ↕R
+            [ 350,  300,   64,   31,  -31,    0]   // ↕L
+            [ 420,  300,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  300,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  300,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  300,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Tracks underlay
@@ -975,22 +1089,22 @@
         }
 
         spriteset(set_MAIN_LINE_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  190,   64,   31,  -31,    0]   // ↔U
-            [ 210,  190,   64,   31,  -31,    0]   // ↔D
-            [ 280,  190,   64,   31,  -31,    0]   // ↕R
-            [ 350,  190,   64,   31,  -31,    0]   // ↕L
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,  190,   64,   31,  -31,    0]   // +
-            [ 770,  190,   64,   31,  -31,    0]   // combi SW
-            [ 840,  190,   64,   31,  -31,    0]   // combi NE
-            [ 910,  190,   64,   31,  -31,    0]   // combi SE
-            [ 980,  190,   64,   31,  -31,    0]   // combi NW
-            [1050,  190,   64,   31,  -31,    0]   // combi all
+            [   0,  340,   64,   31,  -31,    0]   // ↗↙
+            [  70,  340,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  340,   64,   31,  -31,    0]   // ↔U
+            [ 210,  340,   64,   31,  -31,    0]   // ↔D
+            [ 280,  340,   64,   31,  -31,    0]   // ↕R
+            [ 350,  340,   64,   31,  -31,    0]   // ↕L
+            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  340,   64,   31,  -31,    0]   // +
+            [ 770,  340,   64,   31,  -31,    0]   // combi SW
+            [ 840,  340,   64,   31,  -31,    0]   // combi NE
+            [ 910,  340,   64,   31,  -31,    0]   // combi SE
+            [ 980,  340,   64,   31,  -31,    0]   // combi NW
+            [1050,  340,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -1022,7 +1136,7 @@
             [ 210,  270,   64,   39,  -31,   -8]   // ↘
         }
 
-  // Fences
+    // Fences
         spriteset(set_MAIN_LINE_fences, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [ 700,  220,   32,   25,  -33,  -10]
             [ 740,  220,   32,   25,    3,  -10]
@@ -1053,12 +1167,12 @@
         }
 
         spriteset(set_MAIN_LINE_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  230,   64,   45,  -31,  -18]   // SE entry
-            [  70,  230,   64,   45,   -9,  -29]   // SE
-            [ 140,  230,   64,   45,  -31,  -18]   // SW entry
-            [ 210,  230,   64,   45,  -53,  -29]   // SW
-            [ 280,  230,   64,   45,  -53,  -29]   // NE
-            [ 350,  230,   64,   45,   -9,  -29]   // NW
+            [   0,  380,   64,   45,  -31,  -18]   // SE entry
+            [  70,  380,   64,   45,   -9,  -29]   // SE
+            [ 140,  380,   64,   45,  -31,  -18]   // SW entry
+            [ 210,  380,   64,   45,  -53,  -29]   // SW
+            [ 280,  380,   64,   45,  -53,  -29]   // NE
+            [ 350,  380,   64,   45,   -9,  -29]   // NW
         }
 
     // Bridge surfaces (uses track_underlay's sprites)
@@ -1072,12 +1186,12 @@
         }
 
         spriteset(set_MAIN_LINE_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  340,   64,   31,  -31,    0]   // ↗↙
+            [  70,  340,   64,   31,  -31,    0]   // ↖↘
+            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Level crossing
@@ -1108,29 +1222,29 @@
         }
 
         spriteset(set_MAIN_LINE_track_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  230,   64,   31,  -31,    0]
-            [ 770,  230,   64,   31,  -31,    0]
-            [ 840,  230,    5,   13,    0,  -10]   // N
-            [ 850,  230,   23,   29,   -5,  -10]
-            [ 880,  230,   29,   25,  -24,  -17]   // E
-            [ 910,  230,    5,   13,    0,  -10]
-            [ 920,  230,   29,   25,    0,  -20]   // W
-            [ 950,  230,    5,   13,    0,  -10]
-            [ 960,  230,    5,   13,    0,  -10]   // S
-            [ 970,  230,   23,   23,  -19,  -14]
+            [ 700,  380,   64,   31,  -31,    0]
+            [ 770,  380,   64,   31,  -31,    0]
+            [ 840,  380,    5,   13,    0,  -10]   // N
+            [ 850,  380,   23,   29,   -5,  -10]
+            [ 880,  380,   29,   25,  -24,  -17]   // E
+            [ 910,  380,    5,   13,    0,  -10]
+            [ 920,  380,   29,   25,    0,  -20]   // W
+            [ 950,  380,    5,   13,    0,  -10]
+            [ 960,  380,    5,   13,    0,  -10]   // S
+            [ 970,  380,   23,   23,  -19,  -14]
         }
 
         spriteset(set_MAIN_LINE_track_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  260,   64,   31,  -31,    0]
-            [ 770,  260,   64,   31,  -31,    0]
-            [ 840,  260,    5,   13,    0,  -10]
-            [ 850,  260,   24,   27,   -6,  -22]
-            [ 880,  260,   21,   29,  -16,  -26]
-            [ 910,  260,    5,   13,    0,  -10]
-            [ 920,  260,   20,   28,    0,  -23]
-            [ 950,  260,    5,   13,    0,  -10]
-            [ 960,  260,    5,   13,    0,  -10]
-            [ 970,  260,   23,   29,   -3,  -26]
+            [ 700,  380,   64,   31,  -31,    0]
+            [ 770,  380,   64,   31,  -31,    0]
+            [ 840,  410,    5,   13,    0,  -10]
+            [ 850,  410,   24,   27,   -6,  -22]
+            [ 880,  410,   21,   29,  -16,  -26]
+            [ 910,  410,    5,   13,    0,  -10]
+            [ 920,  410,   20,   28,    0,  -23]
+            [ 950,  410,    5,   13,    0,  -10]
+            [ 960,  410,    5,   13,    0,  -10]
+            [ 970,  410,   23,   29,   -3,  -26]
         }
 
     // Level crossing status
@@ -1258,16 +1372,16 @@
         }
 
         spriteset(set_MAIN_LINE_ELEC_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  150,   64,   31,  -31,    0]   // ↗↙
-            [  70,  150,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  150,   64,   31,  -31,    0]   // ↔U
-            [ 210,  150,   64,   31,  -31,    0]   // ↔D
-            [ 280,  150,   64,   31,  -31,    0]   // ↕R
-            [ 350,  150,   64,   31,  -31,    0]   // ↕L
-            [ 420,  150,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  150,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  150,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  150,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  300,   64,   31,  -31,    0]   // ↗↙
+            [  70,  300,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  300,   64,   31,  -31,    0]   // ↔U
+            [ 210,  300,   64,   31,  -31,    0]   // ↔D
+            [ 280,  300,   64,   31,  -31,    0]   // ↕R
+            [ 350,  300,   64,   31,  -31,    0]   // ↕L
+            [ 420,  300,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  300,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  300,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  300,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Tracks underlay
@@ -1291,22 +1405,22 @@
         }
 
         spriteset(set_MAIN_LINE_ELEC_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  190,   64,   31,  -31,    0]   // ↔U
-            [ 210,  190,   64,   31,  -31,    0]   // ↔D
-            [ 280,  190,   64,   31,  -31,    0]   // ↕R
-            [ 350,  190,   64,   31,  -31,    0]   // ↕L
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,  190,   64,   31,  -31,    0]   // +
-            [ 770,  190,   64,   31,  -31,    0]   // combi SW
-            [ 840,  190,   64,   31,  -31,    0]   // combi NE
-            [ 910,  190,   64,   31,  -31,    0]   // combi SE
-            [ 980,  190,   64,   31,  -31,    0]   // combi NW
-            [1050,  190,   64,   31,  -31,    0]   // combi all
+            [   0,  340,   64,   31,  -31,    0]   // ↗↙
+            [  70,  340,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  340,   64,   31,  -31,    0]   // ↔U
+            [ 210,  340,   64,   31,  -31,    0]   // ↔D
+            [ 280,  340,   64,   31,  -31,    0]   // ↕R
+            [ 350,  340,   64,   31,  -31,    0]   // ↕L
+            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  340,   64,   31,  -31,    0]   // +
+            [ 770,  340,   64,   31,  -31,    0]   // combi SW
+            [ 840,  340,   64,   31,  -31,    0]   // combi NE
+            [ 910,  340,   64,   31,  -31,    0]   // combi SE
+            [ 980,  340,   64,   31,  -31,    0]   // combi NW
+            [1050,  340,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -1413,12 +1527,12 @@
         }
 
         spriteset(set_MAIN_LINE_ELEC_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  230,   64,   45,  -31,  -18]   // SE entry
-            [  70,  230,   64,   45,   -9,  -29]   // SE
-            [ 140,  230,   64,   45,  -31,  -18]   // SW entry
-            [ 210,  230,   64,   45,  -53,  -29]   // SW
-            [ 280,  230,   64,   45,  -53,  -29]   // NE
-            [ 350,  230,   64,   45,   -9,  -29]   // NW
+            [   0,  380,   64,   45,  -31,  -18]   // SE entry
+            [  70,  380,   64,   45,   -9,  -29]   // SE
+            [ 140,  380,   64,   45,  -31,  -18]   // SW entry
+            [ 210,  380,   64,   45,  -53,  -29]   // SW
+            [ 280,  380,   64,   45,  -53,  -29]   // NE
+            [ 350,  380,   64,   45,   -9,  -29]   // NW
         }
 
     // Bridge surfaces (uses track_underlay's sprites)
@@ -1432,12 +1546,12 @@
         }
 
         spriteset(set_MAIN_LINE_ELEC_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  340,   64,   31,  -31,    0]   // ↗↙
+            [  70,  340,   64,   31,  -31,    0]   // ↖↘
+            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Level crossing
@@ -1468,29 +1582,29 @@
         }
 
         spriteset(set_MAIN_LINE_ELEC_track_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  230,   64,   31,  -31,    0]
-            [ 770,  230,   64,   31,  -31,    0]
-            [ 840,  230,    5,   13,    0,  -10]   // N
-            [ 850,  230,   23,   29,   -5,  -10]
-            [ 880,  230,   29,   25,  -24,  -17]   // E
-            [ 910,  230,    5,   13,    0,  -10]
-            [ 920,  230,   29,   25,    0,  -20]   // W
-            [ 950,  230,    5,   13,    0,  -10]
-            [ 960,  230,    5,   13,    0,  -10]   // S
-            [ 970,  230,   23,   23,  -19,  -14]
+            [ 700,  380,   64,   31,  -31,    0]
+            [ 770,  380,   64,   31,  -31,    0]
+            [ 840,  380,    5,   13,    0,  -10]   // N
+            [ 850,  380,   23,   29,   -5,  -10]
+            [ 880,  380,   29,   25,  -24,  -17]   // E
+            [ 910,  380,    5,   13,    0,  -10]
+            [ 920,  380,   29,   25,    0,  -20]   // W
+            [ 950,  380,    5,   13,    0,  -10]
+            [ 960,  380,    5,   13,    0,  -10]   // S
+            [ 970,  380,   23,   23,  -19,  -14]
         }
 
         spriteset(set_MAIN_LINE_ELEC_track_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  260,   64,   31,  -31,    0]
-            [ 770,  260,   64,   31,  -31,    0]
-            [ 840,  260,    5,   13,    0,  -10]
-            [ 850,  260,   24,   27,   -6,  -22]
-            [ 880,  260,   21,   29,  -16,  -26]
-            [ 910,  260,    5,   13,    0,  -10]
-            [ 920,  260,   20,   28,    0,  -23]
-            [ 950,  260,    5,   13,    0,  -10]
-            [ 960,  260,    5,   13,    0,  -10]
-            [ 970,  260,   23,   29,   -3,  -26]
+            [ 700,  380,   64,   31,  -31,    0]
+            [ 770,  380,   64,   31,  -31,    0]
+            [ 840,  410,    5,   13,    0,  -10]
+            [ 850,  410,   24,   27,   -6,  -22]
+            [ 880,  410,   21,   29,  -16,  -26]
+            [ 910,  410,    5,   13,    0,  -10]
+            [ 920,  410,   20,   28,    0,  -23]
+            [ 950,  410,    5,   13,    0,  -10]
+            [ 960,  410,    5,   13,    0,  -10]
+            [ 970,  410,   23,   29,   -3,  -26]
         }
 
     // Level crossing status
@@ -1620,16 +1734,16 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  150,   64,   31,  -31,    0]   // ↗↙
-            [  70,  150,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  150,   64,   31,  -31,    0]   // ↔U
-            [ 210,  150,   64,   31,  -31,    0]   // ↔D
-            [ 280,  150,   64,   31,  -31,    0]   // ↕R
-            [ 350,  150,   64,   31,  -31,    0]   // ↕L
-            [ 420,  150,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  150,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  150,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  150,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  300,   64,   31,  -31,    0]   // ↗↙
+            [  70,  300,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  300,   64,   31,  -31,    0]   // ↔U
+            [ 210,  300,   64,   31,  -31,    0]   // ↔D
+            [ 280,  300,   64,   31,  -31,    0]   // ↕R
+            [ 350,  300,   64,   31,  -31,    0]   // ↕L
+            [ 420,  300,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  300,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  300,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  300,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Tracks underlay
@@ -1653,22 +1767,22 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  190,   64,   31,  -31,    0]   // ↔U
-            [ 210,  190,   64,   31,  -31,    0]   // ↔D
-            [ 280,  190,   64,   31,  -31,    0]   // ↕R
-            [ 350,  190,   64,   31,  -31,    0]   // ↕L
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,  190,   64,   31,  -31,    0]   // +
-            [ 770,  190,   64,   31,  -31,    0]   // combi SW
-            [ 840,  190,   64,   31,  -31,    0]   // combi NE
-            [ 910,  190,   64,   31,  -31,    0]   // combi SE
-            [ 980,  190,   64,   31,  -31,    0]   // combi NW
-            [1050,  190,   64,   31,  -31,    0]   // combi all
+            [   0,  340,   64,   31,  -31,    0]   // ↗↙
+            [  70,  340,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  340,   64,   31,  -31,    0]   // ↔U
+            [ 210,  340,   64,   31,  -31,    0]   // ↔D
+            [ 280,  340,   64,   31,  -31,    0]   // ↕R
+            [ 350,  340,   64,   31,  -31,    0]   // ↕L
+            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  340,   64,   31,  -31,    0]   // +
+            [ 770,  340,   64,   31,  -31,    0]   // combi SW
+            [ 840,  340,   64,   31,  -31,    0]   // combi NE
+            [ 910,  340,   64,   31,  -31,    0]   // combi SE
+            [ 980,  340,   64,   31,  -31,    0]   // combi NW
+            [1050,  340,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -1679,7 +1793,7 @@
             [ 210, 1090,   64,   39,  -31,   -8]   // ↘
         }
 
-        spriteset(set_MAIN_LINE_URBAN_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0, 1240,   64,   39,  -31,   -8]   // ↙
             [  70, 1240,   64,   31,  -31,    0]   // ↖
             [ 140, 1240,   64,   31,  -31,    0]   // ↗
@@ -1741,12 +1855,12 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  350,   64,   47,  -31,  -20]   // SE entry
-            [  70,  350,   64,   47,   -9,  -31]   // SE
-            [ 140,  350,   64,   47,  -31,  -20]   // SW entry
-            [ 210,  350,   64,   47,  -53,  -31]   // SW
-            [ 280,  350,   64,   47,  -53,  -31]   // NE
-            [ 350,  350,   64,   47,   -9,  -31]   // NW
+            [   0,  500,   64,   47,  -31,  -20]   // SE entry
+            [  70,  500,   64,   47,   -9,  -31]   // SE
+            [ 140,  500,   64,   47,  -31,  -20]   // SW entry
+            [ 210,  500,   64,   47,  -53,  -31]   // SW
+            [ 280,  500,   64,   47,  -53,  -31]   // NE
+            [ 350,  500,   64,   47,   -9,  -31]   // NW
         }
 
     // Fences
@@ -1778,10 +1892,10 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  300,   64,   39,  -31,  -38]  // ↙
-            [  70,  300,   64,   39,  -31,  -38]  // ↖
-            [ 140,  300,   64,   39,  -31,  -38]  // ↗
-            [ 210,  300,   64,   39,  -31,  -38]  // ↘
+            [   0,  450,   64,   39,  -31,  -38]  // ↙
+            [  70,  450,   64,   39,  -31,  -38]  // ↖
+            [ 140,  450,   64,   39,  -31,  -38]  // ↗
+            [ 210,  450,   64,   39,  -31,  -38]  // ↘
         }
 
     // Bridge surfaces (uses track_underlay's sprites)
@@ -1795,12 +1909,12 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,  340,   64,   31,  -31,    0]   // ↗↙
+            [  70,  340,   64,   31,  -31,    0]   // ↖↘
+            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Level crossing
@@ -1831,29 +1945,29 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  230,   64,   31,  -31,    0]
-            [ 770,  230,   64,   31,  -31,    0]
-            [ 840,  230,    5,   13,    0,  -10]   // N
-            [ 850,  230,   23,   29,   -5,  -10]
-            [ 880,  230,   29,   25,  -24,  -17]   // E
-            [ 910,  230,    5,   13,    0,  -10]
-            [ 920,  230,   29,   25,    0,  -20]   // W
-            [ 950,  230,    5,   13,    0,  -10]
-            [ 960,  230,    5,   13,    0,  -10]   // S
-            [ 970,  230,   23,   23,  -19,  -14]
+            [ 700,  380,   64,   31,  -31,    0]
+            [ 770,  380,   64,   31,  -31,    0]
+            [ 840,  380,    5,   13,    0,  -10]   // N
+            [ 850,  380,   23,   29,   -5,  -10]
+            [ 880,  380,   29,   25,  -24,  -17]   // E
+            [ 910,  380,    5,   13,    0,  -10]
+            [ 920,  380,   29,   25,    0,  -20]   // W
+            [ 950,  380,    5,   13,    0,  -10]
+            [ 960,  380,    5,   13,    0,  -10]   // S
+            [ 970,  380,   23,   23,  -19,  -14]
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  260,   64,   31,  -31,    0]
-            [ 770,  260,   64,   31,  -31,    0]
-            [ 840,  260,    5,   13,    0,  -10]
-            [ 850,  260,   24,   27,   -6,  -22]
-            [ 880,  260,   21,   29,  -16,  -26]
-            [ 910,  260,    5,   13,    0,  -10]
-            [ 920,  260,   20,   28,    0,  -23]
-            [ 950,  260,    5,   13,    0,  -10]
-            [ 960,  260,    5,   13,    0,  -10]
-            [ 970,  260,   23,   29,   -3,  -26]
+            [ 700,  380,   64,   31,  -31,    0]
+            [ 770,  380,   64,   31,  -31,    0]
+            [ 840,  410,    5,   13,    0,  -10]
+            [ 850,  410,   24,   27,   -6,  -22]
+            [ 880,  410,   21,   29,  -16,  -26]
+            [ 910,  410,    5,   13,    0,  -10]
+            [ 920,  410,   20,   28,    0,  -23]
+            [ 950,  410,    5,   13,    0,  -10]
+            [ 960,  410,    5,   13,    0,  -10]
+            [ 970,  410,   23,   29,   -3,  -26]
         }
 
     // Level crossing status
@@ -1941,7 +2055,7 @@
                 gui:                            set_MAIN_LINE_URBAN_gui;
                 track_overlay:                  sw_MAIN_LINE_URBAN_track_overlay;
                 underlay:                       sw_MAIN_LINE_URBAN_track_underlay;
-                tunnels:                        set_MAIN_LINE_URBAN_track_tunnel_underlay;
+                tunnels:                        sw_MAIN_LINE_URBAN_track_tunnel_underlay;
                 tunnel_overlay:                 sw_MAIN_LINE_URBAN_track_tunnel_overlay;
                 depots:                         sw_MAIN_LINE_URBAN_track_depot;
                 bridge_surfaces:                sw_MAIN_LINE_URBAN_track_bridge;
@@ -1987,6 +2101,19 @@
             [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
+        spriteset(set_SEMI_HIGH_SPEED_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  570,   64,   31,  -31,    0]   // ↗↙
+            [  70,  570,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  570,   64,   31,  -31,    0]   // ↔U
+            [ 210,  570,   64,   31,  -31,    0]   // ↔D
+            [ 280,  570,   64,   31,  -31,    0]   // ↕R
+            [ 350,  570,   64,   31,  -31,    0]   // ↕L
+            [ 420,  570,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  570,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  570,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  570,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
     // Tracks underlay
         spriteset(set_SEMI_HIGH_SPEED_track_underlay, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
             [   0,   80,   64,   31,  -31,    0]   // ↗↙
@@ -2005,6 +2132,25 @@
             [ 910,   80,   64,   31,  -31,    0]   // combi SE
             [ 980,   80,   64,   31,  -31,    0]   // combi NW
             [1050,   80,   64,   31,  -31,    0]   // combi all
+        }
+
+        spriteset(set_SEMI_HIGH_SPEED_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  610,   64,   31,  -31,    0]   // ↗↙
+            [  70,  610,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  610,   64,   31,  -31,    0]   // ↔U
+            [ 210,  610,   64,   31,  -31,    0]   // ↔D
+            [ 280,  610,   64,   31,  -31,    0]   // ↕R
+            [ 350,  610,   64,   31,  -31,    0]   // ↕L
+            [ 420,  610,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  610,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  610,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  610,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  610,   64,   31,  -31,    0]   // +
+            [ 770,  610,   64,   31,  -31,    0]   // combi SW
+            [ 840,  610,   64,   31,  -31,    0]   // combi NE
+            [ 910,  610,   64,   31,  -31,    0]   // combi SE
+            [ 980,  610,   64,   31,  -31,    0]   // combi NW
+            [1050,  610,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -2090,6 +2236,15 @@
             [ 350,  320,   64,   47,   -9,  -31]   // NW
         }
 
+        spriteset(set_SEMI_HIGH_SPEED_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  650,   64,   50,  -31,  -23]   // SE entry
+            [  70,  650,   64,   50,   -9,  -34]   // SE
+            [ 140,  650,   64,   50,  -31,  -23]   // SW entry
+            [ 210,  650,   64,   50,  -53,  -34]   // SW
+            [ 280,  650,   64,   50,  -53,  -34]   // NE
+            [ 350,  650,   64,   50,   -9,  -34]   // NW
+        }
+
     // Fences
         spriteset(set_SEMI_HIGH_SPEED_fences, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
             [ 700,  220,   32,   25,  -33,  -10]
@@ -2120,7 +2275,16 @@
             [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
-        // Graphic for terrain
+        spriteset(set_SEMI_HIGH_SPEED_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,  610,   64,   31,  -31,    0]   // ↗↙
+            [ 770,  610,   64,   31,  -31,    0]   // ↖↘
+            [ 840,  610,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 910,  610,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 980,  610,   64,   23,  -31,    0]   // ↙ slope up
+            [1050,  610,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+    // Graphic for terrain
         switch(FEAT_RAILTYPES, SELF, sw_SEMI_HIGH_SPEED_track_tunnel_underlay, terrain_type) {
             TILETYPE_NORMAL:                    set_SEMI_HIGH_SPEED_track_tunnel_underlay;
             TILETYPE_DESERT:                    set_SEMI_HIGH_SPEED_track_tunnel_underlay_desert;
@@ -2128,7 +2292,31 @@
             TILETYPE_SNOW:                      set_SEMI_HIGH_SPEED_track_tunnel_underlay_snow;
             set_SEMI_HIGH_SPEED_track_tunnel_underlay;
         }
-    
+
+        switch(FEAT_RAILTYPES, SELF, sw_SEMI_HIGH_SPEED_track_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_SEMI_HIGH_SPEED_track_overlay;
+            TILETYPE_SNOW:                      set_SEMI_HIGH_SPEED_track_overlay_SNOW;            
+            set_SEMI_HIGH_SPEED_track_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SEMI_HIGH_SPEED_track_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_SEMI_HIGH_SPEED_track_underlay;
+            TILETYPE_SNOW:                      set_SEMI_HIGH_SPEED_track_underlay_SNOW;            
+            set_SEMI_HIGH_SPEED_track_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SEMI_HIGH_SPEED_track_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_SEMI_HIGH_SPEED_track_depot;
+            TILETYPE_SNOW:                      set_SEMI_HIGH_SPEED_track_depot_SNOW;            
+            set_SEMI_HIGH_SPEED_track_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SEMI_HIGH_SPEED_track_bridge, terrain_type) {
+            TILETYPE_NORMAL:                    set_SEMI_HIGH_SPEED_track_bridge;
+            TILETYPE_SNOW:                      set_SEMI_HIGH_SPEED_track_bridge_SNOW;            
+            set_SEMI_HIGH_SPEED_track_bridge;
+        }
+
     // Define SEMI_HIGH_SPEED
         item(FEAT_RAILTYPES, track_SEMI_HIGH_SPEED, 06) {
             property {
@@ -2156,11 +2344,11 @@
 
             graphics {
                 gui:                            set_SEMI_HIGH_SPEED_gui;
-                track_overlay:                  set_SEMI_HIGH_SPEED_track_overlay;
-                underlay:                       set_SEMI_HIGH_SPEED_track_underlay;
+                track_overlay:                  sw_SEMI_HIGH_SPEED_track_overlay;
+                underlay:                       sw_SEMI_HIGH_SPEED_track_underlay;
                 tunnels:                        sw_SEMI_HIGH_SPEED_track_tunnel_underlay;
-                depots:                         set_SEMI_HIGH_SPEED_track_depot;
-                bridge_surfaces:                set_SEMI_HIGH_SPEED_track_bridge;
+                depots:                         sw_SEMI_HIGH_SPEED_track_depot;
+                bridge_surfaces:                sw_SEMI_HIGH_SPEED_track_bridge;
                 catenary_wire:                  set_SEMI_HIGH_SPEED_track_wire;
                 catenary_pylons:                set_SEMI_HIGH_SPEED_track_pylons;
                 fences:                         set_SEMI_HIGH_SPEED_fences;
@@ -2202,6 +2390,19 @@
             [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
+        spriteset(set_HIGH_SPEED_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  720,   64,   31,  -31,    0]   // ↗↙
+            [  70,  720,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  720,   64,   31,  -31,    0]   // ↔U
+            [ 210,  720,   64,   31,  -31,    0]   // ↔D
+            [ 280,  720,   64,   31,  -31,    0]   // ↕R
+            [ 350,  720,   64,   31,  -31,    0]   // ↕L
+            [ 420,  720,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  720,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  720,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  720,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
     // Tracks underlay
         spriteset(set_HIGH_SPEED_track_underlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
             [   0,   80,   64,   31,  -31,    0]   // ↗↙
@@ -2220,6 +2421,25 @@
             [ 910,   80,   64,   31,  -31,    0]   // combi SE
             [ 980,   80,   64,   31,  -31,    0]   // combi NW
             [1050,   80,   64,   31,  -31,    0]   // combi all
+        }
+
+        spriteset(set_HIGH_SPEED_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  760,   64,   31,  -31,    0]   // ↗↙
+            [  70,  760,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  760,   64,   31,  -31,    0]   // ↔U
+            [ 210,  760,   64,   31,  -31,    0]   // ↔D
+            [ 280,  760,   64,   31,  -31,    0]   // ↕R
+            [ 350,  760,   64,   31,  -31,    0]   // ↕L
+            [ 420,  760,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  760,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  760,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  760,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  760,   64,   31,  -31,    0]   // +
+            [ 770,  760,   64,   31,  -31,    0]   // combi SW
+            [ 840,  760,   64,   31,  -31,    0]   // combi NE
+            [ 910,  760,   64,   31,  -31,    0]   // combi SE
+            [ 980,  760,   64,   31,  -31,    0]   // combi NW
+            [1050,  760,   64,   31,  -31,    0]   // combi all
         }
 
     // Tunnels
@@ -2305,6 +2525,15 @@
             [ 350,  320,   64,   47,   -9,  -31]   // NW
         }
 
+        spriteset(set_HIGH_SPEED_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  800,   64,   50,  -31,  -23]   // SE entry
+            [  70,  800,   64,   50,   -9,  -34]   // SE
+            [ 140,  800,   64,   50,  -31,  -23]   // SW entry
+            [ 210,  800,   64,   50,  -53,  -34]   // SW
+            [ 280,  800,   64,   50,  -53,  -34]   // NE
+            [ 350,  800,   64,   50,   -9,  -34]   // NW
+        }
+
     // Fences
         spriteset(set_HIGH_SPEED_fences, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
             [ 700,  220,   32,   25,  -33,  -10]
@@ -2335,7 +2564,16 @@
             [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
-        // Graphic for terrain
+        spriteset(set_HIGH_SPEED_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,  760,   64,   31,  -31,    0]   // ↗↙
+            [ 770,  760,   64,   31,  -31,    0]   // ↖↘
+            [ 840,  760,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 910,  760,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 980,  760,   64,   23,  -31,    0]   // ↙ slope up
+            [1050,  760,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+    // Graphic for terrain
         switch(FEAT_RAILTYPES, SELF, sw_HIGH_SPEED_track_tunnel_underlay, terrain_type) {
             TILETYPE_NORMAL:                    set_HIGH_SPEED_track_tunnel_underlay;
             TILETYPE_DESERT:                    set_HIGH_SPEED_track_tunnel_underlay_desert;
@@ -2343,7 +2581,30 @@
             TILETYPE_SNOW:                      set_HIGH_SPEED_track_tunnel_underlay_snow;
             set_HIGH_SPEED_track_tunnel_underlay;
         }
-    
+
+        switch(FEAT_RAILTYPES, SELF, sw_HIGH_SPEED_track_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_HIGH_SPEED_track_overlay;
+            TILETYPE_SNOW:                      set_HIGH_SPEED_track_overlay_SNOW;            
+            set_HIGH_SPEED_track_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_HIGH_SPEED_track_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_HIGH_SPEED_track_underlay;
+            TILETYPE_SNOW:                      set_HIGH_SPEED_track_underlay_SNOW;            
+            set_HIGH_SPEED_track_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_HIGH_SPEED_track_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_HIGH_SPEED_track_depot;
+            TILETYPE_SNOW:                      set_HIGH_SPEED_track_depot_SNOW;            
+            set_HIGH_SPEED_track_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_HIGH_SPEED_track_bridge, terrain_type) {
+            TILETYPE_NORMAL:                    set_HIGH_SPEED_track_bridge;
+            TILETYPE_SNOW:                      set_HIGH_SPEED_track_bridge_SNOW;            
+            set_HIGH_SPEED_track_bridge;
+        }    
 
     // Define HIGH_SPEED
         item(FEAT_RAILTYPES, track_HIGH_SPEED, 07) {
@@ -2372,11 +2633,11 @@
 
             graphics {
                 gui:                            set_HIGH_SPEED_gui;
-                track_overlay:                  set_HIGH_SPEED_track_overlay;
-                underlay:                       set_HIGH_SPEED_track_underlay;
+                track_overlay:                  sw_HIGH_SPEED_track_overlay;
+                underlay:                       sw_HIGH_SPEED_track_underlay;
                 tunnels:                        sw_HIGH_SPEED_track_tunnel_underlay;
-                depots:                         set_HIGH_SPEED_track_depot;
-                bridge_surfaces:                set_HIGH_SPEED_track_bridge;
+                depots:                         sw_HIGH_SPEED_track_depot;
+                bridge_surfaces:                sw_HIGH_SPEED_track_bridge;
                 catenary_wire:                  set_HIGH_SPEED_track_wire;
                 catenary_pylons:                set_HIGH_SPEED_track_pylons;
                 fences:                         set_HIGH_SPEED_fences;
@@ -2385,7 +2646,7 @@
 
 // METRO_LINE
     // GUI
-        spriteset(set_METRO_LINE_gui, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_gui, "./Korean_Tracks/gfx/METRO.png") {
             [   0,    0,    8,   18,    7,    0]   // ↕
             [  15,    0,   20,   16,    1,    2]   // ↗
             [  48,    0,   20,   12,    1,    6]   // ↔
@@ -2405,7 +2666,7 @@
         }
 
     // Tracks overlay
-        spriteset(set_METRO_LINE_track_overlay, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_overlay, "./Korean_Tracks/gfx/METRO.png") {
             [   0,   40,   64,   31,  -31,    0]   // ↗↙
             [  70,   40,   64,   31,  -31,    0]   // ↖↘
             [ 140,   40,   64,   31,  -31,    0]   // ↔U
@@ -2418,8 +2679,21 @@
             [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
+        spriteset(set_METRO_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  870,   64,   31,  -31,    0]   // ↗↙
+            [  70,  870,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  870,   64,   31,  -31,    0]   // ↔U
+            [ 210,  870,   64,   31,  -31,    0]   // ↔D
+            [ 280,  870,   64,   31,  -31,    0]   // ↕R
+            [ 350,  870,   64,   31,  -31,    0]   // ↕L
+            [ 420,  870,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  870,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  870,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  870,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
     // Tracks underlay
-        spriteset(set_METRO_LINE_track_underlay, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_underlay, "./Korean_Tracks/gfx/METRO.png") {
             [   0,   80,   64,   31,  -31,    0]   // ↗↙
             [  70,   80,   64,   31,  -31,    0]   // ↖↘
             [ 140,   80,   64,   31,  -31,    0]   // ↔U
@@ -2438,29 +2712,34 @@
             [1050,   80,   64,   31,  -31,    0]   // combi all
         }
 
+        spriteset(set_METRO_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  910,   64,   31,  -31,    0]   // ↗↙
+            [  70,  910,   64,   31,  -31,    0]   // ↖↘
+            [ 140,  910,   64,   31,  -31,    0]   // ↔U
+            [ 210,  910,   64,   31,  -31,    0]   // ↔D
+            [ 280,  910,   64,   31,  -31,    0]   // ↕R
+            [ 350,  910,   64,   31,  -31,    0]   // ↕L
+            [ 420,  910,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,  910,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,  910,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,  910,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,  910,   64,   31,  -31,    0]   // +
+            [ 770,  910,   64,   31,  -31,    0]   // combi SW
+            [ 840,  910,   64,   31,  -31,    0]   // combi NE
+            [ 910,  910,   64,   31,  -31,    0]   // combi SE
+            [ 980,  910,   64,   31,  -31,    0]   // combi NW
+            [1050,  910,   64,   31,  -31,    0]   // combi all
+        }
+
     // Tunnels
-        spriteset(set_METRO_LINE_track_tunnel_underlay, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_tunnel_underlay, "./Korean_Tracks/gfx/METRO.png") {
             [   0,  120,   64,   39,  -31,   -8]   // ↙
             [  70,  120,   64,   31,  -31,    0]   // ↖
             [ 140,  120,   64,   31,  -31,    0]   // ↗
             [ 210,  120,   64,   39,  -31,   -8]   // ↘
         }
 
-        spriteset(set_METRO_LINE_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/METRO_LINE.png") {
-            [   0,  170,   64,   39,  -31,   -8]   // ↙
-            [  70,  170,   64,   31,  -31,    0]   // ↖
-            [ 140,  170,   64,   31,  -31,    0]   // ↗
-            [ 210,  170,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_METRO_LINE_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/METRO_LINE.png") {
-            [   0,  220,   64,   39,  -31,   -8]   // ↙
-            [  70,  220,   64,   31,  -31,    0]   // ↖
-            [ 140,  220,   64,   31,  -31,    0]   // ↗
-            [ 210,  220,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_METRO_LINE_track_tunnel_underlay_snow, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/METRO.png") {
             [   0,  270,   64,   39,  -31,   -8]   // ↙
             [  70,  270,   64,   31,  -31,    0]   // ↖
             [ 140,  270,   64,   31,  -31,    0]   // ↗
@@ -2468,7 +2747,7 @@
         }
 
     // Catenary Wire
-        spriteset(set_METRO_LINE_wire, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_wire, "./Korean_Tracks/gfx/METRO.png") {
             [   0,  400,   32,   24,  -29,   -6]  // one tile
             [  40,  400,   32,   24,   -1,   -6]
             [  80,  400,   32,   24,   -1,  -13]
@@ -2500,7 +2779,7 @@
         }
 
     // Catenary Pylons
-        spriteset(set_METRO_LINE_pylons, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_pylons, "./Korean_Tracks/gfx/METRO.png") {
             [   0,  545,   11,   26,  -10,  -18]  // ↙
             [  20,  545,   11,   26,    0,  -21]  // ↗
             [  40,  545,   11,   26,    1,  -18]  // ↘
@@ -2512,7 +2791,7 @@
         }
 
     // Depot
-        spriteset(set_METRO_LINE_track_depot, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_depot, "./Korean_Tracks/gfx/METRO.png") {
             [   0,  320,   64,   47,  -31,  -20]   // SE entry
             [  70,  320,   64,   47,   -9,  -31]   // SE
             [ 140,  320,   64,   47,  -31,  -20]   // SW entry
@@ -2521,8 +2800,17 @@
             [ 350,  320,   64,   47,   -9,  -31]   // NW
         }
 
+        spriteset(set_METRO_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  950,   64,   50,  -31,  -23]   // SE entry
+            [  70,  950,   64,   50,   -9,  -34]   // SE
+            [ 140,  950,   64,   50,  -31,  -23]   // SW entry
+            [ 210,  950,   64,   50,  -53,  -34]   // SW
+            [ 280,  950,   64,   50,  -53,  -34]   // NE
+            [ 350,  950,   64,   50,   -9,  -34]   // NW
+        }
+
     // Fences
-        spriteset(set_METRO_LINE_fences, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_fences, "./Korean_Tracks/gfx/METRO.png") {
             [ 700,  220,   32,   25,  -33,  -10]
             [ 740,  220,   32,   25,    3,  -10]
             [ 780,  220,    8,   35,   -3,  -24]
@@ -2542,15 +2830,22 @@
         }
 
     // Tunnel overlay
-        spriteset(set_METRO_LINE_tunnel_overlay, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_tunnel_overlay, "./Korean_Tracks/gfx/METRO.png") {
             [ 280,  170,   64,   39,  -31,  -38]  // ↙
             [ 350,  170,   64,   39,  -31,  -38]  // ↖
             [ 420,  170,   64,   39,  -31,  -38]  // ↗
             [ 490,  170,   64,   39,  -31,  -38]  // ↘
         }
 
+        spriteset(set_METRO_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0,  450,   64,   39,  -31,  -38]  // ↙
+            [  70,  450,   64,   39,  -31,  -38]  // ↖
+            [ 140,  450,   64,   39,  -31,  -38]  // ↗
+            [ 210,  450,   64,   39,  -31,  -38]  // ↘
+        }
+
     // Bridge surfaces
-        spriteset(set_METRO_LINE_track_bridge, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_bridge, "./Korean_Tracks/gfx/METRO.png") {
             [ 700,  270,   64,   31,  -31,    0]   // ↗↙
             [ 770,  270,   64,   31,  -31,    0]   // ↖↘
             [ 840,  270,   64,   39,  -31,   -8]   // ↗ slope up
@@ -2559,8 +2854,17 @@
             [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
+        spriteset(set_METRO_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,  910,   64,   31,  -31,    0]   // ↗↙
+            [ 770,  910,   64,   31,  -31,    0]   // ↖↘
+            [ 840,  910,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 910,  910,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 980,  910,   64,   23,  -31,    0]   // ↙ slope up
+            [1050,  910,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
     // Level crossing
-        spriteset(set_METRO_LINE_track_crossing_close, "./Korean_Tracks/gfx/METRO_LINE.png") {
+        spriteset(set_METRO_level_crossing_close, "./Korean_Tracks/gfx/METRO.png") {
             [ 700,  120,   64,   31,  -31,    0]
             [ 770,  120,   64,   31,  -31,    0]
             [ 840,  120,    5,   13,    0,  -10]   // N
@@ -2572,7 +2876,8 @@
             [ 960,  120,    5,   13,    0,  -10]   // S
             [ 970,  120,   23,   23,  -19,  -20]
         }
-        spriteset(set_METRO_LINE_track_crossing_open, "./Korean_Tracks/gfx/METRO_LINE.png") {
+
+        spriteset(set_METRO_level_crossing_open, "./Korean_Tracks/gfx/METRO.png") {
             [ 700,  120,   64,   31,  -31,    0]
             [ 770,  120,   64,   31,  -31,    0]
             [ 840,  150,    5,   13,    0,  -10]
@@ -2585,37 +2890,102 @@
             [ 970,  150,   23,   29,  -18,  -26]
         }
 
-    // Graphic for terrain
-        switch(FEAT_RAILTYPES, SELF, sw_METRO_LINE_track_tunnel_underlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_METRO_LINE_track_tunnel_underlay;
-            TILETYPE_DESERT:                    set_METRO_LINE_track_tunnel_underlay_desert;
-            TILETYPE_RAIN_FOREST:               set_METRO_LINE_track_tunnel_underlay_rain;
-            TILETYPE_SNOW:                      set_METRO_LINE_track_tunnel_underlay_snow;            
-            set_METRO_LINE_track_tunnel_underlay;
+        spriteset(set_METRO_level_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,  950,   64,   31,  -31,    0]
+            [ 770,  950,   64,   31,  -31,    0]
+            [ 840,  380,    5,   13,    0,  -10]   // N
+            [ 850,  380,   23,   29,   -5,  -17]
+            [ 880,  380,   29,   25,  -24,  -17]   // E
+            [ 910,  380,    5,   13,   -3,  -10]
+            [ 920,  380,   29,   25,    0,  -20]   // W
+            [ 950,  380,    5,   13,   -3,  -10]
+            [ 960,  380,    5,   13,    0,  -10]   // S
+            [ 970,  380,   23,   23,  -19,  -20]
+        }
+        spriteset(set_METRO_level_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700,  950,   64,   31,  -31,    0]
+            [ 770,  950,   64,   31,  -31,    0]
+            [ 840,  410,    5,   13,    0,  -10]
+            [ 850,  410,   24,   27,   -6,  -22]
+            [ 880,  410,   21,   29,  -16,  -26]
+            [ 910,  410,    5,   13,   -3,  -10]
+            [ 920,  410,   20,   28,    0,  -23]
+            [ 950,  410,    5,   13,   -3,  -10]
+            [ 960,  410,    5,   13,    0,  -10]
+            [ 970,  410,   23,   29,  -18,  -26]
         }
 
     // Level crossing status
-        switch(FEAT_RAILTYPES, SELF, sw_METRO_LINE_track_level_crossing, level_crossing_status) {
-            LEVEL_CROSSING_CLOSED:              set_METRO_LINE_track_crossing_close;
-            LEVEL_CROSSING_OPEN:              
-            set_METRO_LINE_track_crossing_open;
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_level_crossing, level_crossing_status) {
+            LEVEL_CROSSING_CLOSED:              set_METRO_level_crossing_close;
+            LEVEL_CROSSING_OPEN:                set_METRO_level_crossing_open;             
+            set_METRO_level_crossing_open;
         }
 
-    // Define METRO_LINE
-        item(FEAT_RAILTYPES, track_METRO_LINE, 08) {
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_level_crossing_SNOW, level_crossing_status) {
+            LEVEL_CROSSING_CLOSED:              set_METRO_level_crossing_close_SNOW;
+            LEVEL_CROSSING_OPEN:                set_METRO_level_crossing_open_SNOW;             
+            set_METRO_level_crossing_open_SNOW;
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_METRO_overlay;
+            TILETYPE_SNOW:                      set_METRO_overlay_SNOW;            
+            set_METRO_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_METRO_underlay;
+            TILETYPE_SNOW:                      set_METRO_underlay_SNOW;            
+            set_METRO_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_METRO_depot;
+            TILETYPE_SNOW:                      set_METRO_depot_SNOW;            
+            set_METRO_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_tunnel_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_METRO_tunnel_overlay;
+            TILETYPE_SNOW:                      set_METRO_tunnel_overlay_SNOW;            
+            set_METRO_tunnel_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_tunnel_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_METRO_tunnel_underlay;
+            TILETYPE_SNOW:                      set_METRO_tunnel_underlay_SNOW;            
+            set_METRO_tunnel_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_METRO_bridge, terrain_type) {
+            TILETYPE_NORMAL:                    set_METRO_bridge;
+            TILETYPE_SNOW:                      set_METRO_bridge_SNOW;            
+            set_METRO_bridge;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_set_METRO_level_crossing, terrain_type) {
+            TILETYPE_NORMAL:                    sw_METRO_level_crossing;
+            TILETYPE_SNOW:                      sw_METRO_level_crossing_SNOW;            
+            sw_METRO_level_crossing;
+        }
+
+    // Define METRO
+        item(FEAT_RAILTYPES, track_METRO, 08) {
             property {
                 label:                          "KMTR";
                 introduction_date:              date(1972, 1, 1);               
-                name:                           string(STR_METRO_LINE_TRACK_NAME);
-                menu_text:                      string(STR_METRO_LINE_TRACK_DROPDOWN_MENU);
-                toolbar_caption:                string(STR_METRO_LINE_TRACK_TOOLBAR_CAPTION);
-                build_window_caption:           string(STR_METRO_LINE_BUILD_VEHICLE_CAPTION);
-                new_engine_text:                string(STR_METRO_LINE_NEW_ENGINE);
-                autoreplace_text:               string(STR_METRO_LINE_AUTOREPLACE);
+                name:                           string(STR_TRACK_METRO_NAME);
+                menu_text:                      string(STR_TRACK_METRO_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_METRO_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_METRO_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_METRO_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_METRO_AUTOREPLACE);
 
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
-                speed_limit:                    para_speed_METRO_LINE km/h;
+                speed_limit:                    para_speed_METRO km/h;
                 construction_cost:              16;
                 maintenance_cost:               18;
                 sort_order:                     08;
@@ -2627,105 +2997,382 @@
             }
 
             graphics {
-                gui:                            set_METRO_LINE_gui;
-                track_overlay:                  set_METRO_LINE_track_overlay;
-                underlay:                       set_METRO_LINE_track_underlay;
-                tunnels:                        sw_METRO_LINE_track_tunnel_underlay;
-                tunnel_overlay:                 set_METRO_LINE_tunnel_overlay;
-                depots:                         set_METRO_LINE_track_depot;
-                bridge_surfaces:                set_METRO_LINE_track_bridge;
-                level_crossings:                sw_METRO_LINE_track_level_crossing;
-                catenary_wire:                  set_METRO_LINE_wire;
-                catenary_pylons:                set_METRO_LINE_pylons;
-                fences:                         set_METRO_LINE_fences;
+                gui:                            set_METRO_gui;
+                track_overlay:                  sw_METRO_overlay;
+                underlay:                       sw_METRO_underlay;
+                tunnels:                        sw_METRO_tunnel_underlay;
+                tunnel_overlay:                 sw_METRO_tunnel_overlay;
+                depots:                         sw_METRO_depot;
+                bridge_surfaces:                sw_METRO_bridge;
+                level_crossings:                sw_set_METRO_level_crossing;
+                catenary_wire:                  set_METRO_wire;
+                catenary_pylons:                set_METRO_pylons;
+                fences:                         set_METRO_fences;
             }
         }
 
 // OBJECTS
-    // Depot Mainline
-        spriteset(set_object_depot_mainline, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  320,   64,   44,  -31,  -13]
-            [ 140,  320,   64,   44,  -31,  -13]
-            [ 280,  320,   64,   44,  -31,  -13]
-            [ 350,  320,   64,   44,  -31,  -13]
-        }
-
-        spritelayout sply_object_depot_mainline_SW {
-            ground {
-                sprite:                          GROUNDSPRITE_NORMAL;
+    // Depot Narrow 762mm
+        // Spritesets 
+            spriteset(set_object_depot_narrow_762, "./Korean_Tracks/gfx/NARROW_762.png") {
+                [   0,  320,   64,   45,  -31,  -14]
+                [ 140,  320,   64,   45,  -31,  -14]
+                [ 280,  320,   64,   45,  -31,  -14]
+                [ 350,  320,   64,   45,  -31,  -14]
             }
 
-            building {
-                sprite:                          set_object_depot_mainline (0);
-                xextent:                         16; // default
-                yextent:                         16;
-                zextent:                         16; 
-                xoffset:                         0; // from NE edge, default
-                yoffset:                         0; // from NW edge
-                zoffset:                         0;
-            }
-        }
-
-        spritelayout sply_object_depot_mainline_NW {
-            ground {
-                sprite:                          GROUNDSPRITE_NORMAL;
+            spriteset(set_object_depot_narrow_762_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,   80,   64,   50,  -31,  -19]
+                [ 140,   80,   64,   50,  -31,  -19]
+                [ 280,   80,   64,   50,  -31,  -19]
+                [ 350,   80,   64,   50,  -31,  -19]
             }
 
-            building {
-                sprite:                          set_object_depot_mainline (1);
-                xextent:                         16; // default
-                yextent:                         16;
-                zextent:                         16; 
-                xoffset:                         0; // from NE edge, default
-                yoffset:                         0; // from NW edge
-                zoffset:                         0;
-            }
-        }
+        // Spritelayouts 
+            spritelayout sply_object_depot_narrow_762_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
 
-        spritelayout sply_object_depot_mainline_NE {
-            ground {
-                sprite:                          GROUNDSPRITE_NORMAL;
-            }
-
-            building {
-                sprite:                          set_object_depot_mainline (2);
-                xextent:                         16; // default
-                yextent:                         16;
-                zextent:                         16; 
-                xoffset:                         0; // from NE edge, default
-                yoffset:                         0; // from NW edge
-                zoffset:                         0;
-            }
-        }
-
-        spritelayout sply_object_depot_mainline_SE {
-            ground {
-                sprite:                          GROUNDSPRITE_NORMAL;
+                building {
+                    sprite:                          set_object_depot_narrow_762 (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
             }
 
-            building {
-                sprite:                          set_object_depot_mainline (3);
-                xextent:                         16; // default
-                yextent:                         16;
-                zextent:                         16; 
-                xoffset:                         0; // from NE edge, default
-                yoffset:                         0; // from NW edge
-                zoffset:                         0;
+            spritelayout sply_object_depot_narrow_762_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_narrow_762 (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
             }
-        }
 
-        switch(FEAT_OBJECTS, SELF, sw_object_depot_mainline, view) {
-            1: sply_object_depot_mainline_SW;
-            2: sply_object_depot_mainline_NW;
-            3: sply_object_depot_mainline_NE;
-            sply_object_depot_mainline_SE;
-        }
+            spritelayout sply_object_depot_narrow_762_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
 
-        item(FEAT_OBJECTS, object_depot_mainline) {
+                building {
+                    sprite:                          set_object_depot_narrow_762 (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_narrow_762_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_narrow_762 (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_narrow_762_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_narrow_762_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_narrow_762_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_narrow_762_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_narrow_762_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_narrow_762_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_narrow_762_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_narrow_762_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_narrow_762, view) {
+                1: sply_object_depot_narrow_762_SW;
+                2: sply_object_depot_narrow_762_NW;
+                3: sply_object_depot_narrow_762_NE;
+                sply_object_depot_narrow_762_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_narrow_762_SNOW, view) {
+                1: sply_object_depot_narrow_762_SW_SNOW;
+                2: sply_object_depot_narrow_762_NW_SNOW;
+                3: sply_object_depot_narrow_762_NE_SNOW;
+                sply_object_depot_narrow_762_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_narrow_762, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_narrow_762;
+                TILETYPE_SNOW:                      sw_object_depot_narrow_762_SNOW;            
+                sw_object_depot_narrow_762;
+            }
+
+        // Item Define
+        item(FEAT_OBJECTS, object_depot_narrow_762) {
             property {
                 class:                           "KODT";
-                classname:                       string(STR_OBJE_NAME_DEPOTS);
-                name:                            string(STR_OBJE_NAME_DEPOT_MAINLINE);
+                classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                name:                            string(STR_OBJECT_DEPOT_NARROW_762_NAME);
+                climates_available:              ALL_CLIMATES;
+                size:                            [1,1];
+                build_cost_multiplier:           1;
+                remove_cost_multiplier:          1;
+                introduction_date:               date(1899,1,1);
+                end_of_life_date:                0xFFFFFFFF;
+                object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE);
+                height:                          1;
+                num_views:                       4;
+            }
+
+            graphics {
+                default:                         sw_set_object_depot_narrow_762;
+                tile_check:                      CB_RESULT_LOCATION_ALLOW;
+            }
+        }
+
+    // Depot Low Speed
+        // Spritesets 
+            spriteset(set_object_depot_LOW_SPEED, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+                [   0,  320,   64,   45,  -31,  -14]
+                [ 140,  320,   64,   45,  -31,  -14]
+                [ 280,  320,   64,   45,  -31,  -14]
+                [ 350,  320,   64,   45,  -31,  -14]
+            }
+
+            spriteset(set_object_depot_LOW_SPEED_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,  230,   64,   45,  -31,  -14]
+                [ 140,  230,   64,   45,  -31,  -14]
+                [ 280,  230,   64,   45,  -31,  -14]
+                [ 350,  230,   64,   45,  -31,  -14]
+            }
+
+        // Spritelayouts 
+            spritelayout sply_object_depot_LOW_SPEED_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_LOW_SPEED_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_LOW_SPEED_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_LOW_SPEED, view) {
+                1: sply_object_depot_LOW_SPEED_SW;
+                2: sply_object_depot_LOW_SPEED_NW;
+                3: sply_object_depot_LOW_SPEED_NE;
+                sply_object_depot_LOW_SPEED_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_LOW_SPEED_SNOW, view) {
+                1: sply_object_depot_LOW_SPEED_SW_SNOW;
+                2: sply_object_depot_LOW_SPEED_NW_SNOW;
+                3: sply_object_depot_LOW_SPEED_NE_SNOW;
+                sply_object_depot_LOW_SPEED_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_LOW_SPEED, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_LOW_SPEED;
+                TILETYPE_SNOW:                      sw_object_depot_LOW_SPEED_SNOW;            
+                sw_object_depot_LOW_SPEED;
+            }
+
+        // Item Define
+        item(FEAT_OBJECTS, object_depot_LOW_SPEED) {
+            property {
+                class:                           "KODT";
+                classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                name:                            string(STR_OBJECT_DEPOT_LOW_SPEED_NAME);
                 climates_available:              ALL_CLIMATES;
                 size:                            [1,1];
                 build_cost_multiplier:           1;
@@ -2738,8 +3385,957 @@
             }
 
             graphics {
-                default:                         sw_object_depot_mainline;
+                default:                         sw_set_object_depot_LOW_SPEED;
                 tile_check:                      CB_RESULT_LOCATION_ALLOW;
-                additional_text:                 string(STR_OBJE_DESC_DEPOT_MAINLINE);
             }
         }
+
+    // Depot Standard Speed
+        // Spritesets 
+            spriteset(set_object_depot_mainline, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+                [   0,  320,   64,   44,  -31,  -13]
+                [ 140,  320,   64,   44,  -31,  -13]
+                [ 280,  320,   64,   44,  -31,  -13]
+                [ 350,  320,   64,   44,  -31,  -13]
+            }
+
+            spriteset(set_object_depot_mainline_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,  230,   64,   45,  -31,  -14]
+                [ 140,  230,   64,   45,  -31,  -14]
+                [ 280,  230,   64,   45,  -31,  -14]
+                [ 350,  230,   64,   45,  -31,  -14]
+            }
+
+        // Spritelayouts 
+            spritelayout sply_object_depot_mainline_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_mainline, view) {
+                1: sply_object_depot_mainline_SW;
+                2: sply_object_depot_mainline_NW;
+                3: sply_object_depot_mainline_NE;
+                sply_object_depot_mainline_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_mainline_SNOW, view) {
+                1: sply_object_depot_mainline_SW_SNOW;
+                2: sply_object_depot_mainline_NW_SNOW;
+                3: sply_object_depot_mainline_NE_SNOW;
+                sply_object_depot_mainline_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_mainline, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_mainline;
+                TILETYPE_SNOW:                      sw_object_depot_mainline_SNOW;            
+                sw_object_depot_mainline;
+            }
+
+        // Item Define
+        item(FEAT_OBJECTS, object_depot_mainline) {
+            property {
+                class:                           "KODT";
+                classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                name:                            string(STR_OBJECT_DEPOT_STANDARD_SPEED_NAME);
+                climates_available:              ALL_CLIMATES;
+                size:                            [1,1];
+                build_cost_multiplier:           1;
+                remove_cost_multiplier:          1;
+                introduction_date:               date(1971,1,1);
+                end_of_life_date:                0xFFFFFFFF;
+                object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE);
+                height:                          1;
+                num_views:                       4;
+            }
+
+            graphics {
+                default:                         sw_set_object_depot_mainline;
+                tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                additional_text:                 string(STR_OBJECT_DEPOT_STANDARD_SPEED_DESC);
+            }
+        }
+
+    // Depot Standard Speed Urban
+        // Spritesets 
+            spriteset(set_object_depot_mainline_urban, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+                [   0, 1290,   64,   55,  -31,  -24]
+                [ 140, 1290,   64,   55,  -31,  -24]
+                [ 280, 1290,   64,   55,  -31,  -24]
+                [ 350, 1290,   64,   55,  -31,  -24]
+            }
+
+            spriteset(set_object_depot_mainline_urban_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,  350,   64,   45,  -31,  -16]
+                [ 140,  350,   64,   45,  -31,  -16]
+                [ 280,  350,   64,   45,  -31,  -16]
+                [ 350,  350,   64,   45,  -31,  -16]
+            }
+
+        // Spritelayouts 
+            spritelayout sply_object_depot_mainline_urban_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_mainline_urban_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_mainline_urban_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_mainline_urban, view) {
+                1: sply_object_depot_mainline_urban_SW;
+                2: sply_object_depot_mainline_urban_NW;
+                3: sply_object_depot_mainline_urban_NE;
+                sply_object_depot_mainline_urban_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_mainline_urban_SNOW, view) {
+                1: sply_object_depot_mainline_urban_SW_SNOW;
+                2: sply_object_depot_mainline_urban_NW_SNOW;
+                3: sply_object_depot_mainline_urban_NE_SNOW;
+                sply_object_depot_mainline_urban_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_mainline_urban, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_mainline_urban;
+                TILETYPE_SNOW:                      sw_object_depot_mainline_urban_SNOW;            
+                sw_object_depot_mainline_urban;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_depot_mainline_urban) {
+                property {
+                    class:                           "KODT";
+                    classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                    name:                            string(STR_OBJECT_DEPOT_STANDARD_SPEED_URBAN_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           1;
+                    remove_cost_multiplier:          1;
+                    introduction_date:               date(1971,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_depot_mainline_urban;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                    additional_text:                 string(STR_OBJECT_DEPOT_STANDARD_SPEED_DESC);
+                }
+            }
+
+    // Depot Semi High Speed
+        // Spritesets 
+            spriteset(set_object_depot_SEMI_HIGH_SPEED, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+                [   0,  320,   64,   47,  -31,  -16]
+                [ 140,  320,   64,   47,  -31,  -16]
+                [ 280,  320,   64,   47,  -31,  -16]
+                [ 350,  320,   64,   47,  -31,  -16]
+            }
+
+            spriteset(set_object_depot_SEMI_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,  650,   64,   50,  -31,  -19]
+                [ 140,  650,   64,   50,  -31,  -19]
+                [ 280,  650,   64,   50,  -31,  -19]
+                [ 350,  650,   64,   50,  -31,  -19]
+            }
+
+        // Spritelayouts 
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SEMI_HIGH_SPEED_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SEMI_HIGH_SPEED_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_SEMI_HIGH_SPEED, view) {
+                1: sply_object_depot_SEMI_HIGH_SPEED_SW;
+                2: sply_object_depot_SEMI_HIGH_SPEED_NW;
+                3: sply_object_depot_SEMI_HIGH_SPEED_NE;
+                sply_object_depot_SEMI_HIGH_SPEED_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_SEMI_HIGH_SPEED_SNOW, view) {
+                1: sply_object_depot_SEMI_HIGH_SPEED_SW_SNOW;
+                2: sply_object_depot_SEMI_HIGH_SPEED_NW_SNOW;
+                3: sply_object_depot_SEMI_HIGH_SPEED_NE_SNOW;
+                sply_object_depot_SEMI_HIGH_SPEED_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_SEMI_HIGH_SPEED, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_SEMI_HIGH_SPEED;
+                TILETYPE_SNOW:                      sw_object_depot_SEMI_HIGH_SPEED_SNOW;            
+                sw_object_depot_SEMI_HIGH_SPEED;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_depot_SEMI_HIGH_SPEED) {
+                property {
+                    class:                           "KODT";
+                    classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                    name:                            string(STR_OBJECT_DEPOT_SEMI_HIGH_SPEED_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           1;
+                    remove_cost_multiplier:          1;
+                    introduction_date:               date(1971,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_depot_SEMI_HIGH_SPEED;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                    additional_text:                 string(STR_OBJECT_DEPOT_METRO_DESC);
+                }
+            }
+
+    // Depot High Speed
+        // Spritesets 
+            spriteset(set_object_depot_HIGH_SPEED, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+                [   0,  320,   64,   47,  -31,  -16]
+                [ 140,  320,   64,   47,  -31,  -16]
+                [ 280,  320,   64,   47,  -31,  -16]
+                [ 350,  320,   64,   47,  -31,  -16]
+            }
+
+            spriteset(set_object_depot_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,  800,   64,   50,  -31,  -19]
+                [ 140,  800,   64,   50,  -31,  -19]
+                [ 280,  800,   64,   50,  -31,  -19]
+                [ 350,  800,   64,   50,  -31,  -19]
+            }
+
+        // Spritelayouts 
+            spritelayout sply_object_depot_HIGH_SPEED_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_HIGH_SPEED_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_HIGH_SPEED_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_HIGH_SPEED, view) {
+                1: sply_object_depot_HIGH_SPEED_SW;
+                2: sply_object_depot_HIGH_SPEED_NW;
+                3: sply_object_depot_HIGH_SPEED_NE;
+                sply_object_depot_HIGH_SPEED_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_HIGH_SPEED_SNOW, view) {
+                1: sply_object_depot_HIGH_SPEED_SW_SNOW;
+                2: sply_object_depot_HIGH_SPEED_NW_SNOW;
+                3: sply_object_depot_HIGH_SPEED_NE_SNOW;
+                sply_object_depot_HIGH_SPEED_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_HIGH_SPEED, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_HIGH_SPEED;
+                TILETYPE_SNOW:                      sw_object_depot_HIGH_SPEED_SNOW;            
+                sw_object_depot_HIGH_SPEED;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_depot_HIGH_SPEED) {
+                property {
+                    class:                           "KODT";
+                    classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                    name:                            string(STR_OBJECT_DEPOT_HIGH_SPEED_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           1;
+                    remove_cost_multiplier:          1;
+                    introduction_date:               date(1971,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_depot_HIGH_SPEED;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                    additional_text:                 string(STR_OBJECT_DEPOT_HIGH_SPEED_DESC);
+                }
+            }
+
+    // Depot Metro
+        // Spritesets 
+            spriteset(set_object_depot_METRO, "./Korean_Tracks/gfx/METRO.png") {
+                [   0,  320,   64,   47,  -31,  -16]
+                [ 140,  320,   64,   47,  -31,  -16]
+                [ 280,  320,   64,   47,  -31,  -16]
+                [ 350,  320,   64,   47,  -31,  -16]
+            }
+
+            spriteset(set_object_depot_METRO_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                [   0,  950,   64,   50,  -31,  -19]
+                [ 140,  950,   64,   50,  -31,  -19]
+                [ 280,  950,   64,   50,  -31,  -19]
+                [ 350,  950,   64,   50,  -31,  -19]
+            }
+
+        // Spritelayouts 
+            spritelayout sply_object_depot_METRO_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_METRO_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_METRO_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_METRO, view) {
+                1: sply_object_depot_METRO_SW;
+                2: sply_object_depot_METRO_NW;
+                3: sply_object_depot_METRO_NE;
+                sply_object_depot_METRO_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_METRO_SNOW, view) {
+                1: sply_object_depot_METRO_SW_SNOW;
+                2: sply_object_depot_METRO_NW_SNOW;
+                3: sply_object_depot_METRO_NE_SNOW;
+                sply_object_depot_METRO_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_METRO, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_METRO;
+                TILETYPE_SNOW:                      sw_object_depot_METRO_SNOW;            
+                sw_object_depot_METRO;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_depot_METRO) {
+                property {
+                    class:                           "KODT";
+                    classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                    name:                            string(STR_OBJECT_DEPOT_METRO_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           1;
+                    remove_cost_multiplier:          1;
+                    introduction_date:               date(1971,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_depot_METRO;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                    additional_text:                 string(STR_OBJECT_DEPOT_METRO_DESC);
+                }
+            }
