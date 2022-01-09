@@ -15,8 +15,8 @@ STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :준고속선 선로 속도제
 STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :준고속선 선로의 제한속도를 설정합니다. 기본값은 261 입니다. 0 으로 하면 무제한이 됩니다.
 STR_PARA_NAME_SPEED_HIGH_SPEED                    :고속선 선로 속도제한 (km/h)
 STR_PARA_DESC_SPEED_HIGH_SPEED                    :고속선 선로의 제한속도를 설정합니다. 기본값은 430 입니다. 0 으로 하면 무제한이 됩니다.
-STR_PARA_NAME_SPEED_METRO_LINE                    :도시철도 선로 속도제한 (km/h)
-STR_PARA_DESC_SPEED_METRO_LINE                    :도시철도 선로의 제한속도를 설정합니다. 기본값은 121 입니다. 0 으로 하면 무제한이 됩니다.
+STR_PARA_NAME_SPEED_METRO                         :도시철도 선로 속도제한 (km/h)
+STR_PARA_DESC_SPEED_METRO                         :도시철도 선로의 제한속도를 설정합니다. 기본값은 121 입니다. 0 으로 하면 무제한이 됩니다.
 
 # Narrow gauge
 STR_NARROW_762_NAME                               :762mm 협궤 선로
@@ -30,41 +30,41 @@ STR_NARROW_762_AUTOREPLACE                        :762mm 협궤 선로 차량
 STR_LOW_SPEED_TRACK_NAME                          :기존선 선로
 STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :기존선 선로 건설
 STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :기존선 선로 건설
-STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 기존선 차량
-STR_LOW_SPEED_NEW_ENGINE                          :기존선 차량
-STR_LOW_SPEED_AUTOREPLACE                         :기존선 차량
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :새 일반선 차량
+STR_LOW_SPEED_NEW_ENGINE                          :일반선 차량
+STR_LOW_SPEED_AUTOREPLACE                         :일반선 차량
 
 # Electrified Low Speed // 120
 STR_LOW_SPEED_ELEC_TRACK_NAME                     :기존선 전기선로
 STR_LOW_SPEED_ELEC_TRACK_DROPDOWN_MENU            :기존선 전기선로 건설
 STR_LOW_SPEED_ELEC_TRACK_TOOLBAR_CAPTION          :기존선 전기선로 건설
-STR_LOW_SPEED_ELEC_BUILD_VEHICLE_CAPTION          :새 기존선 전기 차량
-STR_LOW_SPEED_ELEC_NEW_ENGINE                     :기존선 전기 차량
-STR_LOW_SPEED_ELEC_AUTOREPLACE                    :기존선 전기 차량
+STR_LOW_SPEED_ELEC_BUILD_VEHICLE_CAPTION          :새 일반선 전기 차량
+STR_LOW_SPEED_ELEC_NEW_ENGINE                     :일반선 전기 차량
+STR_LOW_SPEED_ELEC_AUTOREPLACE                    :일반선 전기 차량
 
 # Main Line // 180
 STR_MAIN_LINE_TRACK_NAME                          :개량선 선로
 STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :개량선 선로 건설
 STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :개량선 선로 건설
-STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :새 개량선 차량
-STR_MAIN_LINE_NEW_ENGINE                          :개량선 차량
-STR_MAIN_LINE_AUTOREPLACE                         :개량선 차량
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :새 일반선 차량
+STR_MAIN_LINE_NEW_ENGINE                          :일반선 차량
+STR_MAIN_LINE_AUTOREPLACE                         :일반선 차량
 
 # Electrified Main Line // 180
 STR_MAIN_LINE_ELEC_TRACK_NAME                     :개량선 전기선로
 STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :개량선 전기선로 건설
 STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :개량선 전기선로 건설
-STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :새 개량선 전기 차량
-STR_MAIN_LINE_ELEC_NEW_ENGINE                     :개량선 전기 차량
-STR_MAIN_LINE_ELEC_AUTOREPLACE                    :개량선 전기 차량
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :새 일반선 전기 차량
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :일반선 전기 차량
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :일반선 전기 차량
 
 # Urban Electrified Main Line // 180
 STR_MAIN_LINE_URBAN_TRACK_NAME                    :개량선 도심전기선로
 STR_MAIN_LINE_URBAN_TRACK_DROPDOWN_MENU           :개량선 도심전기선로 건설
 STR_MAIN_LINE_URBAN_TRACK_TOOLBAR_CAPTION         :개량선 도심전기선로 건설
-STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :새 개량선 전기 차량
-STR_MAIN_LINE_URBAN_NEW_ENGINE                    :개량선 전기 차량
-STR_MAIN_LINE_URBAN_AUTOREPLACE                   :개량선 전기 차량
+STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :새 일반선 전기 차량
+STR_MAIN_LINE_URBAN_NEW_ENGINE                    :일반선 전기 차량
+STR_MAIN_LINE_URBAN_AUTOREPLACE                   :일반선 전기 차량
 
 # Semi High Speed // 260
 STR_SEMI_HIGH_SPEED_TRACK_NAME                    :준고속선 선로
@@ -83,14 +83,22 @@ STR_HIGH_SPEED_NEW_ENGINE                         :고속선 차량
 STR_HIGH_SPEED_AUTOREPLACE                        :고속선 차량
 
 # Metro Line
-STR_METRO_LINE_TRACK_NAME                         :도시철도 선로
-STR_METRO_LINE_TRACK_DROPDOWN_MENU                :도시철도 선로 건설
-STR_METRO_LINE_TRACK_TOOLBAR_CAPTION              :도시철도 선로 건설
-STR_METRO_LINE_BUILD_VEHICLE_CAPTION              :새 도시철도 차량
-STR_METRO_LINE_NEW_ENGINE                         :도시철도 차량
-STR_METRO_LINE_AUTOREPLACE                        :도시철도 차량
+STR_TRACK_METRO_NAME                              :도시철도 선로
+STR_TRACK_METRO_DROPDOWN_MENU                     :도시철도 선로 건설
+STR_TRACK_METRO_TOOLBAR_CAPTION                   :도시철도 선로 건설
+STR_TRACK_METRO_BUILD_VEHICLE_CAPTION             :새 도시철도 차량
+STR_TRACK_METRO_NEW_ENGINE                        :도시철도 차량
+STR_TRACK_METRO_AUTOREPLACE                       :도시철도 차량
 
 # Objects
-STR_OBJE_NAME_DEPOTS                              :[KTR] 차량기지
-STR_OBJE_NAME_DEPOT_MAINLINE                      :개량선 차량기지
-STR_OBJE_DESC_DEPOT_MAINLINE                      :한국철도공사 수색차량기지 (서울)
+STR_OBJECT_DEPOTS_NAME                            :[KTR] 차량기지
+STR_OBJECT_DEPOT_NARROW_762_NAME                  :762mm 협궤 차량기지
+STR_OBJECT_DEPOT_LOW_SPEED_NAME                   :기존선 차량기지
+STR_OBJECT_DEPOT_STANDARD_SPEED_NAME              :개량선 차량기지
+STR_OBJECT_DEPOT_STANDARD_SPEED_DESC              :한국철도공사 수색차량기지 (서울특별시)
+STR_OBJECT_DEPOT_STANDARD_SPEED_URBAN_NAME        :개량선 차량기지 (도심)
+STR_OBJECT_DEPOT_SEMI_HIGH_SPEED_NAME             :준고속선 차량기지
+STR_OBJECT_DEPOT_HIGH_SPEED_NAME                  :고속선 차량기지
+STR_OBJECT_DEPOT_HIGH_SPEED_DESC                  :한국철도공사 고양차량사업소 (경기도 고양시)
+STR_OBJECT_DEPOT_METRO_NAME                       :도시철도 차량기지
+STR_OBJECT_DEPOT_METRO_DESC                       :서울교통공사 창동차량사무소 (서울특별시)
