@@ -9,14 +9,14 @@ STR_PARA_NAME_SPEED_NARROW_762                    :Speed limit on 762mm narrow g
 STR_PARA_DESC_SPEED_NARROW_762                    :Set speed limit on 762mm narrow gauge track. The default value is 70. If 0, it will be unlimited.
 STR_PARA_NAME_SPEED_LOW_SPEED                     :Speed limit on low speed and electrified low speed tracks (km/h)
 STR_PARA_DESC_SPEED_LOW_SPEED                     :Set speed limit on low speed and electrified low speed track. The default value is 121. If 0, it will be unlimited.
-STR_PARA_NAME_SPEED_MAIN_LINE                     :Speed limit on main line and electrified main line tracks (km/h)
-STR_PARA_DESC_SPEED_MAIN_LINE                     :Set speed limit on main line and electrified main line track. The default value is 180. If 0, it will be unlimited.
+STR_PARA_NAME_SPEED_MAIN_LINE                     :Speed limit on main line and electrified standard speed tracks (km/h)
+STR_PARA_DESC_SPEED_MAIN_LINE                     :Set speed limit on main line and electrified standard speed track. The default value is 180. If 0, it will be unlimited.
 STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :Speed limit on semi high speed tracks (km/h)
 STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :Set speed limit on semi high speed track. The default value is 261. If 0, it will be unlimited.
 STR_PARA_NAME_SPEED_HIGH_SPEED                    :Speed limit on high speed Tracks (km/h)
 STR_PARA_DESC_SPEED_HIGH_SPEED                    :Set speed limit on high speed Track. The default value is 430. If 0, it will be unlimited.
-STR_PARA_NAME_SPEED_METRO_LINE                    :Speed limit on metro tracks (km/h)
-STR_PARA_DESC_SPEED_METRO_LINE                    :Set speed limit on metro track. The default value is 121. If 0, it will be unlimited.
+STR_PARA_NAME_SPEED_METRO                         :Speed limit on metro tracks (km/h)
+STR_PARA_DESC_SPEED_METRO                         :Set speed limit on metro track. The default value is 121. If 0, it will be unlimited.
 
 # Narrow gauge
 STR_NARROW_762_NAME                               :762mm Narrow Gauge Tracks
@@ -46,25 +46,25 @@ STR_LOW_SPEED_ELEC_AUTOREPLACE                    :Electrified Low Speed Vehicle
 STR_MAIN_LINE_TRACK_NAME                          :Standard Speed Tracks
 STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :Standard Speed Track Construction
 STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :Standard Speed Track Construction
-STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :New Main Line Vehicles
-STR_MAIN_LINE_NEW_ENGINE                          :Main Line Vehicle
-STR_MAIN_LINE_AUTOREPLACE                         :Main Line Vehicles
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :New Standard Speed Vehicles
+STR_MAIN_LINE_NEW_ENGINE                          :Standard Speed Vehicle
+STR_MAIN_LINE_AUTOREPLACE                         :Standard Speed Vehicles
 
 # Electrified Main Line // 180
 STR_MAIN_LINE_ELEC_TRACK_NAME                     :Standard Speed Tracks (Electrified)
 STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :Standard Speed Track Construction (Electrified)
 STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :Standard Speed Track Construction (Electrified)
-STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Main Line Vehicles
-STR_MAIN_LINE_ELEC_NEW_ENGINE                     :Electrified Main Line Vehicle
-STR_MAIN_LINE_ELEC_AUTOREPLACE                    :Electrified Main Line Vehicles
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Standard Speed Vehicles
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :Electrified Standard Speed Vehicle
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :Electrified Standard Speed Vehicles
 
 # Urban Electrified Main Line // 180
-STR_MAIN_LINE_URBAN_TRACK_NAME                    :Standard Speed Tracks (Urban Electrified)
-STR_MAIN_LINE_URBAN_TRACK_DROPDOWN_MENU           :Standard Speed Track Construction (Urban Electrified)
-STR_MAIN_LINE_URBAN_TRACK_TOOLBAR_CAPTION         :Standard Speed Track Construction (Urban Electrified)
-STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :New Electrified Main Line Vehicles
-STR_MAIN_LINE_URBAN_NEW_ENGINE                    :Electrified Main Line Vehicle
-STR_MAIN_LINE_URBAN_AUTOREPLACE                   :Electrified Main Line Vehicles
+STR_MAIN_LINE_URBAN_TRACK_NAME                    :Standard Speed Tracks (Urban, Electrified)
+STR_MAIN_LINE_URBAN_TRACK_DROPDOWN_MENU           :Standard Speed Track Construction (Urban, Electrified)
+STR_MAIN_LINE_URBAN_TRACK_TOOLBAR_CAPTION         :Standard Speed Track Construction (Urban, Electrified)
+STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :New Electrified Standard Speed Vehicles
+STR_MAIN_LINE_URBAN_NEW_ENGINE                    :Electrified Standard Speed Vehicle
+STR_MAIN_LINE_URBAN_AUTOREPLACE                   :Electrified Standard Speed Vehicles
 
 # Semi High Speed // 260
 STR_SEMI_HIGH_SPEED_TRACK_NAME                    :Semi High Speed Tracks
@@ -83,14 +83,22 @@ STR_HIGH_SPEED_NEW_ENGINE                         :High Speed Vehicle
 STR_HIGH_SPEED_AUTOREPLACE                        :High Speed Vehicles
 
 # Metro Line
-STR_METRO_LINE_TRACK_NAME                         :Metro Tracks
-STR_METRO_LINE_TRACK_DROPDOWN_MENU                :Metro Track Construction
-STR_METRO_LINE_TRACK_TOOLBAR_CAPTION              :Metro Track Construction
-STR_METRO_LINE_BUILD_VEHICLE_CAPTION              :New Metro Vehicles
-STR_METRO_LINE_NEW_ENGINE                         :Metro Vehicle
-STR_METRO_LINE_AUTOREPLACE                        :Metro Vehicles
+STR_TRACK_METRO_NAME                              :Metro Tracks
+STR_TRACK_METRO_DROPDOWN_MENU                     :Metro Track Construction
+STR_TRACK_METRO_TOOLBAR_CAPTION                   :Metro Track Construction
+STR_TRACK_METRO_BUILD_VEHICLE_CAPTION             :New Metro Vehicles
+STR_TRACK_METRO_NEW_ENGINE                        :Metro Vehicle
+STR_TRACK_METRO_AUTOREPLACE                       :Metro Vehicles
 
 # Objects
-STR_OBJE_NAME_DEPOTS                              :[KTR] Train Depot
-STR_OBJE_NAME_DEPOT_MAINLINE                      :Main Line Train Depot
-STR_OBJE_DESC_DEPOT_MAINLINE                      :Korail Susaek Train Depot, Seoul
+STR_OBJECT_DEPOTS_NAME                            :[KTR] Train Depot
+STR_OBJECT_DEPOT_NARROW_762_NAME                  :762mm Narrow Gauge Train Depot
+STR_OBJECT_DEPOT_LOW_SPEED_NAME                   :Low Speed Train Depot
+STR_OBJECT_DEPOT_STANDARD_SPEED_NAME              :Standard Speed Train Depot
+STR_OBJECT_DEPOT_STANDARD_SPEED_DESC              :Korail Susaek Train Depot (Seoul)
+STR_OBJECT_DEPOT_STANDARD_SPEED_URBAN_NAME        :Standard Speed Train Depot (Urban)
+STR_OBJECT_DEPOT_SEMI_HIGH_SPEED_NAME             :Semi High Speed Train Depot
+STR_OBJECT_DEPOT_HIGH_SPEED_NAME                  :High Speed Train Depot
+STR_OBJECT_DEPOT_HIGH_SPEED_DESC                  :Korail Goyang Train Depot (Goyang, Gyeonggi-Do)
+STR_OBJECT_DEPOT_METRO_NAME                       :Metro Train Depot
+STR_OBJECT_DEPOT_METRO_DESC                       :Seoul Metro Chang-dong Train Depot (Seoul)
