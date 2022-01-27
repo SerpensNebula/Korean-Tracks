@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks 1.1.0
+STR_GRF_NAME                                      :Korean Tracks 1.1.1
 STR_GRF_DESC                                      :Korean Tracks NewGRF adds train and metro tracks of South Korea. Recommended to use with Korean Train Set NewGRF.
 
 # Parameters - Speed Limit
