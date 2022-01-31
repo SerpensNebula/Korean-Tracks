@@ -3,7 +3,7 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :220127;
+        version                            :220130;
         
         min_compatible_version             :0;
 
@@ -1919,8 +1919,8 @@
 
     // Level crossing
         spriteset(set_MAIN_LINE_URBAN_track_crossing_close, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  120,   64,   31,  -31,    0]
-            [ 770,  120,   64,   31,  -31,    0]
+            [ 700, 1090,   64,   31,  -31,    0]
+            [ 770, 1090,   64,   31,  -31,    0]
             [ 840,  120,    5,   13,    0,  -10]   // N
             [ 850,  120,   23,   29,   -5,  -17]
             [ 880,  120,   29,   25,  -24,  -17]   // E
@@ -1932,8 +1932,8 @@
         }
 
         spriteset(set_MAIN_LINE_URBAN_track_crossing_open, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  120,   64,   31,  -31,    0]
-            [ 770,  120,   64,   31,  -31,    0]
+            [ 700, 1090,   64,   31,  -31,    0]
+            [ 770, 1090,   64,   31,  -31,    0]
             [ 840,  150,    5,   13,    0,  -10]
             [ 850,  150,   24,   27,   -6,  -22]
             [ 880,  150,   21,   29,  -16,  -26]
