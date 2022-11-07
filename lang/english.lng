@@ -1,22 +1,62 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Tracks 1.1.2
+STR_GRF_NAME                                      :Korean Tracks 1.2.0
 STR_GRF_DESC                                      :Korean Tracks NewGRF adds train and metro tracks of South Korea. Recommended to use with Korean Train Set NewGRF.
 
 # Parameters - Speed Limit
 STR_PARA_NAME_SPEED_NARROW_762                    :Speed limit on 762mm narrow gauge tracks (km/h)
-STR_PARA_DESC_SPEED_NARROW_762                    :Set speed limit on 762mm narrow gauge track. The default value is 70. If 0, it will be unlimited.
-STR_PARA_NAME_SPEED_LOW_SPEED                     :Speed limit on low speed and electrified low speed tracks (km/h)
-STR_PARA_DESC_SPEED_LOW_SPEED                     :Set speed limit on low speed and electrified low speed track. The default value is 121. If 0, it will be unlimited.
-STR_PARA_NAME_SPEED_MAIN_LINE                     :Speed limit on main line and electrified standard speed tracks (km/h)
-STR_PARA_DESC_SPEED_MAIN_LINE                     :Set speed limit on main line and electrified standard speed track. The default value is 180. If 0, it will be unlimited.
+STR_PARA_DESC_SPEED_NARROW_762                    :Set speed limit on 762mm narrow gauge tracks. The default value is 70. 0 is unlimited.
+STR_PARA_NAME_SPEED_LOW_SPEED                     :Speed limit on low speed tracks (km/h)
+STR_PARA_DESC_SPEED_LOW_SPEED                     :Set speed limit on low speed tracks. The default value is 121. 0 is unlimited.
+STR_PARA_NAME_SPEED_MAIN_LINE                     :Speed limit on standard speed tracks (km/h)
+STR_PARA_DESC_SPEED_MAIN_LINE                     :Set speed limit on standard speed tracks. The default value is 180. 0 is unlimited.
 STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :Speed limit on semi high speed tracks (km/h)
-STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :Set speed limit on semi high speed track. The default value is 261. If 0, it will be unlimited.
+STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :Set speed limit on semi high speed tracks. The default value is 261. 0 is unlimited.
 STR_PARA_NAME_SPEED_HIGH_SPEED                    :Speed limit on high speed Tracks (km/h)
-STR_PARA_DESC_SPEED_HIGH_SPEED                    :Set speed limit on high speed Track. The default value is 430. If 0, it will be unlimited.
+STR_PARA_DESC_SPEED_HIGH_SPEED                    :Set speed limit on high speed Tracks. The default value is 430. 0 is unlimited.
 STR_PARA_NAME_SPEED_METRO                         :Speed limit on metro tracks (km/h)
-STR_PARA_DESC_SPEED_METRO                         :Set speed limit on metro track. The default value is 121. If 0, it will be unlimited.
+STR_PARA_DESC_SPEED_METRO                         :Set speed limit on metro tracks. The default value is 121. 0 is unlimited.
+
+# Parameters - Construction Cost
+STR_PARA_NAME_CONST_COST_NARROW_762               :Construction cost variable of 762mm narrow gauge track
+STR_PARA_DESC_CONST_COST_NARROW_762               :Set construction cost variable of 762mm narrow gauge track. The default value is 4.
+STR_PARA_NAME_CONST_COST_LOW_SPEED                :Construction cost variable of low speed track
+STR_PARA_DESC_CONST_COST_LOW_SPEED                :Set construction cost variable of low speed track. The default value is 8.
+STR_PARA_NAME_CONST_COST_LOW_SPEED_ELEC           :Construction cost variable of low speed track (electrified)
+STR_PARA_DESC_CONST_COST_LOW_SPEED_ELEC           :Set construction cost variable of low speed track (electrified). The default value is 10.
+STR_PARA_NAME_CONST_COST_MAIN_LINE                :Construction cost variable of standard speed track 
+STR_PARA_DESC_CONST_COST_MAIN_LINE                :Set construction cost variable of standard speed track. The default value is 12.
+STR_PARA_NAME_CONST_COST_MAIN_LINE_ELEC           :Construction cost variable of standard speed track (electrified)
+STR_PARA_DESC_CONST_COST_MAIN_LINE_ELEC           :Set construction cost variable of standard speed track (electrified). The default value is 16.
+STR_PARA_NAME_CONST_COST_MAIN_LINE_URBAN          :Construction cost variable of standard speed track (urban, electrified) 
+STR_PARA_DESC_CONST_COST_MAIN_LINE_URBAN          :Set construction cost variable of standard speed track (urban, electrified). The default value is 18.
+STR_PARA_NAME_CONST_COST_SEMI_HIGH_SPEED          :Construction cost variable of semi high speed track
+STR_PARA_DESC_CONST_COST_SEMI_HIGH_SPEED          :Set construction cost variable of semi high speed track. The default value is 48.
+STR_PARA_NAME_CONST_COST_HIGH_SPEED               :Construction cost variable of high speed track
+STR_PARA_DESC_CONST_COST_HIGH_SPEED               :Set construction cost variable of high speed track. The default value is 96.
+STR_PARA_NAME_CONST_COST_METRO                    :Construction cost variable of metro track
+STR_PARA_DESC_CONST_COST_METRO                    :Set construction cost variable of metro track. The default value is 16.
+
+# Parameters - Maintenance Cost
+STR_PARA_NAME_MAINT_COST_NARROW_762               :Maintenance cost variable of 762mm narrow gauge track
+STR_PARA_DESC_MAINT_COST_NARROW_762               :Set maintenance cost variable of 762mm narrow gauge track. The default value is 12.
+STR_PARA_NAME_MAINT_COST_LOW_SPEED                :Maintenance cost variable of low speed track
+STR_PARA_DESC_MAINT_COST_LOW_SPEED                :Set maintenance cost variable of low speed track. The default value is 16.
+STR_PARA_NAME_MAINT_COST_LOW_SPEED_ELEC           :Maintenance cost variable of low speed track (electrified)
+STR_PARA_DESC_MAINT_COST_LOW_SPEED_ELEC           :Set maintenance cost variable of low speed track (electrified). The default value is 18.
+STR_PARA_NAME_MAINT_COST_MAIN_LINE                :Maintenance cost variable of standard speed track 
+STR_PARA_DESC_MAINT_COST_MAIN_LINE                :Set maintenance cost variable of standard speed track. The default value is 18.
+STR_PARA_NAME_MAINT_COST_MAIN_LINE_ELEC           :Maintenance cost variable of standard speed track (electrified)
+STR_PARA_DESC_MAINT_COST_MAIN_LINE_ELEC           :Set maintenance cost variable of standard speed track (electrified). The default value is 20.
+STR_PARA_NAME_MAINT_COST_MAIN_LINE_URBAN          :Maintenance cost variable of standard speed track (urban, electrified) 
+STR_PARA_DESC_MAINT_COST_MAIN_LINE_URBAN          :Set maintenance cost variable of standard speed track (urban, electrified). The default value is 20.
+STR_PARA_NAME_MAINT_COST_SEMI_HIGH_SPEED          :Maintenance cost variable of semi high speed track
+STR_PARA_DESC_MAINT_COST_SEMI_HIGH_SPEED          :Set maintenance cost variable of semi high speed track. The default value is 22.
+STR_PARA_NAME_MAINT_COST_HIGH_SPEED               :Maintenance cost variable of high speed track
+STR_PARA_DESC_MAINT_COST_HIGH_SPEED               :Set maintenance cost variable of high speed track. The default value is 24.
+STR_PARA_NAME_MAINT_COST_METRO                    :Maintenance cost variable of metro track
+STR_PARA_DESC_MAINT_COST_METRO                    :Set maintenance cost variable of metro track. The default value is 18.
 
 # Narrow gauge
 STR_NARROW_762_NAME                               :762mm Narrow Gauge Tracks
@@ -82,7 +122,7 @@ STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :New High Speed Vehicles
 STR_HIGH_SPEED_NEW_ENGINE                         :High Speed Vehicle
 STR_HIGH_SPEED_AUTOREPLACE                        :High Speed Vehicles
 
-# Metro Line
+# Metro
 STR_TRACK_METRO_NAME                              :Metro Tracks
 STR_TRACK_METRO_DROPDOWN_MENU                     :Metro Track Construction
 STR_TRACK_METRO_TOOLBAR_CAPTION                   :Metro Track Construction
