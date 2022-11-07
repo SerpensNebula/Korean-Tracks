@@ -1,12 +1,13 @@
-# 한국 기찻길 1.1.1
+# 한국 기찻길 1.2.0
 --------------------
 
-![001](https://user-images.githubusercontent.com/75788864/148671019-9d7ab852-0747-4853-96c6-e4b8b109f2ae.png)
-![002](https://user-images.githubusercontent.com/75788864/148671021-f017fd1f-89c4-4cf5-8de4-27090cb68527.png)
+![1](https://user-images.githubusercontent.com/75788864/200274976-222bff52-1e8d-425f-9b7a-5e0500fcea36.png)
+![2](https://user-images.githubusercontent.com/75788864/200274986-e92723f7-1194-4605-9c5d-aeb452d20ecc.png)
 
-한국 기찻길 NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
+한국기찻길NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
 
-- 선로grf는 코드 구조상 다른 선로grf와 온전히 호환될 가능성이 거의 없습니다. 하나의 선로grf만을 사용해주세요.
+- 한국기찻길NewGRF는 [한국열차세트](https://github.com/KoreanGRF/KoreanTrainSet) 와 [한국열차세트+애드온](https://github.com/MEGB-NewGRF/KoreanTrainSet_Plus) 과 같이 사용할때 가장 빛을 발하는 선로grf 입니다. 
+- 선로grf는 다른 선로grf와 같이 쓸 경우, 몇몇 선로를 건설할 수 없다던지 같은 호환성 문제가 발생할 가능성이 매우 높습니다. 한 맵에는 하나의 선로grf만을 사용하는 것을 권장합니다.
 
 - 각 선로들의 의도한 모습(스프라이트)
   - (일반선)기존선:오래된 자갈 도상, 오래된 나무 침목
