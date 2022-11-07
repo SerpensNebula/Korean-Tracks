@@ -1,22 +1,62 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 기찻길 1.1.2
+STR_GRF_NAME                                      :한국 기찻길 1.2.0
 STR_GRF_DESC                                      :한국에서 쓰이는 모습과 종류의 선로를 추가해줍니다. 한국 열차 세트 grf와 같이 쓰는 것을 추천해드립니다.
 
 # Parameters - Speed Limit
-STR_PARA_NAME_SPEED_NARROW_762                    :762mm 협궤 선로 속도제한 (km/h)
+STR_PARA_NAME_SPEED_NARROW_762                    :속도제한 - 762mm 협궤 선로  (km/h)
 STR_PARA_DESC_SPEED_NARROW_762                    :762mm 협궤 선로의 제한속도를 설정합니다. 기본값은 70 입니다. 0 으로 하면 무제한이 됩니다.
-STR_PARA_NAME_SPEED_LOW_SPEED                     :기존선 선로 속도제한 (km/h)
+STR_PARA_NAME_SPEED_LOW_SPEED                     :속도제한 - 기존선 선로 (km/h)
 STR_PARA_DESC_SPEED_LOW_SPEED                     :기존선 선로와 전기선로의 제한속도를 설정합니다. 기본값은 121 입니다. 0 으로 하면 무제한이 됩니다.
-STR_PARA_NAME_SPEED_MAIN_LINE                     :개량선 선로 속도제한 (km/h)
+STR_PARA_NAME_SPEED_MAIN_LINE                     :속도제한 - 개량선 선로 (km/h)
 STR_PARA_DESC_SPEED_MAIN_LINE                     :개량선 선로와 전기선로와 도심전기선로의 제한속도를 설정합니다. 기본값은 180 입니다. 0 으로 하면 무제한이 됩니다.
-STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :준고속선 선로 속도제한 (km/h)
+STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :속도제한 - 준고속선 선로 (km/h)
 STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :준고속선 선로의 제한속도를 설정합니다. 기본값은 261 입니다. 0 으로 하면 무제한이 됩니다.
-STR_PARA_NAME_SPEED_HIGH_SPEED                    :고속선 선로 속도제한 (km/h)
+STR_PARA_NAME_SPEED_HIGH_SPEED                    :속도제한 - 고속선 선로 (km/h)
 STR_PARA_DESC_SPEED_HIGH_SPEED                    :고속선 선로의 제한속도를 설정합니다. 기본값은 430 입니다. 0 으로 하면 무제한이 됩니다.
-STR_PARA_NAME_SPEED_METRO                         :도시철도 선로 속도제한 (km/h)
+STR_PARA_NAME_SPEED_METRO                         :속도제한 - 도시철도 선로 (km/h)
 STR_PARA_DESC_SPEED_METRO                         :도시철도 선로의 제한속도를 설정합니다. 기본값은 121 입니다. 0 으로 하면 무제한이 됩니다.
+
+# Parameters - Construction Cost
+STR_PARA_NAME_CONST_COST_NARROW_762               :건설비용 변수 - 762mm 협궤 선로
+STR_PARA_DESC_CONST_COST_NARROW_762               :762mm 협궤 선로의 건설비용 변수를 설정합니다. 기본값은 4 입니다.
+STR_PARA_NAME_CONST_COST_LOW_SPEED                :건설비용 변수 - 기존선 선로
+STR_PARA_DESC_CONST_COST_LOW_SPEED                :기존선 선로의 건설비용 변수를 설정합니다. 기본값은 8 입니다.
+STR_PARA_NAME_CONST_COST_LOW_SPEED_ELEC           :건설비용 변수 - 기존선 전기선로
+STR_PARA_DESC_CONST_COST_LOW_SPEED_ELEC           :기존선 전기선로의 건설비용 변수를 설정합니다. 기본값은 10 입니다.
+STR_PARA_NAME_CONST_COST_MAIN_LINE                :건설비용 변수 - 개량선 선로
+STR_PARA_DESC_CONST_COST_MAIN_LINE                :개량선 선로의 건설비용 변수를 설정합니다. 기본값은 12 입니다.
+STR_PARA_NAME_CONST_COST_MAIN_LINE_ELEC           :건설비용 변수 - 개량선 전기선로
+STR_PARA_DESC_CONST_COST_MAIN_LINE_ELEC           :개량선 전기선로의 건설비용 변수를 설정합니다. 기본값은 16 입니다.
+STR_PARA_NAME_CONST_COST_MAIN_LINE_URBAN          :건설비용 변수 - 개량선 도심전기선로
+STR_PARA_DESC_CONST_COST_MAIN_LINE_URBAN          :개량선 도심전기선로의 건설비용 변수를 설정합니다. 기본값은 18 입니다.
+STR_PARA_NAME_CONST_COST_SEMI_HIGH_SPEED          :건설비용 변수 - 준고속선 선로
+STR_PARA_DESC_CONST_COST_SEMI_HIGH_SPEED          :준고속선 선로의 건설비용 변수를 설정합니다. 기본값은 48 입니다.
+STR_PARA_NAME_CONST_COST_HIGH_SPEED               :건설비용 변수 - 고속선 선로
+STR_PARA_DESC_CONST_COST_HIGH_SPEED               :고속선 선로의 건설비용 변수를 설정합니다. 기본값은 96 입니다.
+STR_PARA_NAME_CONST_COST_METRO                    :건설비용 변수 - 도시철도 선로
+STR_PARA_DESC_CONST_COST_METRO                    :도시철도 선로의 건설비용 변수를 설정합니다. 기본값은 16 입니다.
+
+# Parameters - Maintenance Cost
+STR_PARA_NAME_MAINT_COST_NARROW_762               :유지비용 변수 - 762mm 협궤 선로
+STR_PARA_DESC_MAINT_COST_NARROW_762               :762mm 협궤 선로의 유지비용 변수를 설정합니다. 기본값은 12 입니다.
+STR_PARA_NAME_MAINT_COST_LOW_SPEED                :유지비용 변수 - 기존선 선로
+STR_PARA_DESC_MAINT_COST_LOW_SPEED                :기존선 선로의 유지비용 변수를 설정합니다. 기본값은 16 입니다.
+STR_PARA_NAME_MAINT_COST_LOW_SPEED_ELEC           :유지비용 변수 - 기존선 전기선로
+STR_PARA_DESC_MAINT_COST_LOW_SPEED_ELEC           :기존선 전기선로의 유지비용 변수를 설정합니다. 기본값은 18 입니다.
+STR_PARA_NAME_MAINT_COST_MAIN_LINE                :유지비용 변수 - 개량선 선로
+STR_PARA_DESC_MAINT_COST_MAIN_LINE                :개량선 선로의 유지비용 변수를 설정합니다. 기본값은 18 입니다.
+STR_PARA_NAME_MAINT_COST_MAIN_LINE_ELEC           :유지비용 변수 - 개량선 전기선로
+STR_PARA_DESC_MAINT_COST_MAIN_LINE_ELEC           :개량선 전기선로의 유지비용 변수를 설정합니다. 기본값은 20 입니다.
+STR_PARA_NAME_MAINT_COST_MAIN_LINE_URBAN          :유지비용 변수 - 개량선 도심전기선로
+STR_PARA_DESC_MAINT_COST_MAIN_LINE_URBAN          :개량선 도심전기선로의 유지비용 변수를 설정합니다. 기본값은 20 입니다.
+STR_PARA_NAME_MAINT_COST_SEMI_HIGH_SPEED          :유지비용 변수 - 준고속선 선로
+STR_PARA_DESC_MAINT_COST_SEMI_HIGH_SPEED          :준고속선 선로의 유지비용 변수를 설정합니다. 기본값은 22 입니다.
+STR_PARA_NAME_MAINT_COST_HIGH_SPEED               :유지비용 변수 - 고속선 선로
+STR_PARA_DESC_MAINT_COST_HIGH_SPEED               :고속선 선로의 유지비용 변수를 설정합니다. 기본값은 24 입니다.
+STR_PARA_NAME_MAINT_COST_METRO                    :유지비용 변수 - 도시철도 선로
+STR_PARA_DESC_MAINT_COST_METRO                    :도시철도 선로의 유지비용 변수를 설정합니다. 기본값은 18 입니다.
 
 # Narrow gauge
 STR_NARROW_762_NAME                               :762mm 협궤 선로
@@ -82,7 +122,7 @@ STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :새 고속선 차량
 STR_HIGH_SPEED_NEW_ENGINE                         :고속선 차량
 STR_HIGH_SPEED_AUTOREPLACE                        :고속선 차량
 
-# Metro Line
+# Metro
 STR_TRACK_METRO_NAME                              :도시철도 선로
 STR_TRACK_METRO_DROPDOWN_MENU                     :도시철도 선로 건설
 STR_TRACK_METRO_TOOLBAR_CAPTION                   :도시철도 선로 건설
