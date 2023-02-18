@@ -3,7 +3,7 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :221107;
+        version                            :230218;
         
         min_compatible_version             :0;
 
@@ -71,9 +71,21 @@
                         desc:       string(STR_PARA_DESC_SPEED_METRO);
                         min_value:  0;
                         max_value:  6000;
+                        def_value:  180;
+                    }
+                }
+
+                param 11    {
+                    para_speed_LIGHT_RAIL {
+                        type:       int;
+                        name:       string(STR_PARA_NAME_SPEED_LIGHT);
+                        desc:       string(STR_PARA_DESC_SPEED_LIGHT);
+                        min_value:  0;
+                        max_value:  6000;
                         def_value:  121;
                     }
                 }
+
 
             // construction cost parameters
                 param 21    { 
@@ -169,6 +181,17 @@
                         type:       int;
                         name:       string(STR_PARA_NAME_CONST_COST_METRO);
                         desc:       string(STR_PARA_DESC_CONST_COST_METRO);
+                        min_value:  1;
+                        max_value:  6000;
+                        def_value:  18;
+                    }
+                }
+
+                param 30    { 
+                    para_construction_cost_LIGHT_RAIL {
+                        type:       int;
+                        name:       string(STR_PARA_NAME_CONST_COST_LIGHT);
+                        desc:       string(STR_PARA_DESC_CONST_COST_LIGHT);
                         min_value:  1;
                         max_value:  6000;
                         def_value:  16;
@@ -269,6 +292,17 @@
                         type:       int;
                         name:       string(STR_PARA_NAME_MAINT_COST_METRO);
                         desc:       string(STR_PARA_DESC_MAINT_COST_METRO);
+                        min_value:  1;
+                        max_value:  6000;
+                        def_value:  20;
+                    }
+                }
+
+                param 50    { 
+                    para_maintenance_cost_LIGHT_RAIL {
+                        type:       int;
+                        name:       string(STR_PARA_NAME_MAINT_COST_LIGHT);
+                        desc:       string(STR_PARA_DESC_MAINT_COST_LIGHT);
                         min_value:  1;
                         max_value:  6000;
                         def_value:  18;
@@ -393,7 +427,7 @@
         }
 
     // Fences (empty)
-        spriteset(set_NARROW_762_fence, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_EMPTY_fences, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
@@ -586,7 +620,7 @@
                 depots:                         sw_NARROW_762_depot;
                 bridge_surfaces:                sw_NARROW_762_bridge;
                 level_crossings:                sw_set_NARROW_762_level_crossing;
-                fences:                         set_NARROW_762_fence;
+                fences:                         set_EMPTY_fences;
             }
     }
 
@@ -883,7 +917,7 @@
             }
         }
 
-// LOW SPEED_ELECTRIFIED
+// LOW SPEED ELECTRIFIED
     // GUI
         spriteset(set_LOW_SPEED_ELEC_gui, "./Korean_Tracks/gfx/LOW_SPEED.png") {
             [   0,  380,    8,   18,    7,    0]   // ↕
@@ -904,101 +938,6 @@
             [ 480,  380,   29,   29,    0,    0]   // convert cursor
         }
 
-    // Tracks overlay
-        spriteset(set_LOW_SPEED_ELEC_track_overlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   40,   64,   31,  -31,    0]   // ↔U
-            [ 210,   40,   64,   31,  -31,    0]   // ↔D
-            [ 280,   40,   64,   31,  -31,    0]   // ↕R
-            [ 350,   40,   64,   31,  -31,    0]   // ↕L
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  150,   64,   31,  -31,    0]   // ↗↙
-            [  70,  150,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  150,   64,   31,  -31,    0]   // ↔U
-            [ 210,  150,   64,   31,  -31,    0]   // ↔D
-            [ 280,  150,   64,   31,  -31,    0]   // ↕R
-            [ 350,  150,   64,   31,  -31,    0]   // ↕L
-            [ 420,  150,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  150,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  150,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  150,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-    // Tracks underlay
-        spriteset(set_LOW_SPEED_ELEC_track_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,   80,   64,   31,  -31,    0]   // ↗↙
-            [  70,   80,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   80,   64,   31,  -31,    0]   // ↔U
-            [ 210,   80,   64,   31,  -31,    0]   // ↔D
-            [ 280,   80,   64,   31,  -31,    0]   // ↕R
-            [ 350,   80,   64,   31,  -31,    0]   // ↕L
-            [ 420,   80,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   80,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   80,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   80,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,   80,   64,   31,  -31,    0]   // +
-            [ 770,   80,   64,   31,  -31,    0]   // combi SW
-            [ 840,   80,   64,   31,  -31,    0]   // combi NE
-            [ 910,   80,   64,   31,  -31,    0]   // combi SE
-            [ 980,   80,   64,   31,  -31,    0]   // combi NW
-            [1050,   80,   64,   31,  -31,    0]   // combi all
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  190,   64,   31,  -31,    0]   // ↔U
-            [ 210,  190,   64,   31,  -31,    0]   // ↔D
-            [ 280,  190,   64,   31,  -31,    0]   // ↕R
-            [ 350,  190,   64,   31,  -31,    0]   // ↕L
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,  190,   64,   31,  -31,    0]   // +
-            [ 770,  190,   64,   31,  -31,    0]   // combi SW
-            [ 840,  190,   64,   31,  -31,    0]   // combi NE
-            [ 910,  190,   64,   31,  -31,    0]   // combi SE
-            [ 980,  190,   64,   31,  -31,    0]   // combi NW
-            [1050,  190,   64,   31,  -31,    0]   // combi all
-        }
-
-    // Tunnels
-        spriteset(set_LOW_SPEED_ELEC_track_tunnel_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  120,   64,   39,  -31,   -8]   // ↙
-            [  70,  120,   64,   31,  -31,    0]   // ↖
-            [ 140,  120,   64,   31,  -31,    0]   // ↗
-            [ 210,  120,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  170,   64,   39,  -31,   -8]   // ↙
-            [  70,  170,   64,   31,  -31,    0]   // ↖
-            [ 140,  170,   64,   31,  -31,    0]   // ↗
-            [ 210,  170,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  220,   64,   39,  -31,   -8]   // ↙
-            [  70,  220,   64,   31,  -31,    0]   // ↖
-            [ 140,  220,   64,   31,  -31,    0]   // ↗
-            [ 210,  220,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_tunnel_underlay_snow, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  270,   64,   39,  -31,   -8]   // ↙
-            [  70,  270,   64,   31,  -31,    0]   // ↖
-            [ 140,  270,   64,   31,  -31,    0]   // ↗
-            [ 210,  270,   64,   39,  -31,   -8]   // ↘
-        }
-
     // Catenary Wire
         spriteset(set_LOW_SPEED_ELEC_track_wire, "./Korean_Tracks/gfx/LOW_SPEED.png") {
             [   0,  420,   32,   24,  -29,   -6]  // one tile
@@ -1006,25 +945,25 @@
             [  80,  420,   32,   24,   -1,  -13]
             [ 120,  420,    1,   24,    0,   -7]
             [ 130,  420,   32,   32,  -29,   -7]
-            [ 170,  420,   32,   24,    0,    3]
+            [ 170,  420,   32,   24,   -1,    3]
             [ 210,  420,   32,   24,  -29,    3]
-            [ 250,  420,   32,   32,    0,   -6]
+            [ 250,  420,   32,   32,   -1,   -7]
             [   0,  460,   32,   24,  -29,   -6]  // two tiles 1st
             [  40,  460,   32,   24,   -1,   -6]
             [  80,  460,   32,   24,   -1,  -13]
             [ 120,  460,    1,   24,    0,   -7]
             [ 130,  460,   32,   32,  -29,   -7]
-            [ 170,  460,   32,   24,    0,    3]
+            [ 170,  460,   32,   24,   -1,    3]
             [ 210,  460,   32,   24,  -29,    3]
-            [ 250,  460,   32,   32,    0,   -6]
+            [ 250,  460,   32,   32,   -1,   -7]
             [   0,  500,   32,   24,  -29,   -6]  // two tiles 2nd
             [  40,  500,   32,   24,   -1,   -6]
             [  80,  500,   32,   24,   -1,  -13]
             [ 120,  500,    1,   24,    0,   -7]
             [ 130,  500,   32,   32,  -29,   -7]
-            [ 170,  500,   32,   24,    0,    3]
+            [ 170,  500,   32,   24,   -1,    3]
             [ 210,  500,   32,   24,  -29,    3]
-            [ 250,  500,   32,   32,    0,   -6]
+            [ 250,  500,   32,   32,   -1,   -7]
             [   0,  540,   16,   13,  -29,    2]  // short lines
             [  40,  540,   16,   13,   -1,   -6]
             [  80,  540,   16,   13,  -13,   -6]
@@ -1041,146 +980,6 @@
             [ 100,  565,   11,   26,    0,  -22]  // ↑
             [ 120,  565,   11,   26,    0,  -18]  // →
             [ 140,  565,   11,   26,   -9,  -18]  // ←
-        }
-
-    // Depot
-        spriteset(set_LOW_SPEED_ELEC_track_depot, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [   0,  320,   64,   45,  -31,  -18]   // SE entry
-            [  70,  320,   64,   45,   -9,  -29]   // SE
-            [ 140,  320,   64,   45,  -31,  -18]   // SW entry
-            [ 210,  320,   64,   45,  -53,  -29]   // SW
-            [ 280,  320,   64,   45,  -53,  -29]   // NE
-            [ 350,  320,   64,   45,   -9,  -29]   // NW
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  230,   64,   45,  -31,  -18]   // SE entry
-            [  70,  230,   64,   45,   -9,  -29]   // SE
-            [ 140,  230,   64,   45,  -31,  -18]   // SW entry
-            [ 210,  230,   64,   45,  -53,  -29]   // SW
-            [ 280,  230,   64,   45,  -53,  -29]   // NE
-            [ 350,  230,   64,   45,   -9,  -29]   // NW
-        }
-    // Bridge surfaces (uses track_underlay's sprites)
-        spriteset(set_LOW_SPEED_ELEC_track_bridge, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 700,  270,   64,   31,  -31,    0]   // ↗↙
-            [ 770,  270,   64,   31,  -31,    0]   // ↖↘
-            [ 840,  270,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 910,  270,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 980,  270,   64,   23,  -31,    0]   // ↙ slope up
-            [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  190,   64,   31,  -31,    0]   // ↗↙
-            [  70,  190,   64,   31,  -31,    0]   // ↖↘
-            [ 420,  190,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  190,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  190,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  190,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-    // Level crossing
-        spriteset(set_LOW_SPEED_ELEC_track_crossing_close, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 700,  120,   64,   31,  -31,    0]
-            [ 770,  120,   64,   31,  -31,    0]
-            [ 840,  120,    5,   13,    0,  -10]   // N
-            [ 850,  120,   23,   22,   -5,  -10]
-            [ 880,  120,   29,   18,  -24,  -10]   // E
-            [ 910,  120,    5,   13,   -3,  -10]
-            [ 920,  120,   29,   16,    0,  -11]   // W
-            [ 950,  120,    5,   13,   -3,  -10]
-            [ 960,  120,    5,   13,    0,  -10]   // S
-            [ 970,  120,   23,   17,  -19,  -14]
-        }
-        spriteset(set_LOW_SPEED_ELEC_track_crossing_open, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            [ 700,  120,   64,   31,  -31,    0]
-            [ 770,  120,   64,   31,  -31,    0]
-            [ 840,  150,    5,   13,    0,  -10]
-            [ 850,  150,    8,   27,   -6,  -22]
-            [ 880,  150,    8,   29,   -3,  -26]
-            [ 910,  150,    5,   13,   -3,  -10]
-            [ 920,  150,    8,   28,    0,  -23]
-            [ 950,  150,    5,   13,   -3,  -10]
-            [ 960,  150,    5,   13,    0,  -10]
-            [ 970,  150,    8,   29,   -3,  -26]
-        }
-
-        spriteset(set_LOW_SPEED_ELEC_track_crossing_SNOW_close, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  230,   64,   31,  -31,    0]
-            [ 770,  230,   64,   31,  -31,    0]
-            [ 840,   80,    5,   13,    0,  -10]   // N
-            [ 850,   80,   23,   22,   -5,  -10]
-            [ 880,   80,   29,   18,  -24,  -10]   // E
-            [ 910,   80,    5,   13,   -3,  -10]
-            [ 920,   80,   29,   16,    0,  -11]   // W
-            [ 950,   80,    5,   13,   -3,  -10]
-            [ 960,   80,    5,   13,    0,  -10]   // S
-            [ 970,   80,   23,   17,  -19,  -14]
-        }
-        spriteset(set_LOW_SPEED_ELEC_track_crossing_SNOW_open, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  230,   64,   31,  -31,    0]
-            [ 770,  230,   64,   31,  -31,    0]
-            [ 840,  110,    5,   13,    0,  -10]
-            [ 850,  110,    8,   27,   -6,  -22]
-            [ 880,  110,    8,   29,   -3,  -26]
-            [ 910,  110,    5,   13,   -3,  -10]
-            [ 920,  110,    8,   28,    0,  -23]
-            [ 950,  110,    5,   13,   -3,  -10]
-            [ 960,  110,    5,   13,    0,  -10]
-            [ 970,  110,    8,   29,   -3,  -26]
-        }
-
-    // Level crossing status
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_level_crossing, level_crossing_status) {
-            LEVEL_CROSSING_CLOSED:              set_LOW_SPEED_ELEC_track_crossing_close;
-            LEVEL_CROSSING_OPEN:              
-            set_LOW_SPEED_ELEC_track_crossing_open;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_level_crossing_SNOW, level_crossing_status) {
-            LEVEL_CROSSING_CLOSED:              set_LOW_SPEED_ELEC_track_crossing_SNOW_close;
-            LEVEL_CROSSING_OPEN:              
-            set_LOW_SPEED_ELEC_track_crossing_SNOW_open;
-        }
-
-    // Graphic for terrain
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_tunnel_underlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_LOW_SPEED_ELEC_track_tunnel_underlay;
-            TILETYPE_DESERT:                    set_LOW_SPEED_ELEC_track_tunnel_underlay_desert;
-            TILETYPE_RAIN_FOREST:               set_LOW_SPEED_ELEC_track_tunnel_underlay_rain;
-            TILETYPE_SNOW:                      set_LOW_SPEED_ELEC_track_tunnel_underlay_snow;            
-            set_LOW_SPEED_ELEC_track_tunnel_underlay;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_overlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_LOW_SPEED_ELEC_track_overlay;
-            TILETYPE_SNOW:                      set_LOW_SPEED_ELEC_track_overlay_SNOW;            
-            set_LOW_SPEED_ELEC_track_overlay;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_underlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_LOW_SPEED_ELEC_track_underlay;
-            TILETYPE_SNOW:                      set_LOW_SPEED_ELEC_track_underlay_SNOW;            
-            set_LOW_SPEED_ELEC_track_underlay;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_depot, terrain_type) {
-            TILETYPE_NORMAL:                    set_LOW_SPEED_ELEC_track_depot;
-            TILETYPE_SNOW:                      set_LOW_SPEED_ELEC_track_depot_SNOW;            
-            set_LOW_SPEED_ELEC_track_depot;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_LOW_SPEED_ELEC_track_bridge, terrain_type) {
-            TILETYPE_NORMAL:                    set_LOW_SPEED_ELEC_track_bridge;
-            TILETYPE_SNOW:                      set_LOW_SPEED_ELEC_track_bridge_SNOW;            
-            set_LOW_SPEED_ELEC_track_bridge;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_set_LOW_SPEED_ELEC_track_level_crossing, terrain_type) {
-            TILETYPE_NORMAL:                    sw_LOW_SPEED_ELEC_track_level_crossing;
-            TILETYPE_SNOW:                      sw_LOW_SPEED_ELEC_track_level_crossing_SNOW;            
-            sw_LOW_SPEED_ELEC_track_level_crossing;
         }
 
     // Define LOW_SPEED_ELECTRIFIED
@@ -1210,18 +1009,18 @@
 
             graphics {
                 gui:                            set_LOW_SPEED_ELEC_gui;
-                track_overlay:                  sw_LOW_SPEED_ELEC_track_overlay;
-                underlay:                       sw_LOW_SPEED_ELEC_track_underlay;
-                tunnels:                        sw_LOW_SPEED_ELEC_track_tunnel_underlay;
-                depots:                         sw_LOW_SPEED_ELEC_track_depot;
-                bridge_surfaces:                sw_LOW_SPEED_ELEC_track_bridge;
-                level_crossings:                sw_set_LOW_SPEED_ELEC_track_level_crossing;
+                track_overlay:                  sw_LOW_SPEED_track_overlay;
+                underlay:                       sw_LOW_SPEED_track_underlay;
+                tunnels:                        sw_LOW_SPEED_track_tunnel_underlay;
+                depots:                         sw_LOW_SPEED_track_depot;
+                bridge_surfaces:                sw_LOW_SPEED_track_bridge;
+                level_crossings:                sw_set_LOW_SPEED_track_level_crossing;
                 catenary_wire:                  set_LOW_SPEED_ELEC_track_wire;
                 catenary_pylons:                set_LOW_SPEED_ELEC_track_pylons;
             }
         }
 
-// MAIN_LINE
+// STANDARD SPEED
     // GUI
         spriteset(set_MAIN_LINE_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,    0,    8,   15,    7,    3]   // ↕
@@ -1500,7 +1299,7 @@
             sw_MAIN_LINE_track_level_crossing;
         }
 
-    // Define MAIN_LINE
+    // Define STANDARD_SPEED
         item(FEAT_RAILTYPES, track_MAIN_LINE, 03) {
             property {
                 label:                          "KDS_";
@@ -1537,7 +1336,7 @@
             }
         }
 
-// MAIN_LINE_ELECTRIFIED
+// STANDARD SPEED ELECTRIFIED
     // GUI
         spriteset(set_MAIN_LINE_ELEC_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,  375,    8,   18,    7,    0]   // ↕
@@ -1558,101 +1357,6 @@
             [ 480,  375,   29,   29,    0,    0]   // convert cursor
         }
 
-    // Tracks overlay
-        spriteset(set_MAIN_LINE_ELEC_track_overlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   40,   64,   31,  -31,    0]   // ↔U
-            [ 210,   40,   64,   31,  -31,    0]   // ↔D
-            [ 280,   40,   64,   31,  -31,    0]   // ↕R
-            [ 350,   40,   64,   31,  -31,    0]   // ↕L
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  300,   64,   31,  -31,    0]   // ↗↙
-            [  70,  300,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  300,   64,   31,  -31,    0]   // ↔U
-            [ 210,  300,   64,   31,  -31,    0]   // ↔D
-            [ 280,  300,   64,   31,  -31,    0]   // ↕R
-            [ 350,  300,   64,   31,  -31,    0]   // ↕L
-            [ 420,  300,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  300,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  300,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  300,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-    // Tracks underlay
-        spriteset(set_MAIN_LINE_ELEC_track_underlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,   80,   64,   31,  -31,    0]   // ↗↙
-            [  70,   80,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   80,   64,   31,  -31,    0]   // ↔U
-            [ 210,   80,   64,   31,  -31,    0]   // ↔D
-            [ 280,   80,   64,   31,  -31,    0]   // ↕R
-            [ 350,   80,   64,   31,  -31,    0]   // ↕L
-            [ 420,   80,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   80,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   80,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   80,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,   80,   64,   31,  -31,    0]   // +
-            [ 770,   80,   64,   31,  -31,    0]   // combi SW
-            [ 840,   80,   64,   31,  -31,    0]   // combi NE
-            [ 910,   80,   64,   31,  -31,    0]   // combi SE
-            [ 980,   80,   64,   31,  -31,    0]   // combi NW
-            [1050,   80,   64,   31,  -31,    0]   // combi all
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  340,   64,   31,  -31,    0]   // ↗↙
-            [  70,  340,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  340,   64,   31,  -31,    0]   // ↔U
-            [ 210,  340,   64,   31,  -31,    0]   // ↔D
-            [ 280,  340,   64,   31,  -31,    0]   // ↕R
-            [ 350,  340,   64,   31,  -31,    0]   // ↕L
-            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
-            [ 700,  340,   64,   31,  -31,    0]   // +
-            [ 770,  340,   64,   31,  -31,    0]   // combi SW
-            [ 840,  340,   64,   31,  -31,    0]   // combi NE
-            [ 910,  340,   64,   31,  -31,    0]   // combi SE
-            [ 980,  340,   64,   31,  -31,    0]   // combi NW
-            [1050,  340,   64,   31,  -31,    0]   // combi all
-        }
-
-    // Tunnels
-        spriteset(set_MAIN_LINE_ELEC_track_tunnel_underlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  120,   64,   39,  -31,   -8]   // ↙
-            [  70,  120,   64,   31,  -31,    0]   // ↖
-            [ 140,  120,   64,   31,  -31,    0]   // ↗
-            [ 210,  120,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  170,   64,   39,  -31,   -8]   // ↙
-            [  70,  170,   64,   31,  -31,    0]   // ↖
-            [ 140,  170,   64,   31,  -31,    0]   // ↗
-            [ 210,  170,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  220,   64,   39,  -31,   -8]   // ↙
-            [  70,  220,   64,   31,  -31,    0]   // ↖
-            [ 140,  220,   64,   31,  -31,    0]   // ↗
-            [ 210,  220,   64,   39,  -31,   -8]   // ↘
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_tunnel_underlay_snow, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  270,   64,   39,  -31,   -8]   // ↙
-            [  70,  270,   64,   31,  -31,    0]   // ↖
-            [ 140,  270,   64,   31,  -31,    0]   // ↗
-            [ 210,  270,   64,   39,  -31,   -8]   // ↘
-        }
-
     // Catenary Wire
         spriteset(set_MAIN_LINE_ELEC_track_wire, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,  420,   32,   24,  -29,   -6]  // one tile
@@ -1660,25 +1364,25 @@
             [  80,  420,   32,   24,   -1,  -13]
             [ 120,  420,    1,   24,    0,   -7]
             [ 130,  420,   32,   32,  -29,   -7]
-            [ 170,  420,   32,   24,    0,    3]
+            [ 170,  420,   32,   24,   -1,    3]
             [ 210,  420,   32,   24,  -29,    3]
-            [ 250,  420,   32,   32,    0,   -6]
+            [ 250,  420,   32,   32,   -1,   -7]
             [   0,  460,   32,   24,  -29,   -6]  // two tiles 1st
             [  40,  460,   32,   24,   -1,   -6]
             [  80,  460,   32,   24,   -1,  -13]
             [ 120,  460,    1,   24,    0,   -7]
             [ 130,  460,   32,   32,  -29,   -7]
-            [ 170,  460,   32,   24,    0,    3]
+            [ 170,  460,   32,   24,   -1,    3]
             [ 210,  460,   32,   24,  -29,    3]
-            [ 250,  460,   32,   32,    0,   -6]
+            [ 250,  460,   32,   32,   -1,   -7]
             [   0,  500,   32,   24,  -29,   -6]  // two tiles 2nd
             [  40,  500,   32,   24,   -1,   -6]
             [  80,  500,   32,   24,   -1,  -13]
             [ 120,  500,    1,   24,    0,   -7]
             [ 130,  500,   32,   32,  -29,   -7]
-            [ 170,  500,   32,   24,    0,    3]
+            [ 170,  500,   32,   24,   -1,    3]
             [ 210,  500,   32,   24,  -29,    3]
-            [ 250,  500,   32,   32,    0,   -6]
+            [ 250,  500,   32,   32,   -1,   -7]
             [   0,  540,   16,   13,  -29,    2]  // short lines
             [  40,  540,   16,   13,   -1,   -6]
             [  80,  540,   16,   13,  -13,   -6]
@@ -1697,170 +1401,7 @@
             [ 140,  565,   11,   26,   -9,  -18]  // ←
         }
 
-    // Fences
-        spriteset(set_MAIN_LINE_ELEC_fences, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  220,   32,   25,  -33,  -10]
-            [ 740,  220,   32,   25,    3,  -10]
-            [ 780,  220,    8,   39,   -3,  -24]
-            [ 800,  220,   64,   12,  -32,  -12]
-            [ 870,  220,   32,   17,  -33,  -10]
-            [ 910,  220,   32,   17,    3,  -10]
-            [ 950,  220,   32,   35,  -33,  -19]
-            [ 990,  220,   32,   35,    3,  -19]
-            [ 700,  220,   32,   25,  -30,   -8]
-            [ 740,  220,   32,   25,   -2,   -8]
-            [1030,  220,    8,   39,   -3,  -24]
-            [ 800,  220,   64,   12,  -31,  -12]
-            [ 870,  220,   32,   17,  -30,   -8]
-            [ 910,  220,   32,   17,   -2,   -8]
-            [ 950,  220,   32,   35,  -30,  -17]
-            [ 990,  220,   32,   35,   -2,  -17]
-        }
-
-    // Depot
-        spriteset(set_MAIN_LINE_ELEC_track_depot, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  320,   64,   44,  -31,  -17]   // SE entry
-            [  70,  320,   64,   44,   -9,  -28]   // SE
-            [ 140,  320,   64,   44,  -31,  -17]   // SW entry
-            [ 210,  320,   64,   44,  -53,  -28]   // SW
-            [ 280,  320,   64,   44,  -53,  -28]   // NE
-            [ 350,  320,   64,   44,   -9,  -28]   // NW
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  380,   64,   45,  -31,  -18]   // SE entry
-            [  70,  380,   64,   45,   -9,  -29]   // SE
-            [ 140,  380,   64,   45,  -31,  -18]   // SW entry
-            [ 210,  380,   64,   45,  -53,  -29]   // SW
-            [ 280,  380,   64,   45,  -53,  -29]   // NE
-            [ 350,  380,   64,   45,   -9,  -29]   // NW
-        }
-
-    // Bridge surfaces
-        spriteset(set_MAIN_LINE_ELEC_track_bridge, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  270,   64,   31,  -31,    0]   // ↗↙
-            [ 770,  270,   64,   31,  -31,    0]   // ↖↘
-            [ 840,  270,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 910,  270,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 980,  270,   64,   23,  -31,    0]   // ↙ slope up
-            [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0,  340,   64,   31,  -31,    0]   // ↗↙
-            [  70,  340,   64,   31,  -31,    0]   // ↖↘
-            [ 420,  340,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  340,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  340,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  340,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
-    // Level crossing
-        spriteset(set_MAIN_LINE_ELEC_track_crossing_close, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  120,   64,   31,  -31,    0]
-            [ 770,  120,   64,   31,  -31,    0]
-            [ 840,  120,    5,   13,    0,  -10]   // N
-            [ 850,  120,   23,   29,   -5,  -10]
-            [ 880,  120,   29,   25,  -24,  -17]   // E
-            [ 910,  120,    5,   13,    0,  -10]
-            [ 920,  120,   29,   25,    0,  -20]   // W
-            [ 950,  120,    5,   13,    0,  -10]
-            [ 960,  120,    5,   13,    0,  -10]   // S
-            [ 970,  120,   23,   23,  -19,  -14]
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_crossing_open, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  120,   64,   31,  -31,    0]
-            [ 770,  120,   64,   31,  -31,    0]
-            [ 840,  150,    5,   13,    0,  -10]
-            [ 850,  150,   24,   27,   -6,  -22]
-            [ 880,  150,   21,   29,  -16,  -26]
-            [ 910,  150,    5,   13,   -3,  -10]
-            [ 920,  150,   20,   28,    0,  -23]
-            [ 950,  150,    5,   13,   -3,  -10]
-            [ 960,  150,    5,   13,    0,  -10]
-            [ 970,  150,   23,   29,  -18,  -26]
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  380,   64,   31,  -31,    0]
-            [ 770,  380,   64,   31,  -31,    0]
-            [ 840,  380,    5,   13,    0,  -10]   // N
-            [ 850,  380,   23,   29,   -5,  -10]
-            [ 880,  380,   29,   25,  -24,  -17]   // E
-            [ 910,  380,    5,   13,    0,  -10]
-            [ 920,  380,   29,   25,    0,  -20]   // W
-            [ 950,  380,    5,   13,    0,  -10]
-            [ 960,  380,    5,   13,    0,  -10]   // S
-            [ 970,  380,   23,   23,  -19,  -14]
-        }
-
-        spriteset(set_MAIN_LINE_ELEC_track_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [ 700,  380,   64,   31,  -31,    0]
-            [ 770,  380,   64,   31,  -31,    0]
-            [ 840,  410,    5,   13,    0,  -10]
-            [ 850,  410,   24,   27,   -6,  -22]
-            [ 880,  410,   21,   29,  -16,  -26]
-            [ 910,  410,    5,   13,    0,  -10]
-            [ 920,  410,   20,   28,    0,  -23]
-            [ 950,  410,    5,   13,    0,  -10]
-            [ 960,  410,    5,   13,    0,  -10]
-            [ 970,  410,   23,   29,   -3,  -26]
-        }
-
-    // Level crossing status
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_level_crossing, level_crossing_status) {
-            LEVEL_CROSSING_CLOSED:              set_MAIN_LINE_ELEC_track_crossing_close;
-            LEVEL_CROSSING_OPEN:              
-            set_MAIN_LINE_ELEC_track_crossing_open;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_level_crossing_SNOW, level_crossing_status) {
-            LEVEL_CROSSING_CLOSED:              set_MAIN_LINE_ELEC_track_crossing_close_SNOW;
-            LEVEL_CROSSING_OPEN:              
-            set_MAIN_LINE_ELEC_track_crossing_open_SNOW;
-        }
-
-    // Graphic for terrain
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_tunnel_underlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_MAIN_LINE_ELEC_track_tunnel_underlay;
-            TILETYPE_DESERT:                    set_MAIN_LINE_ELEC_track_tunnel_underlay_desert;
-            TILETYPE_RAIN_FOREST:               set_MAIN_LINE_ELEC_track_tunnel_underlay_rain;
-            TILETYPE_SNOW:                      set_MAIN_LINE_ELEC_track_tunnel_underlay_snow;            
-            set_MAIN_LINE_ELEC_track_tunnel_underlay;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_overlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_MAIN_LINE_ELEC_track_overlay;
-            TILETYPE_SNOW:                      set_MAIN_LINE_ELEC_track_overlay_SNOW;            
-            set_MAIN_LINE_ELEC_track_overlay;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_underlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_MAIN_LINE_ELEC_track_underlay;
-            TILETYPE_SNOW:                      set_MAIN_LINE_ELEC_track_underlay_SNOW;            
-            set_MAIN_LINE_ELEC_track_underlay;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_depot, terrain_type) {
-            TILETYPE_NORMAL:                    set_MAIN_LINE_ELEC_track_depot;
-            TILETYPE_SNOW:                      set_MAIN_LINE_ELEC_track_depot_SNOW;            
-            set_MAIN_LINE_ELEC_track_depot;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_ELEC_track_bridge, terrain_type) {
-            TILETYPE_NORMAL:                    set_MAIN_LINE_ELEC_track_bridge;
-            TILETYPE_SNOW:                      set_MAIN_LINE_ELEC_track_bridge_SNOW;            
-            set_MAIN_LINE_ELEC_track_bridge;
-        }
-
-        switch(FEAT_RAILTYPES, SELF, sw_set_MAIN_LINE_ELEC_track_level_crossing, terrain_type) {
-            TILETYPE_NORMAL:                    sw_MAIN_LINE_ELEC_track_level_crossing;
-            TILETYPE_SNOW:                      sw_MAIN_LINE_ELEC_track_level_crossing_SNOW;            
-            sw_MAIN_LINE_ELEC_track_level_crossing;
-        }
-
-    // Define MAIN_LINE_ELECTRIFIED
+    // Define STANDARD_SPEED_ELECTRIFIED
         item(FEAT_RAILTYPES, track_MAIN_LINE_ELEC, 04) {
             property {
                 label:                          "ELRL";
@@ -1887,19 +1428,19 @@
 
             graphics {
                 gui:                            set_MAIN_LINE_ELEC_gui;
-                track_overlay:                  sw_MAIN_LINE_ELEC_track_overlay;
-                underlay:                       sw_MAIN_LINE_ELEC_track_underlay;
-                tunnels:                        sw_MAIN_LINE_ELEC_track_tunnel_underlay;
-                depots:                         sw_MAIN_LINE_ELEC_track_depot;
-                bridge_surfaces:                sw_MAIN_LINE_ELEC_track_bridge;
-                level_crossings:                sw_set_MAIN_LINE_ELEC_track_level_crossing;
+                track_overlay:                  sw_MAIN_LINE_track_overlay;
+                underlay:                       sw_MAIN_LINE_track_underlay;
+                tunnels:                        sw_MAIN_LINE_track_tunnel_underlay;
+                depots:                         sw_MAIN_LINE_track_depot;
+                bridge_surfaces:                sw_MAIN_LINE_track_bridge;
+                level_crossings:                sw_set_MAIN_LINE_track_level_crossing;
                 catenary_wire:                  set_MAIN_LINE_ELEC_track_wire;
                 catenary_pylons:                set_MAIN_LINE_ELEC_track_pylons;
-                fences:                         set_MAIN_LINE_ELEC_fences;
+                fences:                         set_MAIN_LINE_fences;
             }
         }
 
-// MAIN_LINE_URBAN_ELECTRIFIED
+// STANDARD SPEED URBAN ELECTRIFIED
     // GUI
         spriteset(set_MAIN_LINE_URBAN_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,  615,    8,   18,    7,    0]   // ↕
@@ -1921,19 +1462,6 @@
         }
 
     // Tracks overlay
-        spriteset(set_MAIN_LINE_URBAN_track_overlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  655,   64,   31,  -31,    0]   // ↗↙
-            [  70,  655,   64,   31,  -31,    0]   // ↖↘
-            [ 140,  655,   64,   31,  -31,    0]   // ↔U
-            [ 210,  655,   64,   31,  -31,    0]   // ↔D
-            [ 280,  655,   64,   31,  -31,    0]   // ↕R
-            [ 350,  655,   64,   31,  -31,    0]   // ↕L
-            [ 420,  655,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,  655,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,  655,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,  655,   64,   39,  -31,   -8]   // ↖ slope up
-        }
-
         spriteset(set_MAIN_LINE_URBAN_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
             [   0,  450,   64,   31,  -31,    0]   // ↗↙
             [  70,  450,   64,   31,  -31,    0]   // ↖↘
@@ -2001,50 +1529,6 @@
             [ 210,  885,   64,   39,  -31,   -8]   // ↘
         }
 
-    // Catenary Wire
-        spriteset(set_MAIN_LINE_URBAN_track_wire, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  420,   32,   24,  -29,   -6]  // one tile
-            [  40,  420,   32,   24,   -1,   -6]
-            [  80,  420,   32,   24,   -1,  -13]
-            [ 120,  420,    1,   24,    0,   -7]
-            [ 130,  420,   32,   32,  -29,   -7]
-            [ 170,  420,   32,   24,    0,    3]
-            [ 210,  420,   32,   24,  -29,    3]
-            [ 250,  420,   32,   32,    0,   -6]
-            [   0,  460,   32,   24,  -29,   -6]  // two tiles 1st
-            [  40,  460,   32,   24,   -1,   -6]
-            [  80,  460,   32,   24,   -1,  -13]
-            [ 120,  460,    1,   24,    0,   -7]
-            [ 130,  460,   32,   32,  -29,   -7]
-            [ 170,  460,   32,   24,    0,    3]
-            [ 210,  460,   32,   24,  -29,    3]
-            [ 250,  460,   32,   32,    0,   -6]
-            [   0,  500,   32,   24,  -29,   -6]  // two tiles 2nd
-            [  40,  500,   32,   24,   -1,   -6]
-            [  80,  500,   32,   24,   -1,  -13]
-            [ 120,  500,    1,   24,    0,   -7]
-            [ 130,  500,   32,   32,  -29,   -7]
-            [ 170,  500,   32,   24,    0,    3]
-            [ 210,  500,   32,   24,  -29,    3]
-            [ 250,  500,   32,   32,    0,   -6]
-            [   0,  540,   16,   13,  -29,    2]  // short lines
-            [  40,  540,   16,   13,   -1,   -6]
-            [  80,  540,   16,   13,  -13,   -6]
-            [ 120,  540,   16,   13,   15,    2]
-        }
-
-    // Catenary Pylons
-        spriteset(set_MAIN_LINE_URBAN_track_pylons, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [   0,  565,   11,   26,  -10,  -18]  // ↙
-            [  20,  565,   11,   26,    0,  -21]  // ↗
-            [  40,  565,   11,   26,    1,  -18]  // ↘
-            [  60,  565,   11,   26,   -9,  -21]  // ↖
-            [  80,  565,   11,   26,    0,  -21]  // ↓
-            [ 100,  565,   11,   26,    0,  -22]  // ↑
-            [ 120,  565,   11,   26,    0,  -18]  // →
-            [ 140,  565,   11,   26,   -9,  -18]  // ←
-        }
-
     // Depot
         spriteset(set_MAIN_LINE_URBAN_track_depot, "./Korean_Tracks/gfx/MAIN_LINE.png") {
             [   0,  935,   64,   55,  -31,  -28]   // SE entry
@@ -2097,16 +1581,6 @@
             [ 770,  450,   64,   39,  -31,  -38]  // ↖
             [ 840,  450,   64,   39,  -31,  -38]  // ↗
             [ 910,  450,   64,   39,  -31,  -38]  // ↘
-        }
-
-    // Bridge surfaces
-        spriteset(set_MAIN_LINE_URBAN_track_bridge, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            [ 700,  270,   64,   31,  -31,    0]   // ↗↙
-            [ 770,  270,   64,   31,  -31,    0]   // ↖↘
-            [ 840,  270,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 910,  270,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 980,  270,   64,   23,  -31,    0]   // ↙ slope up
-            [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
         }
 
     // Level crossing
@@ -2177,9 +1651,9 @@
 
     // Graphic for terrain
         switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_URBAN_track_overlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_MAIN_LINE_URBAN_track_overlay;
+            TILETYPE_NORMAL:                    set_MAIN_LINE_track_overlay;
             TILETYPE_SNOW:                      set_MAIN_LINE_URBAN_track_overlay_SNOW;            
-            set_MAIN_LINE_URBAN_track_overlay;
+            set_MAIN_LINE_track_overlay;
         }
 
         switch(FEAT_RAILTYPES, SELF, sw_MAIN_LINE_URBAN_track_underlay, terrain_type) {
@@ -2244,10 +1718,10 @@
                 tunnels:                        sw_MAIN_LINE_URBAN_track_tunnel_underlay;
                 tunnel_overlay:                 sw_MAIN_LINE_URBAN_track_tunnel_overlay;
                 depots:                         sw_MAIN_LINE_URBAN_track_depot;
-                bridge_surfaces:                set_MAIN_LINE_URBAN_track_bridge;
+                bridge_surfaces:                set_MAIN_LINE_track_bridge;
                 level_crossings:                sw_set_MAIN_LINE_URBAN_track_level_crossing;
-                catenary_wire:                  set_MAIN_LINE_URBAN_track_wire;
-                catenary_pylons:                set_MAIN_LINE_URBAN_track_pylons;
+                catenary_wire:                  set_MAIN_LINE_ELEC_track_wire;
+                catenary_pylons:                set_MAIN_LINE_ELEC_track_pylons;
                 fences:                         set_MAIN_LINE_URBAN_fences;
             }
         }
@@ -2375,25 +1849,25 @@
             [  80,  400,   32,   24,   -1,  -13]
             [ 120,  400,    1,   24,    0,   -7]
             [ 130,  400,   32,   32,  -29,   -7]
-            [ 170,  400,   32,   24,    0,    3]
+            [ 170,  400,   32,   24,   -1,    3]
             [ 210,  400,   32,   24,  -29,    3]
-            [ 250,  400,   32,   32,    0,   -6]
+            [ 250,  400,   32,   32,   -1,   -7]
             [   0,  440,   32,   24,  -29,   -6]  // two tiles 1st
             [  40,  440,   32,   24,   -1,   -6]
             [  80,  440,   32,   24,   -1,  -13]
             [ 120,  440,    1,   24,    0,   -7]
             [ 130,  440,   32,   32,  -29,   -7]
-            [ 170,  440,   32,   24,    0,    3]
+            [ 170,  440,   32,   24,   -1,    3]
             [ 210,  440,   32,   24,  -29,    3]
-            [ 250,  440,   32,   32,    0,   -6]
+            [ 250,  440,   32,   32,   -1,   -7]
             [   0,  480,   32,   24,  -29,   -6]  // two tiles 2nd
             [  40,  480,   32,   24,   -1,   -6]
             [  80,  480,   32,   24,   -1,  -13]
             [ 120,  480,    1,   24,    0,   -7]
             [ 130,  480,   32,   32,  -29,   -7]
-            [ 170,  480,   32,   24,    0,    3]
+            [ 170,  480,   32,   24,   -1,    3]
             [ 210,  480,   32,   24,  -29,    3]
-            [ 250,  480,   32,   32,    0,   -6]
+            [ 250,  480,   32,   32,   -1,   -7]
             [   0,  520,   16,   13,  -29,    2]  // short lines
             [  40,  520,   16,   13,   -1,   -6]
             [  80,  520,   16,   13,  -13,   -6]
@@ -2500,7 +1974,7 @@
                 new_engine_text:                string(STR_SEMI_HIGH_SPEED_NEW_ENGINE);
                 autoreplace_text:               string(STR_SEMI_HIGH_SPEED_AUTOREPLACE);
 
-                station_graphics:               RAILTYPE_STATION_NORMAL;
+                station_graphics:               RAILTYPE_STATION_MAGLEV;
                 acceleration_model:             ACC_MODEL_RAIL;
                 speed_limit:                    para_speed_SEMI_HIGH_SPEED km/h;
                 construction_cost:              para_construction_cost_SEMI_HIGH_SPEED;
@@ -2649,25 +2123,25 @@
             [  80,  400,   32,   24,   -1,  -13]
             [ 120,  400,    1,   24,    0,   -7]
             [ 130,  400,   32,   32,  -29,   -7]
-            [ 170,  400,   32,   24,    0,    3]
+            [ 170,  400,   32,   24,   -1,    3]
             [ 210,  400,   32,   24,  -29,    3]
-            [ 250,  400,   32,   32,    0,   -6]
+            [ 250,  400,   32,   32,   -1,   -7]
             [   0,  440,   32,   24,  -29,   -6]  // two tiles 1st
             [  40,  440,   32,   24,   -1,   -6]
             [  80,  440,   32,   24,   -1,  -13]
             [ 120,  440,    1,   24,    0,   -7]
             [ 130,  440,   32,   32,  -29,   -7]
-            [ 170,  440,   32,   24,    0,    3]
+            [ 170,  440,   32,   24,   -1,    3]
             [ 210,  440,   32,   24,  -29,    3]
-            [ 250,  440,   32,   32,    0,   -6]
+            [ 250,  440,   32,   32,   -1,   -7]
             [   0,  480,   32,   24,  -29,   -6]  // two tiles 2nd
             [  40,  480,   32,   24,   -1,   -6]
             [  80,  480,   32,   24,   -1,  -13]
             [ 120,  480,    1,   24,    0,   -7]
             [ 130,  480,   32,   32,  -29,   -7]
-            [ 170,  480,   32,   24,    0,    3]
+            [ 170,  480,   32,   24,   -1,    3]
             [ 210,  480,   32,   24,  -29,    3]
-            [ 250,  480,   32,   32,    0,   -6]
+            [ 250,  480,   32,   32,   -1,   -7]
             [   0,  520,   16,   13,  -29,    2]  // short lines
             [  40,  520,   16,   13,   -1,   -6]
             [  80,  520,   16,   13,  -13,   -6]
@@ -2774,7 +2248,7 @@
                 new_engine_text:                string(STR_HIGH_SPEED_NEW_ENGINE);
                 autoreplace_text:               string(STR_HIGH_SPEED_AUTOREPLACE);
 
-                station_graphics:               RAILTYPE_STATION_NORMAL;
+                station_graphics:               RAILTYPE_STATION_MAGLEV;
                 acceleration_model:             ACC_MODEL_RAIL;
                 speed_limit:                    para_speed_HIGH_SPEED km/h; // 430km/h
                 construction_cost:              para_construction_cost_HIGH_SPEED;
@@ -2909,25 +2383,25 @@
             [  80,  400,   32,   24,   -1,  -13]
             [ 120,  400,    1,   24,    0,   -7]
             [ 130,  400,   32,   32,  -29,   -7]
-            [ 170,  400,   32,   24,    0,    3]
+            [ 170,  400,   32,   24,   -1,    3]
             [ 210,  400,   32,   24,  -29,    3]
-            [ 250,  400,   32,   32,    0,   -6]
+            [ 250,  400,   32,   32,   -1,   -7]
             [   0,  440,   32,   24,  -29,   -6]  // two tiles 1st
             [  40,  440,   32,   24,   -1,   -6]
             [  80,  440,   32,   24,   -1,  -13]
             [ 120,  440,    1,   24,    0,   -7]
             [ 130,  440,   32,   32,  -29,   -7]
-            [ 170,  440,   32,   24,    0,    3]
+            [ 170,  440,   32,   24,   -1,    3]
             [ 210,  440,   32,   24,  -29,    3]
-            [ 250,  440,   32,   32,    0,   -6]
+            [ 250,  440,   32,   32,   -1,   -7]
             [   0,  480,   32,   24,  -29,   -6]  // two tiles 2nd
             [  40,  480,   32,   24,   -1,   -6]
             [  80,  480,   32,   24,   -1,  -13]
             [ 120,  480,    1,   24,    0,   -7]
             [ 130,  480,   32,   32,  -29,   -7]
-            [ 170,  480,   32,   24,    0,    3]
+            [ 170,  480,   32,   24,   -1,    3]
             [ 210,  480,   32,   24,  -29,    3]
-            [ 250,  480,   32,   32,    0,   -6]
+            [ 250,  480,   32,   32,   -1,   -7]
             [   0,  520,   16,   13,  -29,    2]  // short lines
             [  40,  520,   16,   13,   -1,   -6]
             [  80,  520,   16,   13,  -13,   -6]
@@ -3149,6 +2623,369 @@
                 catenary_wire:                  set_METRO_wire;
                 catenary_pylons:                set_METRO_pylons;
                 fences:                         set_METRO_fences;
+            }
+        }
+
+// THIRD RAIL
+    // GUI
+        spriteset(set_THIRD_gui, "./Korean_Tracks/gfx/THIRD.png") {
+            [   0,    0,    8,   18,    7,    0]   // ↕
+            [  15,    0,   20,   16,    1,    2]   // ↗
+            [  48,    0,   20,   12,    1,    6]   // ↔
+            [  80,    0,   20,   16,    1,    2]   // ↘
+            [ 112,    0,   20,   16,    1,    2]   // x
+            [ 144,    0,   20,   20,    0,    0]   // depot
+            [ 176,    0,   20,   20,    0,    0]   // tunnel
+            [ 208,    0,   20,   18,    0,    0]   // convert
+            [ 240,    0,   20,   29,    0,    0]   // ↕ cursor
+            [ 272,    0,   26,   28,    0,    0]   // ↗ cursor
+            [ 304,    0,   27,   28,    0,    0]   // ↔ cursor
+            [ 336,    0,   26,   31,    0,    0]   // ↘ cursor
+            [ 368,    0,   26,   31,    0,    0]   // x cursor
+            [ 400,    0,   32,   32,    0,    0]   // depot cursor
+            [ 445,    0,   27,   32,    0,    0]   // tunnel cursor
+            [ 480,    0,   29,   29,    0,    0]   // convert cursor
+        }
+
+    // Tracks overlay
+        spriteset(set_THIRD_overlay, "./Korean_Tracks/gfx/THIRD.png") {
+            [   0,   40,   64,   31,  -31,    0]   // ↗↙
+            [  70,   40,   64,   31,  -31,    0]   // ↖↘
+            [ 140,   40,   64,   31,  -31,    0]   // ↔U
+            [ 210,   40,   64,   31,  -31,    0]   // ↔D
+            [ 280,   40,   64,   31,  -31,    0]   // ↕R
+            [ 350,   40,   64,   31,  -31,    0]   // ↕L
+            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+        spriteset(set_THIRD_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0, 1050,   64,   31,  -31,    0]   // ↗↙
+            [  70, 1050,   64,   31,  -31,    0]   // ↖↘
+            [ 140, 1050,   64,   31,  -31,    0]   // ↔U
+            [ 210, 1050,   64,   31,  -31,    0]   // ↔D
+            [ 280, 1050,   64,   31,  -31,    0]   // ↕R
+            [ 350, 1050,   64,   31,  -31,    0]   // ↕L
+            [ 420, 1050,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490, 1050,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560, 1050,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630, 1050,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+    // Tracks underlay
+        spriteset(set_THIRD_underlay, "./Korean_Tracks/gfx/THIRD.png") {
+            [   0,   80,   64,   31,  -31,    0]   // ↗↙
+            [  70,   80,   64,   31,  -31,    0]   // ↖↘
+            [ 140,   80,   64,   31,  -31,    0]   // ↔U
+            [ 210,   80,   64,   31,  -31,    0]   // ↔D
+            [ 280,   80,   64,   31,  -31,    0]   // ↕R
+            [ 350,   80,   64,   31,  -31,    0]   // ↕L
+            [ 420,   80,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   80,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   80,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   80,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700,   80,   64,   31,  -31,    0]   // +
+            [ 770,   80,   64,   31,  -31,    0]   // combi SW
+            [ 840,   80,   64,   31,  -31,    0]   // combi NE
+            [ 910,   80,   64,   31,  -31,    0]   // combi SE
+            [ 980,   80,   64,   31,  -31,    0]   // combi NW
+            [1050,   80,   64,   31,  -31,    0]   // combi all
+        }
+
+        spriteset(set_THIRD_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0, 1090,   64,   31,  -31,    0]   // ↗↙
+            [  70, 1090,   64,   31,  -31,    0]   // ↖↘
+            [ 140, 1090,   64,   31,  -31,    0]   // ↔U
+            [ 210, 1090,   64,   31,  -31,    0]   // ↔D
+            [ 280, 1090,   64,   31,  -31,    0]   // ↕R
+            [ 350, 1090,   64,   31,  -31,    0]   // ↕L
+            [ 420, 1090,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490, 1090,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560, 1090,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630, 1090,   64,   39,  -31,   -8]   // ↖ slope up
+            [ 700, 1090,   64,   31,  -31,    0]   // +
+            [ 770, 1090,   64,   31,  -31,    0]   // combi SW
+            [ 840, 1090,   64,   31,  -31,    0]   // combi NE
+            [ 910, 1090,   64,   31,  -31,    0]   // combi SE
+            [ 980, 1090,   64,   31,  -31,    0]   // combi NW
+            [1050, 1090,   64,   31,  -31,    0]   // combi all
+        }
+
+    // Tunnels
+        spriteset(set_THIRD_tunnel_underlay, "./Korean_Tracks/gfx/THIRD.png") {
+            [   0,  120,   64,   39,  -31,   -8]   // ↙
+            [  70,  120,   64,   31,  -31,    0]   // ↖
+            [ 140,  120,   64,   31,  -31,    0]   // ↗
+            [ 210,  120,   64,   39,  -31,   -8]   // ↘
+        }
+
+        spriteset(set_THIRD_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700, 1130,   64,   39,  -31,   -8]   // ↙
+            [ 770, 1130,   64,   31,  -31,    0]   // ↖
+            [ 840, 1130,   64,   31,  -31,    0]   // ↗
+            [ 910, 1130,   64,   39,  -31,   -8]   // ↘
+        }
+
+    // Depot
+        spriteset(set_THIRD_depot, "./Korean_Tracks/gfx/THIRD.png") {
+            [   0,  220,   64,   55,  -31,  -28]   // SE entry
+            [  70,  220,   64,   55,   -9,  -39]   // SE
+            [ 140,  220,   64,   55,  -31,  -28]   // SW entry
+            [ 210,  220,   64,   55,  -53,  -39]   // SW
+            [ 280,  220,   64,   55,  -53,  -39]   // NE
+            [ 350,  220,   64,   55,   -9,  -39]   // NW
+        }
+
+        spriteset(set_THIRD_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0, 1130,   64,   55,  -31,  -28]   // SE entry
+            [  70, 1130,   64,   55,   -9,  -39]   // SE
+            [ 140, 1130,   64,   55,  -31,  -28]   // SW entry
+            [ 210, 1130,   64,   55,  -53,  -39]   // SW
+            [ 280, 1130,   64,   55,  -53,  -39]   // NE
+            [ 350, 1130,   64,   55,   -9,  -39]   // NW
+        }
+
+    // Fences
+        spriteset(set_THIRD_fences, "./Korean_Tracks/gfx/THIRD.png") {
+            [ 700,  220,   32,   25,  -33,  -10]
+            [ 740,  220,   32,   25,    3,  -10]
+            [ 780,  220,    8,   35,   -3,  -24]
+            [ 800,  220,   64,   12,  -32,  -12]
+            [ 870,  220,   32,   17,  -33,  -10]
+            [ 910,  220,   32,   17,    3,  -10]
+            [ 950,  220,   32,   33,  -33,  -19]
+            [ 990,  220,   32,   33,    3,  -19]
+            [ 700,  220,   32,   25,  -30,   -8]
+            [ 740,  220,   32,   25,   -2,   -8]
+            [1030,  220,    8,   35,   -3,  -24]
+            [ 800,  220,   64,   12,  -31,  -12]
+            [ 870,  220,   32,   17,  -30,   -8]
+            [ 910,  220,   32,   17,   -2,   -8]
+            [ 950,  220,   32,   33,  -30,  -17]
+            [ 990,  220,   32,   33,   -2,  -17]
+        }
+
+    // Tunnel overlay
+        spriteset(set_THIRD_tunnel_overlay, "./Korean_Tracks/gfx/THIRD.png") {
+            [   0,  170,   64,   39,  -31,  -38]  // ↙
+            [  70,  170,   64,   39,  -31,  -40]  // ↖
+            [ 140,  170,   64,   39,  -31,  -40]  // ↗
+            [ 210,  170,   64,   39,  -31,  -38]  // ↘
+        }
+
+        spriteset(set_THIRD_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [ 700, 1050,   64,   39,  -31,  -38]  // ↙
+            [ 770, 1050,   64,   39,  -31,  -40]  // ↖
+            [ 840, 1050,   64,   39,  -31,  -40]  // ↗
+            [ 910, 1050,   64,   39,  -31,  -38]  // ↘
+        }
+
+    // Bridge surfaces
+        spriteset(set_THIRD_bridge, "./Korean_Tracks/gfx/THIRD.png") {
+            [ 700,  270,   64,   31,  -31,    0]   // ↗↙
+            [ 770,  270,   64,   31,  -31,    0]   // ↖↘
+            [ 840,  270,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 910,  270,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 980,  270,   64,   23,  -31,    0]   // ↙ slope up
+            [1050,  270,   64,   39,  -31,   -8]   // ↖ slope up
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_THIRD_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_THIRD_overlay;
+            TILETYPE_SNOW:                      set_THIRD_overlay_SNOW;            
+            set_THIRD_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_THIRD_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_THIRD_underlay;
+            TILETYPE_SNOW:                      set_THIRD_underlay_SNOW;            
+            set_THIRD_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_THIRD_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_THIRD_depot;
+            TILETYPE_SNOW:                      set_THIRD_depot_SNOW;            
+            set_THIRD_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_THIRD_tunnel_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_THIRD_tunnel_overlay;
+            TILETYPE_SNOW:                      set_THIRD_tunnel_overlay_SNOW;            
+            set_THIRD_tunnel_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_THIRD_tunnel_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_THIRD_tunnel_underlay;
+            TILETYPE_SNOW:                      set_THIRD_tunnel_underlay_SNOW;            
+            set_THIRD_tunnel_underlay;    
+        }
+
+    // Define THIRD_RAIL
+        item(FEAT_RAILTYPES, track_THIRD, 10) {
+            property {
+                label:                          "KL3L";
+                introduction_date:              date(0001, 1, 1);               
+                name:                           string(STR_TRACK_THIRD_NAME);
+                menu_text:                      string(STR_TRACK_THIRD_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_THIRD_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_THIRD_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_THIRD_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_THIRD_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    para_speed_LIGHT_RAIL km/h;
+                construction_cost:              para_construction_cost_LIGHT_RAIL;
+                maintenance_cost:               para_maintenance_cost_LIGHT_RAIL;
+                sort_order:                     10;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+                alternative_railtype_list:      ["RAIL"];
+            }
+
+            graphics {
+                gui:                            set_THIRD_gui;
+                track_overlay:                  sw_THIRD_overlay;
+                underlay:                       sw_THIRD_underlay;
+                tunnels:                        sw_THIRD_tunnel_underlay;
+                tunnel_overlay:                 sw_THIRD_tunnel_overlay;
+                depots:                         sw_THIRD_depot;
+                bridge_surfaces:                set_THIRD_bridge;
+                fences:                         set_THIRD_fences;
+            }
+        }
+
+// RAILBED
+    // GUI
+        spriteset(set_RAILBED_gui, "./Korean_Tracks/gfx/RAILBED.png") {
+            [   0,    0,   20,   18,    0,    0]   // ↕
+            [  30,    0,   20,   18,    0,    0]   // ↗
+            [  60,    0,   20,   18,    0,    0]   // ↔
+            [  90,    0,   20,   18,    0,    0]   // ↘
+            [ 120,    0,   20,   18,    0,    0]   // x
+            [   0,    0,    1,    1,    0,    0]   // depot
+            [   0,    0,    1,    1,    0,    0]   // tunnel
+            [ 210,    0,   20,   18,    0,    0]   // convert
+            [ 240,    0,   28,   31,    0,    0]   // ↕ cursor
+            [ 270,    0,   28,   31,    0,    0]   // ↗ cursor
+            [ 300,    0,   28,   31,    0,    0]   // ↔ cursor
+            [ 330,    0,   28,   31,    0,    0]   // ↘ cursor
+            [ 360,    0,   28,   31,    0,    0]   // x cursor
+            [ 390,    0,   28,   31,    0,    0]   // depot cursor
+            [ 390,    0,   28,   31,    0,    0]   // tunnel cursor
+            [ 450,    0,   28,   31,    0,    0]   // convert cursor
+        }
+
+    // Tracks overlay (Blank)
+        spriteset(set_RAILBED_overlay, "./Korean_Tracks/gfx/RAILBED.png") {
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+        }
+
+    // Tracks underlay
+        spriteset(set_RAILBED_underlay, "./Korean_Tracks/gfx/RAILBED.png") {
+            [   0,   40,   64,   31,  -31,    0]   // ↗↙
+            [  70,   40,   64,   31,  -31,    0]   // ↖↘
+            [ 140,   40,   64,   31,  -31,    0]   // ↔U
+            [ 210,   40,   64,   31,  -31,    0]   // ↔D
+            [ 280,   40,   64,   31,  -31,    0]   // ↕R
+            [ 350,   40,   64,   31,  -31,    0]   // ↕L
+            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0,   40,   64,   31,  -31,    0]   // +
+            [  70,   40,   64,   31,  -31,    0]   // combi SW
+            [  70,   40,   64,   31,  -31,    0]   // combi NE
+            [   0,   40,   64,   31,  -31,    0]   // combi SE
+            [   0,   40,   64,   31,  -31,    0]   // combi NW
+            [   0,   40,   64,   31,  -31,    0]   // combi all
+        }
+
+        spriteset(set_RAILBED_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            [   0, 1200,   64,   31,  -31,    0]   // ↗↙
+            [  70, 1200,   64,   31,  -31,    0]   // ↖↘
+            [ 140, 1200,   64,   31,  -31,    0]   // ↔U
+            [ 210, 1200,   64,   31,  -31,    0]   // ↔D
+            [ 280, 1200,   64,   31,  -31,    0]   // ↕R
+            [ 350, 1200,   64,   31,  -31,    0]   // ↕L
+            [ 420, 1200,   64,   39,  -31,   -8]   // ↗ slope up
+            [ 490, 1200,   64,   23,  -31,    0]   // ↘ slope up 
+            [ 560, 1200,   64,   23,  -31,    0]   // ↙ slope up
+            [ 630, 1200,   64,   39,  -31,   -8]   // ↖ slope up
+            [   0, 1200,   64,   31,  -31,    0]   // +
+            [   0, 1200,   64,   31,  -31,    0]   // combi SW
+            [   0, 1200,   64,   31,  -31,    0]   // combi NE
+            [   0, 1200,   64,   31,  -31,    0]   // combi SE
+            [   0, 1200,   64,   31,  -31,    0]   // combi NW
+            [   0, 1200,   64,   31,  -31,    0]   // combi all
+        }
+
+    // Fences
+        spriteset(set_RAILBED_fences, "./Korean_Tracks/gfx/RAILBED.png") {
+            [ 700,   40,   32,   25,  -33,  -10]
+            [ 740,   40,   32,   25,    3,  -10]
+            [ 780,   40,    8,   35,   -3,  -24]
+            [ 800,   40,   64,   12,  -32,  -12]
+            [ 870,   40,   32,   17,  -33,  -10]
+            [ 910,   40,   32,   17,    3,  -10]
+            [ 950,   40,   32,   33,  -33,  -19]
+            [ 990,   40,   32,   33,    3,  -19]
+            [ 700,   40,   32,   25,  -30,   -8]
+            [ 740,   40,   32,   25,   -2,   -8]
+            [1030,   40,    8,   35,   -3,  -24]
+            [ 800,   40,   64,   12,  -31,  -12]
+            [ 870,   40,   32,   17,  -30,   -8]
+            [ 910,   40,   32,   17,   -2,   -8]
+            [ 950,   40,   32,   33,  -30,  -17]
+            [ 990,   40,   32,   33,   -2,  -17]
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_RAILBED_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_RAILBED_underlay;
+            TILETYPE_SNOW:                      set_RAILBED_underlay_SNOW;            
+            set_RAILBED_underlay;
+        }
+
+    // Define RAILBED
+        item(FEAT_RAILTYPES, track_RAILBED, 16) {
+            property {
+                label:                          "KRBD";
+                introduction_date:              date(0001, 1, 1);               
+                name:                           string(STR_TRACK_RAILBED_NAME);
+                menu_text:                      string(STR_TRACK_RAILBED_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_RAILBED_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_RAILBED_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_RAILBED_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_RAILBED_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    0 km/h;
+                construction_cost:              8;
+                maintenance_cost:               4;
+                sort_order:                     16;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+            }
+
+            graphics {
+                gui:                            set_RAILBED_gui;
+                track_overlay:                  set_RAILBED_overlay;
+                underlay:                       sw_RAILBED_underlay;
+                fences:                         set_RAILBED_fences;
             }
         }
 
