@@ -3,7 +3,7 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :230218;
+        version                            :230219;
         
         min_compatible_version             :0;
 
@@ -2843,7 +2843,10 @@
                 sort_order:                     10;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-                alternative_railtype_list:      ["RAIL"];
+                alternative_railtype_list:      ["KL3L","KRLR"];
+                compatible_railtype_list:       ["KL3L","KRLR"];
+                powered_railtype_list:          ["KL3L","KRLR"];
+
             }
 
             graphics {
