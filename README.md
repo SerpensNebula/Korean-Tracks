@@ -1,4 +1,4 @@
-# 한국 기찻길 1.2.0
+# 한국 기찻길 1.3.0
 --------------------
 
 ![1](https://user-images.githubusercontent.com/75788864/200274976-222bff52-1e8d-425f-9b7a-5e0500fcea36.png)
