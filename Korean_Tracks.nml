@@ -3,8 +3,8 @@
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
-        version                            :230219;
-        
+        url                                :string(STR_GRF_URL);
+        version                            :230320;
         min_compatible_version             :0;
 
         // Parameters
@@ -901,9 +901,9 @@
                 sort_order:                     01;
 
                 railtype_flags:                 bitmask();
-                alternative_railtype_list:      ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
+                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
+                powered_railtype_list:          ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
             }
 
             graphics {
@@ -1002,9 +1002,9 @@
                 sort_order:                     02;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                compatible_railtype_list:       ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                powered_railtype_list:          ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
             }
 
             graphics {
@@ -1421,8 +1421,8 @@
                 sort_order:                     04;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                compatible_railtype_list:       ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
                 powered_railtype_list:          ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
             }
 
@@ -1706,8 +1706,8 @@
                 sort_order:                     05;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                compatible_railtype_list:       ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
                 powered_railtype_list:          ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
             }
 
@@ -1982,8 +1982,8 @@
                 sort_order:                     06;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-                alternative_railtype_list:      ["RAIL","KLSE","KDS_","KDSU","ELRL","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KDS_","KDSU","ELRL","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                compatible_railtype_list:       ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
                 powered_railtype_list:          ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
             }
 
@@ -2256,8 +2256,8 @@
                 sort_order:                     07;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                compatible_railtype_list:       ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
                 powered_railtype_list:          ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
             }
 
@@ -2606,9 +2606,9 @@
                 sort_order:                     08;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["KLSE","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
+                compatible_railtype_list:       ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
+                powered_railtype_list:          ["RAIL","KLSE","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
             }
 
             graphics {
