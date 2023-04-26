@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Track Set 1.3.2
+STR_GRF_NAME                                      :Korean Track Set 1.4.0
 STR_GRF_DESC                                      :Korean Track Set adds train and metro tracks in South Korea. Highly recommended to use with Korean Train Set or Korean Train Set Plus. It is NOT guaranteed compatibility with the other train sets or track sets.
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Tracks
 
@@ -28,6 +28,8 @@ STR_PARA_NAME_CONST_COST_LOW_SPEED                :Construction cost variable of
 STR_PARA_DESC_CONST_COST_LOW_SPEED                :Set construction cost variable of low speed track. The default value is 8.
 STR_PARA_NAME_CONST_COST_LOW_SPEED_ELEC           :Construction cost variable of low speed track (electrified)
 STR_PARA_DESC_CONST_COST_LOW_SPEED_ELEC           :Set construction cost variable of low speed track (electrified). The default value is 10.
+STR_PARA_NAME_CONST_COST_LOW_SPEED_URBAN          :Construction cost variable of low speed track (urban, electrified)
+STR_PARA_DESC_CONST_COST_LOW_SPEED_URBAN          :Set construction cost variable of low speed track (urban, electrified). The default value is 14.
 STR_PARA_NAME_CONST_COST_MAIN_LINE                :Construction cost variable of standard speed track 
 STR_PARA_DESC_CONST_COST_MAIN_LINE                :Set construction cost variable of standard speed track. The default value is 12.
 STR_PARA_NAME_CONST_COST_MAIN_LINE_ELEC           :Construction cost variable of standard speed track (electrified)
@@ -50,6 +52,8 @@ STR_PARA_NAME_MAINT_COST_LOW_SPEED                :Maintenance cost variable of 
 STR_PARA_DESC_MAINT_COST_LOW_SPEED                :Set maintenance cost variable of low speed track. The default value is 16.
 STR_PARA_NAME_MAINT_COST_LOW_SPEED_ELEC           :Maintenance cost variable of low speed track (electrified)
 STR_PARA_DESC_MAINT_COST_LOW_SPEED_ELEC           :Set maintenance cost variable of low speed track (electrified). The default value is 18.
+STR_PARA_NAME_MAINT_COST_LOW_SPEED_URBAN          :Maintenance cost variable of low speed track (urban, electrified)
+STR_PARA_DESC_MAINT_COST_LOW_SPEED_URBAN          :Set maintenance cost variable of low speed track (urban, electrified). The default value is 18.
 STR_PARA_NAME_MAINT_COST_MAIN_LINE                :Maintenance cost variable of standard speed track 
 STR_PARA_DESC_MAINT_COST_MAIN_LINE                :Set maintenance cost variable of standard speed track. The default value is 18.
 STR_PARA_NAME_MAINT_COST_MAIN_LINE_ELEC           :Maintenance cost variable of standard speed track (electrified)
@@ -88,6 +92,14 @@ STR_LOW_SPEED_ELEC_TRACK_TOOLBAR_CAPTION          :Low Speed Track Construction 
 STR_LOW_SPEED_ELEC_BUILD_VEHICLE_CAPTION          :New Electrified Low Speed Vehicles
 STR_LOW_SPEED_ELEC_NEW_ENGINE                     :Electrified Low Speed Vehicle
 STR_LOW_SPEED_ELEC_AUTOREPLACE                    :Electrified Low Speed Vehicles
+
+# Urban Electrified Low Speed // 120
+STR_LOW_SPEED_URBAN_TRACK_NAME                    :Low Speed Tracks (Urban, Electrified)
+STR_LOW_SPEED_URBAN_TRACK_DROPDOWN_MENU           :Low Speed Track Construction (Urban, Electrified)
+STR_LOW_SPEED_URBAN_TRACK_TOOLBAR_CAPTION         :Low Speed Track Construction (Urban, Electrified)
+STR_LOW_SPEED_URBAN_BUILD_VEHICLE_CAPTION         :New Electrified Low Speed Vehicles
+STR_LOW_SPEED_URBAN_NEW_ENGINE                    :Electrified Low Speed Vehicle
+STR_LOW_SPEED_URBAN_AUTOREPLACE                   :Electrified Low Speed Vehicle
 
 # Standard Speed // 180
 STR_MAIN_LINE_TRACK_NAME                          :Standard Speed Tracks
