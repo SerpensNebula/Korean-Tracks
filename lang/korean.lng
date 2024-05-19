@@ -1,8 +1,8 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 선로 세트 1.4.0
-STR_GRF_DESC                                      :한국에서 쓰이는 모습과 종류의 선로를 추가해줍니다. 한국 열차 세트나 한국 열차 세트 플러스와 같이 쓰는 것을 추천합니다. 이외 다른 열차 세트나 선로 세트와 호환을 보장하지 않습니다.
+STR_GRF_NAME                                      :한국 선로 세트 1.5.0
+STR_GRF_DESC                                      :{BLACK}한국에서 쓰이는 모습과 종류의 선로를 추가해줍니다. 한국 열차 세트나 한국 초기 열차 세트와 같이 쓰는 것을 추천합니다. 이외 다른 열차 세트나 선로 세트와 호환을 보장하지 않습니다. {}{}{YELLOW}한국 선로 세트는 한국 열차 세트와 한국 초기 열차 세트보다 뒤/아래에 배치할 것을 권장합니다. {}{}{BLACK}영향받음: {SILVER}Japan Set3: Tracks, NuTracks 2 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Tracks
 
 # Parameters - Speed Limit
@@ -166,7 +166,7 @@ STR_TRACK_RAILBED_NEW_ENGINE                      :.
 STR_TRACK_RAILBED_AUTOREPLACE                     :.
 
 # Objects
-STR_OBJECT_DEPOTS_NAME                            :[KTR] 차량기지
+STR_OBJECT_DEPOTS_NAME                            :한국선로세트 차량기지
 STR_OBJECT_DEPOT_NARROW_762_NAME                  :762mm 협궤 차량기지
 STR_OBJECT_DEPOT_LOW_SPEED_NAME                   :기존선 차량기지
 STR_OBJECT_DEPOT_STANDARD_SPEED_NAME              :개량선 차량기지
@@ -177,3 +177,14 @@ STR_OBJECT_DEPOT_HIGH_SPEED_NAME                  :고속선 차량기지
 STR_OBJECT_DEPOT_HIGH_SPEED_DESC                  :한국철도공사 고양차량사업소 (경기도 고양시)
 STR_OBJECT_DEPOT_METRO_NAME                       :도시철도 차량기지
 STR_OBJECT_DEPOT_METRO_DESC                       :서울교통공사 창동차량사무소 (서울특별시)
+
+STR_OBJECT_BUFFERS_NAME							  :한국선로세트 차막이
+STR_OBJECT_BUFFER_NARROW_762_NAME				  :762mm 협궤 선로 차막이
+STR_OBJECT_BUFFER_LOW_SPEED_NAME				  :기존선 차막이
+STR_OBJECT_BUFFER_LOW_SPEED_URBAN_NAME			  :기존선 (도심) 차막이
+STR_OBJECT_BUFFER_STANDARD_SPEED_NAME			  :개량선 차막이
+STR_OBJECT_BUFFER_STANDARD_SPEED_URBAN_NAME		  :개량선 (도심) 차막이
+STR_OBJECT_BUFFER_SEMI_HIGH_SPEED_NAME			  :준고속선 차막이
+STR_OBJECT_BUFFER_HIGH_SPEED_NAME				  :고속선 차막이
+STR_OBJECT_BUFFER_METRO_NAME					  :도시철도 차막이
+STR_OBJECT_BUFFER_THIRD_NAME					  :제3궤조 차막이

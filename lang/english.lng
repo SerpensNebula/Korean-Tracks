@@ -1,8 +1,8 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Track Set 1.4.0
-STR_GRF_DESC                                      :Korean Track Set adds train and metro tracks in South Korea. Highly recommended to use with Korean Train Set or Korean Train Set Plus. It is NOT guaranteed compatibility with the other train sets or track sets.
+STR_GRF_NAME                                      :Korean Track Set 1.5.0
+STR_GRF_DESC                                      :Korean Track Set adds train and metro tracks in South Korea. Highly recommended to use with Korean Train Set and Korean Early Train Set. It is NOT guaranteed compatibility with the other train sets or track sets. {}{}{YELLOW}Korean Track Set is recommended to be loaded after Korean Train Set AND Korean Early Train Set. {}{}{BLACK}Inspired by: {SILVER}Japan Set3: Tracks, NuTracks 2 {}{}{BLACK}License: {SILVER}GNU GPL v3
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Tracks
 
 # Parameters - Speed Limit
@@ -166,7 +166,7 @@ STR_TRACK_RAILBED_NEW_ENGINE                      :.
 STR_TRACK_RAILBED_AUTOREPLACE                     :.
 
 # Objects
-STR_OBJECT_DEPOTS_NAME                            :[KTR] Train Depot
+STR_OBJECT_DEPOTS_NAME                            :Korean Track Set Train Depots
 STR_OBJECT_DEPOT_NARROW_762_NAME                  :762mm Narrow Gauge Train Depot
 STR_OBJECT_DEPOT_LOW_SPEED_NAME                   :Low Speed Train Depot
 STR_OBJECT_DEPOT_STANDARD_SPEED_NAME              :Standard Speed Train Depot
@@ -177,3 +177,14 @@ STR_OBJECT_DEPOT_HIGH_SPEED_NAME                  :High Speed Train Depot
 STR_OBJECT_DEPOT_HIGH_SPEED_DESC                  :Korail Goyang Train Depot (Goyang, Gyeonggi-Do)
 STR_OBJECT_DEPOT_METRO_NAME                       :Metro Train Depot
 STR_OBJECT_DEPOT_METRO_DESC                       :Seoul Metro Chang-dong Train Depot (Seoul)
+
+STR_OBJECT_BUFFERS_NAME							  :Korean Track Set Buffers
+STR_OBJECT_BUFFER_NARROW_762_NAME				  :762mm Narrow Gauge Track Buffer
+STR_OBJECT_BUFFER_LOW_SPEED_NAME				  :Low Speed Track Buffer
+STR_OBJECT_BUFFER_LOW_SPEED_URBAN_NAME			  :Low Speed (Urban) Track Buffer
+STR_OBJECT_BUFFER_STANDARD_SPEED_NAME			  :Stradard Speed Track Buffer
+STR_OBJECT_BUFFER_STANDARD_SPEED_URBAN_NAME		  :Stradard Speed (Urban) Track Buffer
+STR_OBJECT_BUFFER_SEMI_HIGH_SPEED_NAME			  :Semi High Speed Track Buffer
+STR_OBJECT_BUFFER_HIGH_SPEED_NAME				  :High Speed Track Buffer
+STR_OBJECT_BUFFER_METRO_NAME					  :Metro Track Buffer
+STR_OBJECT_BUFFER_THIRD_NAME					  :Light Rail (Third Rail) Track

@@ -4,7 +4,7 @@
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
         url                                :string(STR_GRF_URL);
-        version                            :230426;
+        version                            :240519;
         min_compatible_version             :0;
 
         // Parameters
@@ -85,7 +85,6 @@
                         def_value:  121;
                     }
                 }
-
 
             // construction cost parameters
                 param 21    { 
@@ -502,62 +501,29 @@
             [ x+140,  y,      11,      26,      -9,     -18]  // ←
         }
 
-
-    // Level Crossing Type 2
-        template tmpl_level_crossing_type_2_close (x, y) {
-            [ x,      y,      64,      31,     -31,       0]
-            [ x+70,   y,      64,      31,     -31,       0]
-            [ x+140,  y,       5,      13,       0,     -10]
-            [ x+150,  y,      23,      22,      -5,     -10]
-            [ x+180,  y,      29,      18,     -24,     -10]
-            [ x+210,  y,       5,      13,      -3,     -10]
-            [ x+220,  y,      29,      16,       0,     -11]
-            [ x+250,  y,       5,      13,      -3,     -10]
-            [ x+260,  y,       5,      13,       0,     -10]
-            [ x+270,  y,      23,      17,     -19,     -14]
+    // Level Crossing
+        template tmpl_level_crossing (x, y) {
+            [ x,      y,      64,      56,     -31,     -25]
+            [ x+70,   y,      64,      56,     -31,     -25]
+            [ x+140,  y,      64,      56,     -25,     -24]
+            [ x+210,  y,      64,      56,     -37,     -24]
+            [ x+280,  y,      64,      56,     -57,     -40]
+            [ x+350,  y,      64,      56,     -61,     -36]
+            [ x+420,  y,      64,      56,      -1,     -36]
+            [ x+490,  y,      64,      56,      -5,     -40]
+            [ x+560,  y,      64,      56,     -33,     -52]
+            [ x+630,  y,      64,      56,     -29,     -51]
         }
 
-        template tmpl_level_crossing_type_2_open (x, y) {
-            [ x,      y,      64,      31,     -31,       0]
-            [ x+70,   y,      64,      31,     -31,       0]
-            [ x+140,  y+30,    5,      13,       0,     -10]
-            [ x+150,  y+30,    8,      27,      -6,     -22]
-            [ x+180,  y+30,    8,      29,      -3,     -26]
-            [ x+210,  y+30,    5,      13,      -3,     -10]
-            [ x+220,  y+30,    8,      28,       0,     -23]
-            [ x+250,  y+30,    5,      13,      -3,     -10]
-            [ x+260,  y+30,    5,      13,       0,     -10]
-            [ x+270,  y+30,    8,      29,      -3,     -26]
+    // Buffer
+        template tmpl_buffer_object (x, y) {
+            [ x,      y,      64,      55,     -31,     -24]
+            [ x+70,   y,      64,      55,     -31,     -24]
+            [ x+140,  y,      64,      55,     -31,     -24]
+            [ x+210,  y,      64,      55,     -31,     -24]
         }
 
-    // Level Crossing Type 1
-        template tmpl_level_crossing_type_1_close (x, y) {
-            [ x,      y,      64,      31,     -31,       0]
-            [ x+70,   y,      64,      31,     -31,       0]
-            [ x+140,  y,       5,      13,       0,     -10]   // N
-            [ x+150,  y,      23,      29,      -5,     -17]
-            [ x+180,  y,      29,      25,     -24,     -17]   // E
-            [ x+210,  y,       5,      13,       0,     -10]
-            [ x+220,  y,      29,      25,       0,     -20]   // W
-            [ x+250,  y,       5,      13,       0,     -10]
-            [ x+260,  y,       5,      13,       0,     -10]   // S
-            [ x+270,  y,      23,      23,     -19,     -20]
-        }
-
-        template tmpl_level_crossing_type_1_open (x, y) {
-            [ x,      y,      64,      31,     -31,       0]
-            [ x+70,   y,      64,      31,     -31,       0]
-            [ x+140,  y+30,    5,      13,       0,     -10]
-            [ x+150,  y+30,   24,      27,      -6,     -22]
-            [ x+180,  y+30,   21,      29,     -16,     -26]
-            [ x+210,  y+30,    5,      13,       0,     -10]
-            [ x+220,  y+30,   20,      28,       0,     -23]
-            [ x+250,  y+30,    5,      13,       0,     -10]
-            [ x+260,  y+30,    5,      13,       0,     -10]
-            [ x+270,  y+30,   23,      29,     -18,     -26]
-        }
-
-// MARROW 762mm
+// NARROW 762mm
     // GUI
         spriteset(set_NARROW_762_gui, "./Korean_Tracks/gfx/NARROW_762.png") {
             tmpl_gui (0, 0) 
@@ -598,8 +564,8 @@
             tmpl_tunnel_underlay (0, 270)
         } 
 
-    // Fences (empty)
-        spriteset(set_EMPTY_fences, "./Korean_Tracks/gfx/NARROW_762.png") {
+    // Fences // transparent
+        spriteset(set_TRANSPARENT_fences, "./Korean_Tracks/gfx/NARROW_762.png") {
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
@@ -637,20 +603,20 @@
         }
 
     // Level crossing
-        spriteset(set_NARROW_762_level_crossing_close, "./Korean_Tracks/gfx/NARROW_762.png") {
-            tmpl_level_crossing_type_2_close (700, 120)
+        spriteset(set_NARROW_762_level_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 0)
         }
 
-        spriteset(set_NARROW_762_level_crossing_open, "./Korean_Tracks/gfx/NARROW_762.png") {
-            tmpl_level_crossing_type_2_open (700, 120)
+        spriteset(set_NARROW_762_level_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 60)
         }
 
-        spriteset(set_NARROW_762_level_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_2_close (700, 80)
+        spriteset(set_NARROW_762_level_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 0)
         }
 
-        spriteset(set_NARROW_762_level_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_2_open (700, 80)
+        spriteset(set_NARROW_762_level_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 60)
         }
 
     // Level crossing status
@@ -736,7 +702,7 @@
                 depots:                         sw_NARROW_762_depot;
                 bridge_surfaces:                sw_NARROW_762_bridge;
                 level_crossings:                sw_set_NARROW_762_level_crossing;
-                fences:                         set_EMPTY_fences;
+                fences:                         set_TRANSPARENT_fences;
             }
     }
 
@@ -800,20 +766,20 @@
         }
 
     // Level crossing
-        spriteset(set_LOW_SPEED_track_crossing_close, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            tmpl_level_crossing_type_2_close (700, 120)
+        spriteset(set_LOW_SPEED_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 120)
         }
 
-        spriteset(set_LOW_SPEED_track_crossing_open, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            tmpl_level_crossing_type_2_open (700, 120)
+        spriteset(set_LOW_SPEED_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 180)
         }
 
-        spriteset(set_LOW_SPEED_track_crossing_SNOW_close, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_2_close (700, 230)
+        spriteset(set_LOW_SPEED_track_crossing_SNOW_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 120)
         }
 
-        spriteset(set_LOW_SPEED_track_crossing_SNOW_open, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_2_open (700, 230)
+        spriteset(set_LOW_SPEED_track_crossing_SNOW_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 180)
         }
 
     // Level crossing status
@@ -1020,20 +986,20 @@
         }
 
     // Level crossing
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_close, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            tmpl_level_crossing_type_1_close (700, 740)
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 240)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_open, "./Korean_Tracks/gfx/LOW_SPEED.png") {
-            tmpl_level_crossing_type_1_open (700, 740)
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 300)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_close, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_close (700, 530)
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 240)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_open, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_open (700, 530)
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 300)
         }
 
     // Level crossing status
@@ -1126,7 +1092,6 @@
             }
         }
 
-
 // STANDARD SPEED
     // GUI
         spriteset(set_MAIN_LINE_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
@@ -1192,20 +1157,20 @@
         }
 
     // Level crossing
-        spriteset(set_MAIN_LINE_track_crossing_close, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            tmpl_level_crossing_type_1_close (700, 120)
+        spriteset(set_MAIN_LINE_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 360)
         }
 
-        spriteset(set_MAIN_LINE_track_crossing_open, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            tmpl_level_crossing_type_1_open (700, 120)
+        spriteset(set_MAIN_LINE_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 420)
         }
 
-        spriteset(set_MAIN_LINE_track_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_close (700, 380)
+        spriteset(set_MAIN_LINE_track_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 360)
         }
 
-        spriteset(set_MAIN_LINE_track_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_open (700, 530)
+        spriteset(set_MAIN_LINE_track_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 420)
         }
 
     // Level crossing status
@@ -1405,17 +1370,17 @@
         }
 
     // Level crossing
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_close, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            tmpl_level_crossing_type_1_close (700, 760)
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 480)
         }
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_open, "./Korean_Tracks/gfx/MAIN_LINE.png") {
-            tmpl_level_crossing_type_1_open (700, 760)
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 540)
         }
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_close (700, 680)
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 480)
         }
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_open (700, 680)
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 540)
         }
 
     // Level crossing status
@@ -1850,17 +1815,17 @@
         }
 
     // Level crossing
-        spriteset(set_METRO_level_crossing_close, "./Korean_Tracks/gfx/METRO.png") {
-            tmpl_level_crossing_type_1_close (700, 120)
+        spriteset(set_METRO_level_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 600)
         }
-        spriteset(set_METRO_level_crossing_open, "./Korean_Tracks/gfx/METRO.png") {
-            tmpl_level_crossing_type_1_open (700, 120)
+        spriteset(set_METRO_level_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (0, 660)
         }
-        spriteset(set_METRO_level_crossing_close_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_close (700, 1130)
+        spriteset(set_METRO_level_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 600)
         }
-        spriteset(set_METRO_level_crossing_open_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_level_crossing_type_1_open (700, 1130)
+        spriteset(set_METRO_level_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+            tmpl_level_crossing (700, 660)
         }
 
     // Level crossing status
@@ -1983,7 +1948,7 @@
         } 
 
         spriteset(set_THIRD_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_tunnel_underlay (0, 1280)
+            tmpl_tunnel_underlay (700, 1280)
         } 
 
     // Depot
@@ -2089,7 +2054,7 @@
             tmpl_gui (0, 0) 
         }
 
-    // Tracks overlay (Blank)
+    // Tracks overlay // transparent
         spriteset(set_RAILBED_overlay, "./Korean_Tracks/gfx/RAILBED.png") {
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
@@ -2123,23 +2088,37 @@
             [   0,   40,   64,   31,  -31,    0]   // combi all
         }
 
-        spriteset(set_RAILBED_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            [   0, 1350,   64,   31,  -31,    0]   // ↗↙
-            [  70, 1350,   64,   31,  -31,    0]   // ↖↘
-            [ 140, 1350,   64,   31,  -31,    0]   // ↔U
-            [ 210, 1350,   64,   31,  -31,    0]   // ↔D
-            [ 280, 1350,   64,   31,  -31,    0]   // ↕R
-            [ 350, 1350,   64,   31,  -31,    0]   // ↕L
-            [ 420, 1350,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490, 1350,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560, 1350,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630, 1350,   64,   39,  -31,   -8]   // ↖ slope up
-            [   0, 1350,   64,   31,  -31,    0]   // +
-            [   0, 1350,   64,   31,  -31,    0]   // combi SW
-            [   0, 1350,   64,   31,  -31,    0]   // combi NE
-            [   0, 1350,   64,   31,  -31,    0]   // combi SE
-            [   0, 1350,   64,   31,  -31,    0]   // combi NW
-            [   0, 1350,   64,   31,  -31,    0]   // combi all
+        spriteset(set_RAILBED_underlay_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { // transparent
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+        }
+
+    // Bridge surfaces
+        spriteset(set_RAILBED_bridge, "./Korean_Tracks/gfx/RAILBED.png") {
+            tmpl_bridge_surface (0, 80)
+        }
+
+        spriteset(set_RAILBED_bridge_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { // transparent
+            [   0,    0,    1,    1,    0,    0]            
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
         }
 
     // Fences
@@ -2152,6 +2131,12 @@
             TILETYPE_NORMAL:                    set_RAILBED_underlay;
             TILETYPE_SNOW:                      set_RAILBED_underlay_SNOW;            
             set_RAILBED_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_RAILBED_bridge, terrain_type) {
+            TILETYPE_NORMAL:                    set_RAILBED_bridge;
+            TILETYPE_SNOW:                      set_RAILBED_bridge_SNOW;            
+            set_RAILBED_bridge;
         }
 
     // Define RAILBED
@@ -2180,6 +2165,7 @@
                 gui:                            set_RAILBED_gui;
                 track_overlay:                  set_RAILBED_overlay;
                 underlay:                       sw_RAILBED_underlay;
+                bridge_surfaces:                sw_RAILBED_bridge;
                 fences:                         set_RAILBED_fences;
             }
         }
@@ -3468,5 +3454,1652 @@
                     default:                         sw_set_object_depot_METRO;
                     tile_check:                      CB_RESULT_LOCATION_ALLOW;
                     additional_text:                 string(STR_OBJECT_DEPOT_METRO_DESC);
+                }
+            }
+
+    // Buffer NARROW 762mm
+        // Spritesets 
+            spriteset(set_object_NARROW_762, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 0)
+            }
+              
+            spriteset(set_object_NARROW_762_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 0)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_NARROW_762_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762 (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762 (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762 (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762 (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_NARROW_762, view) {
+                1: sply_object_NARROW_762_SW;
+                2: sply_object_NARROW_762_NW;
+                3: sply_object_NARROW_762_NE;
+                sply_object_NARROW_762_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_NARROW_762_SNOW, view) {
+                1: sply_object_NARROW_762_SW_SNOW;
+                2: sply_object_NARROW_762_NW_SNOW;
+                3: sply_object_NARROW_762_NE_SNOW;
+                sply_object_NARROW_762_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_NARROW_762, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_NARROW_762;
+                TILETYPE_SNOW:                      sw_object_NARROW_762_SNOW;            
+                sw_object_NARROW_762;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_NARROW_762) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_NARROW_762_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_NARROW_762/2;
+                    remove_cost_multiplier:          para_construction_cost_NARROW_762/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_NARROW_762;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Low Speed
+        // Spritesets 
+            spriteset(set_object_low_speed, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 60)
+            }
+              
+            spriteset(set_object_low_speed_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 60)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_low_speed_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed, view) {
+                1: sply_object_low_speed_SW;
+                2: sply_object_low_speed_NW;
+                3: sply_object_low_speed_NE;
+                sply_object_low_speed_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed_SNOW, view) {
+                1: sply_object_low_speed_SW_SNOW;
+                2: sply_object_low_speed_NW_SNOW;
+                3: sply_object_low_speed_NE_SNOW;
+                sply_object_low_speed_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_low_speed, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_low_speed;
+                TILETYPE_SNOW:                      sw_object_low_speed_SNOW;            
+                sw_object_low_speed;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_low_speed) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_LOW_SPEED_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_LOW_SPEED/2;
+                    remove_cost_multiplier:          para_construction_cost_LOW_SPEED/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_low_speed;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Low Speed (Urban)
+        // Spritesets 
+            spriteset(set_object_low_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 120)
+            }
+              
+            spriteset(set_object_low_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 120)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_low_speed_urban_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_urban_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_urban_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed_urban, view) {
+                1: sply_object_low_speed_urban_SW;
+                2: sply_object_low_speed_urban_NW;
+                3: sply_object_low_speed_urban_NE;
+                sply_object_low_speed_urban_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed_urban_SNOW, view) {
+                1: sply_object_low_speed_urban_SW_SNOW;
+                2: sply_object_low_speed_urban_NW_SNOW;
+                3: sply_object_low_speed_urban_NE_SNOW;
+                sply_object_low_speed_urban_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_low_speed_urban, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_low_speed_urban;
+                TILETYPE_SNOW:                      sw_object_low_speed_urban_SNOW;            
+                sw_object_low_speed_urban;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_low_speed_urban) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_LOW_SPEED_URBAN_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_LOW_SPEED_URBAN/2;
+                    remove_cost_multiplier:          para_construction_cost_LOW_SPEED_URBAN/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_low_speed_urban;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Standard Speed
+        // Spritesets 
+            spriteset(set_object_standard_speed, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 180)
+            }
+              
+            spriteset(set_object_standard_speed_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 180)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_standard_speed_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed, view) {
+                1: sply_object_standard_speed_SW;
+                2: sply_object_standard_speed_NW;
+                3: sply_object_standard_speed_NE;
+                sply_object_standard_speed_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_SNOW, view) {
+                1: sply_object_standard_speed_SW_SNOW;
+                2: sply_object_standard_speed_NW_SNOW;
+                3: sply_object_standard_speed_NE_SNOW;
+                sply_object_standard_speed_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_standard_speed, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_standard_speed;
+                TILETYPE_SNOW:                      sw_object_standard_speed_SNOW;            
+                sw_object_standard_speed;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_standard_speed) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_STANDARD_SPEED_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_MAIN_LINE/2;
+                    remove_cost_multiplier:          para_construction_cost_MAIN_LINE/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_standard_speed;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Standard Speed (Urban)
+        // Spritesets 
+            spriteset(set_object_standard_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 240)
+            }
+              
+            spriteset(set_object_standard_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 240)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_standard_speed_urban_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_urban_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_urban_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_urban, view) {
+                1: sply_object_standard_speed_urban_SW;
+                2: sply_object_standard_speed_urban_NW;
+                3: sply_object_standard_speed_urban_NE;
+                sply_object_standard_speed_urban_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_urban_SNOW, view) {
+                1: sply_object_standard_speed_urban_SW_SNOW;
+                2: sply_object_standard_speed_urban_NW_SNOW;
+                3: sply_object_standard_speed_urban_NE_SNOW;
+                sply_object_standard_speed_urban_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_standard_speed_urban, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_standard_speed_urban;
+                TILETYPE_SNOW:                      sw_object_standard_speed_urban_SNOW;            
+                sw_object_standard_speed_urban;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_standard_speed_urban) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_STANDARD_SPEED_URBAN_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_MAIN_LINE_URBAN/2;
+                    remove_cost_multiplier:          para_construction_cost_MAIN_LINE_URBAN/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_standard_speed_urban;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Semi High Speed
+        // Spritesets 
+            spriteset(set_object_SEMI_HIGH_SPEED, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 300)
+            }
+              
+            spriteset(set_object_SEMI_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 300)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_SEMI_HIGH_SPEED_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_SEMI_HIGH_SPEED_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_SEMI_HIGH_SPEED_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_SEMI_HIGH_SPEED, view) {
+                1: sply_object_SEMI_HIGH_SPEED_SW;
+                2: sply_object_SEMI_HIGH_SPEED_NW;
+                3: sply_object_SEMI_HIGH_SPEED_NE;
+                sply_object_SEMI_HIGH_SPEED_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_SEMI_HIGH_SPEED_SNOW, view) {
+                1: sply_object_SEMI_HIGH_SPEED_SW_SNOW;
+                2: sply_object_SEMI_HIGH_SPEED_NW_SNOW;
+                3: sply_object_SEMI_HIGH_SPEED_NE_SNOW;
+                sply_object_SEMI_HIGH_SPEED_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_SEMI_HIGH_SPEED, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_SEMI_HIGH_SPEED;
+                TILETYPE_SNOW:                      sw_object_SEMI_HIGH_SPEED_SNOW;            
+                sw_object_SEMI_HIGH_SPEED;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_SEMI_HIGH_SPEED) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_SEMI_HIGH_SPEED_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_SEMI_HIGH_SPEED/2;
+                    remove_cost_multiplier:          para_construction_cost_SEMI_HIGH_SPEED/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_SEMI_HIGH_SPEED;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer High Speed
+        // Spritesets 
+            spriteset(set_object_HIGH_SPEED, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 360)
+            }
+              
+            spriteset(set_object_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 360)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_HIGH_SPEED_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_HIGH_SPEED_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_HIGH_SPEED_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_HIGH_SPEED, view) {
+                1: sply_object_HIGH_SPEED_SW;
+                2: sply_object_HIGH_SPEED_NW;
+                3: sply_object_HIGH_SPEED_NE;
+                sply_object_HIGH_SPEED_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_HIGH_SPEED_SNOW, view) {
+                1: sply_object_HIGH_SPEED_SW_SNOW;
+                2: sply_object_HIGH_SPEED_NW_SNOW;
+                3: sply_object_HIGH_SPEED_NE_SNOW;
+                sply_object_HIGH_SPEED_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_HIGH_SPEED, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_HIGH_SPEED;
+                TILETYPE_SNOW:                      sw_object_HIGH_SPEED_SNOW;            
+                sw_object_HIGH_SPEED;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_HIGH_SPEED) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_HIGH_SPEED_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_HIGH_SPEED/2;
+                    remove_cost_multiplier:          para_construction_cost_HIGH_SPEED/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_HIGH_SPEED;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Metro
+        // Spritesets 
+            spriteset(set_object_metro, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 420)
+            }
+              
+            spriteset(set_object_metro_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 420)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_metro_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_metro (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_metro (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_metro (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_metro (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_metro_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_metro_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_metro_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_metro_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_metro_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_metro, view) {
+                1: sply_object_metro_SW;
+                2: sply_object_metro_NW;
+                3: sply_object_metro_NE;
+                sply_object_metro_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_metro_SNOW, view) {
+                1: sply_object_metro_SW_SNOW;
+                2: sply_object_metro_NW_SNOW;
+                3: sply_object_metro_NE_SNOW;
+                sply_object_metro_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_metro, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_metro;
+                TILETYPE_SNOW:                      sw_object_metro_SNOW;            
+                sw_object_metro;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_metro) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_METRO_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_METRO/2;
+                    remove_cost_multiplier:          para_construction_cost_METRO/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_metro;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer THIRD
+        // Spritesets 
+            spriteset(set_object_THIRD, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 480)
+            }
+              
+            spriteset(set_object_THIRD_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 480)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_THIRD_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_THIRD_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_THIRD_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_THIRD, view) {
+                1: sply_object_THIRD_SW;
+                2: sply_object_THIRD_NW;
+                3: sply_object_THIRD_NE;
+                sply_object_THIRD_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_THIRD_SNOW, view) {
+                1: sply_object_THIRD_SW_SNOW;
+                2: sply_object_THIRD_NW_SNOW;
+                3: sply_object_THIRD_NE_SNOW;
+                sply_object_THIRD_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_THIRD, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_THIRD;
+                TILETYPE_SNOW:                      sw_object_THIRD_SNOW;            
+                sw_object_THIRD;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_THIRD) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_THIRD_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_LIGHT_RAIL/2;
+                    remove_cost_multiplier:          para_construction_cost_LIGHT_RAIL/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_THIRD;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
                 }
             }
