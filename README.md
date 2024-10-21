@@ -8,7 +8,7 @@
 
 한국기찻길NewGRF의 GitHub 홈페이지입니다. This is a main page of Korean Tracks NewGRF.
 
-- 한국기찻길NewGRF는 [한국열차세트](https://github.com/KoreanGRF/KoreanTrainSet) 와 [한국열차세트+애드온](https://github.com/MEGB-NewGRF/KoreanTrainSet_Plus) 과 같이 사용할때 가장 빛을 발하는 선로grf 입니다. 
+- 한국기찻길NewGRF는 [한국열차세트](https://github.com/KoreanGRF/KoreanTrainSet) 와 같이 사용할때 가장 빛을 발하는 선로grf 입니다. 
 - 선로grf는 다른 선로grf와 같이 쓸 경우, 몇몇 선로를 건설할 수 없다던지 같은 호환성 문제가 발생할 가능성이 매우 높습니다. 한 맵에는 하나의 선로grf만을 사용하는 것을 권장합니다.
 
 - 각 선로들의 의도한 모습(스프라이트)
