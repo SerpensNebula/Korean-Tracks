@@ -1,7 +1,7 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 선로 세트 1.5.0
+STR_GRF_NAME                                      :한국 선로 세트 1.6.0
 STR_GRF_DESC                                      :{BLACK}한국에서 쓰이는 모습과 종류의 선로를 추가해줍니다. 한국 열차 세트나 한국 초기 열차 세트와 같이 쓰는 것을 추천합니다. 이외 다른 열차 세트나 선로 세트와 호환을 보장하지 않습니다. {}{}{YELLOW}한국 선로 세트는 한국 열차 세트와 한국 초기 열차 세트보다 뒤/아래에 배치할 것을 권장합니다. {}{}{BLACK}영향받음: {SILVER}Japan Set3: Tracks, NuTracks 2 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Tracks
 
@@ -19,7 +19,7 @@ STR_PARA_DESC_SPEED_HIGH_SPEED                    :고속선 선로의 제한속
 STR_PARA_NAME_SPEED_METRO                         :속도제한 - 도시철도 선로 (km/h)
 STR_PARA_DESC_SPEED_METRO                         :도시철도 선로의 제한속도를 설정합니다. 기본값은 180 입니다. 0 으로 하면 무제한이 됩니다.
 STR_PARA_NAME_SPEED_LIGHT                         :속도제한 - 경전철 선로 (km/h)
-STR_PARA_DESC_SPEED_LIGHT                         :경전철 제3궤조 선로의 제한속도를 설정합니다. 기본값은 121 입니다. 0으로 하면 무제한이 됩니다.
+STR_PARA_DESC_SPEED_LIGHT                         :경전철 선로들의 제한속도를 설정합니다. 기본값은 121 입니다. 0으로 하면 무제한이 됩니다.
 
 # Parameters - Construction Cost
 STR_PARA_NAME_CONST_COST_NARROW_762               :건설비용 변수 - 762mm 협궤 선로
@@ -43,7 +43,7 @@ STR_PARA_DESC_CONST_COST_HIGH_SPEED               :고속선 선로의 건설비
 STR_PARA_NAME_CONST_COST_METRO                    :건설비용 변수 - 도시철도 선로
 STR_PARA_DESC_CONST_COST_METRO                    :도시철도 선로의 건설비용 변수를 설정합니다. 기본값은 18 입니다.
 STR_PARA_NAME_CONST_COST_LIGHT                    :건설비용 변수 - 경전철 선로
-STR_PARA_DESC_CONST_COST_LIGHT                    :경전철 제3궤조 선로의 건설비용 변수를 설정합니다. 기본값은 16 입니다.
+STR_PARA_DESC_CONST_COST_LIGHT                    :경전철 선로들의 건설비용 변수를 설정합니다. 기본값은 16 입니다.
 
 # Parameters - Maintenance Cost
 STR_PARA_NAME_MAINT_COST_NARROW_762               :유지비용 변수 - 762mm 협궤 선로
@@ -67,7 +67,7 @@ STR_PARA_DESC_MAINT_COST_HIGH_SPEED               :고속선 선로의 유지비
 STR_PARA_NAME_MAINT_COST_METRO                    :유지비용 변수 - 도시철도 선로
 STR_PARA_DESC_MAINT_COST_METRO                    :도시철도 선로의 유지비용 변수를 설정합니다. 기본값은 20 입니다.
 STR_PARA_NAME_MAINT_COST_LIGHT                    :유지비용 변수 - 경전철 선로
-STR_PARA_DESC_MAINT_COST_LIGHT                    :경전철 제3궤조 선로의 유지비용 변수를 설정합니다. 기본값은 18 입니다.
+STR_PARA_DESC_MAINT_COST_LIGHT                    :경전철 선로들의 유지비용 변수를 설정합니다. 기본값은 18 입니다.
 
 # Narrow gauge
 STR_NARROW_762_NAME                               :762mm 협궤 선로
@@ -149,6 +149,22 @@ STR_TRACK_METRO_BUILD_VEHICLE_CAPTION             :새 도시철도 차량
 STR_TRACK_METRO_NEW_ENGINE                        :도시철도 차량
 STR_TRACK_METRO_AUTOREPLACE                       :도시철도 차량
 
+# Subway
+STR_TRACK_SUBWAY_NAME                             :도시철도 (지하) 선로
+STR_TRACK_SUBWAY_DROPDOWN_MENU                    :도시철도 (지하) 선로 건설
+STR_TRACK_SUBWAY_TOOLBAR_CAPTION                  :도시철도 (지하) 선로 건설
+STR_TRACK_SUBWAY_BUILD_VEHICLE_CAPTION            :새 도시철도 차량
+STR_TRACK_SUBWAY_NEW_ENGINE                       :도시철도 차량
+STR_TRACK_SUBWAY_AUTOREPLACE                      :도시철도 차량
+
+# Subway (with Park)
+STR_TRACK_SUBWAY_PARK_NAME                        :도시철도 (지하, 공원) 선로
+STR_TRACK_SUBWAY_PARK_DROPDOWN_MENU               :도시철도 (지하, 공원) 선로 건설
+STR_TRACK_SUBWAY_PARK_TOOLBAR_CAPTION             :도시철도 (지하, 공원) 선로 건설
+STR_TRACK_SUBWAY_PARK_BUILD_VEHICLE_CAPTION       :새 도시철도 차량
+STR_TRACK_SUBWAY_PARK_NEW_ENGINE                  :도시철도 차량
+STR_TRACK_SUBWAY_PARK_AUTOREPLACE                 :도시철도 차량
+
 # Third Rail
 STR_TRACK_THIRD_NAME                              :경전철 제3궤조 선로
 STR_TRACK_THIRD_DROPDOWN_MENU                     :경전철 제3궤조 선로 건설
@@ -156,6 +172,22 @@ STR_TRACK_THIRD_TOOLBAR_CAPTION                   :경전철 제3궤조 선로 �
 STR_TRACK_THIRD_BUILD_VEHICLE_CAPTION             :새 경전철 제3궤조 차량
 STR_TRACK_THIRD_NEW_ENGINE                        :경전철 제3궤조 차량
 STR_TRACK_THIRD_AUTOREPLACE                       :경전철 제3궤조 차량
+
+# Automated Guideway Track
+STR_TRACK_AGT_NAME                                :경전철 고무차륜 선로
+STR_TRACK_AGT_DROPDOWN_MENU                       :경전철 고무차륜 선로 건설
+STR_TRACK_AGT_TOOLBAR_CAPTION                     :경전철 고무차륜 선로 건설
+STR_TRACK_AGT_BUILD_VEHICLE_CAPTION               :새 경전철 고무차륜 차량
+STR_TRACK_AGT_NEW_ENGINE                          :경전철 고무차륜 차량
+STR_TRACK_AGT_AUTOREPLACE                         :경전철 고무차륜 차량
+
+# Monorail
+STR_TRACK_MONORAIL_NAME                           :경전철 모노레일 선로
+STR_TRACK_MONORAIL_DROPDOWN_MENU                  :경전철 모노레일 선로 건설
+STR_TRACK_MONORAIL_TOOLBAR_CAPTION                :경전철 모노레일 선로 건설
+STR_TRACK_MONORAIL_BUILD_VEHICLE_CAPTION          :새 경전철 모노레일 차량
+STR_TRACK_MONORAIL_NEW_ENGINE                     :경전철 모노레일 차량
+STR_TRACK_MONORAIL_AUTOREPLACE                    :경전철 모노레일 차량
 
 # Railbed
 STR_TRACK_RAILBED_NAME                            :노반
@@ -181,8 +213,10 @@ STR_OBJECT_DEPOT_METRO_DESC                       :서울교통공사 창동차�
 STR_OBJECT_BUFFERS_NAME							  :한국선로세트 차막이
 STR_OBJECT_BUFFER_NARROW_762_NAME				  :762mm 협궤 선로 차막이
 STR_OBJECT_BUFFER_LOW_SPEED_NAME				  :기존선 차막이
+STR_OBJECT_BUFFER_LOW_SPEED_ELEC_NAME			  :기존선 (전기) 차막이
 STR_OBJECT_BUFFER_LOW_SPEED_URBAN_NAME			  :기존선 (도심) 차막이
 STR_OBJECT_BUFFER_STANDARD_SPEED_NAME			  :개량선 차막이
+STR_OBJECT_BUFFER_STANDARD_SPEED_ELEC_NAME		  :개량선 (전기) 차막이
 STR_OBJECT_BUFFER_STANDARD_SPEED_URBAN_NAME		  :개량선 (도심) 차막이
 STR_OBJECT_BUFFER_SEMI_HIGH_SPEED_NAME			  :준고속선 차막이
 STR_OBJECT_BUFFER_HIGH_SPEED_NAME				  :고속선 차막이

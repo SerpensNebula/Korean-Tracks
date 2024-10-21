@@ -1,8 +1,8 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Track Set 1.5.0
-STR_GRF_DESC                                      :Korean Track Set adds train and metro tracks in South Korea. Highly recommended to use with Korean Train Set and Korean Early Train Set. It is NOT guaranteed compatibility with the other train sets or track sets. {}{}{YELLOW}Korean Track Set is recommended to be loaded after Korean Train Set AND Korean Early Train Set. {}{}{BLACK}Inspired by: {SILVER}Japan Set3: Tracks, NuTracks 2 {}{}{BLACK}License: {SILVER}GNU GPL v3
+STR_GRF_NAME                                      :Korean Track Set 1.6.0
+STR_GRF_DESC                                      :Korean Track Set adds train and metro tracks in South Korea. Highly recommended to use with Korean Train Set or Korean Early Train Set. It is NOT guaranteed compatibility with the other train sets or track sets. {}{}{YELLOW}Korean Track Set is recommended to be loaded after Korean Train Set AND Korean Early Train Set. {}{}{BLACK}Inspired by: {SILVER}Japan Set3: Tracks, NuTracks 2 {}{}{BLACK}License: {SILVER}GNU GPL v3
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Tracks
 
 # Parameters - Speed Limit
@@ -19,7 +19,7 @@ STR_PARA_DESC_SPEED_HIGH_SPEED                    :Set speed limit on high speed
 STR_PARA_NAME_SPEED_METRO                         :Speed limit on metro tracks (km/h)
 STR_PARA_DESC_SPEED_METRO                         :Set speed limit on metro tracks. The default value is 180. 0 is unlimited.
 STR_PARA_NAME_SPEED_LIGHT                         :Speed limit on light rail tracks (km/h)
-STR_PARA_DESC_SPEED_LIGHT                         :Set speed limit on third rail track. The default value is 121. 0 is unlimited.
+STR_PARA_DESC_SPEED_LIGHT                         :Set speed limit on light rail tracks. The default value is 121. 0 is unlimited.
 
 # Parameters - Construction Cost
 STR_PARA_NAME_CONST_COST_NARROW_762               :Construction cost variable of 762mm narrow gauge track
@@ -43,7 +43,7 @@ STR_PARA_DESC_CONST_COST_HIGH_SPEED               :Set construction cost variabl
 STR_PARA_NAME_CONST_COST_METRO                    :Construction cost variable of metro track
 STR_PARA_DESC_CONST_COST_METRO                    :Set construction cost variable of metro track. The default value is 18.
 STR_PARA_NAME_CONST_COST_LIGHT                    :Construction cost variable of light rail tracks
-STR_PARA_DESC_CONST_COST_LIGHT                    :Set construction cost variable of third rail track. The default value is 16.
+STR_PARA_DESC_CONST_COST_LIGHT                    :Set construction cost variable of light rail tracks. The default value is 16.
 
 # Parameters - Maintenance Cost
 STR_PARA_NAME_MAINT_COST_NARROW_762               :Maintenance cost variable of 762mm narrow gauge track
@@ -67,7 +67,7 @@ STR_PARA_DESC_MAINT_COST_HIGH_SPEED               :Set maintenance cost variable
 STR_PARA_NAME_MAINT_COST_METRO                    :Maintenance cost variable of metro track
 STR_PARA_DESC_MAINT_COST_METRO                    :Set maintenance cost variable of metro track. The default value is 20.
 STR_PARA_NAME_MAINT_COST_LIGHT                    :Maintenance cost variable of light rail tracks
-STR_PARA_DESC_MAINT_COST_LIGHT                    :Set maintenance cost variable of third rail track. The default value is 18.
+STR_PARA_DESC_MAINT_COST_LIGHT                    :Set maintenance cost variable of light rail tracks. The default value is 18.
 
 # Narrow gauge
 STR_NARROW_762_NAME                               :762mm Narrow Gauge Tracks
@@ -149,6 +149,22 @@ STR_TRACK_METRO_BUILD_VEHICLE_CAPTION             :New Metro Vehicles
 STR_TRACK_METRO_NEW_ENGINE                        :Metro Vehicle
 STR_TRACK_METRO_AUTOREPLACE                       :Metro Vehicles
 
+# Subway
+STR_TRACK_SUBWAY_NAME                             :Subway Tracks
+STR_TRACK_SUBWAY_DROPDOWN_MENU                    :Subway Track Construction
+STR_TRACK_SUBWAY_TOOLBAR_CAPTION                  :Subway Track Construction
+STR_TRACK_SUBWAY_BUILD_VEHICLE_CAPTION            :New Subway Vehicles
+STR_TRACK_SUBWAY_NEW_ENGINE                       :Subway Vehicle
+STR_TRACK_SUBWAY_AUTOREPLACE                      :Subway Vehicles
+
+# Subway (with Park)
+STR_TRACK_SUBWAY_PARK_NAME                        :Subway (With Park) Tracks
+STR_TRACK_SUBWAY_PARK_DROPDOWN_MENU               :Subway (With Park) Track Construction
+STR_TRACK_SUBWAY_PARK_TOOLBAR_CAPTION             :Subway (With Park) Construction
+STR_TRACK_SUBWAY_PARK_BUILD_VEHICLE_CAPTION       :New Subway Vehicles
+STR_TRACK_SUBWAY_PARK_NEW_ENGINE                  :Subway Vehicle
+STR_TRACK_SUBWAY_PARK_AUTOREPLACE                 :Subway Vehicles
+
 # Third Rail
 STR_TRACK_THIRD_NAME                              :Light Rail (Third Rail) Tracks
 STR_TRACK_THIRD_DROPDOWN_MENU                     :Light Rail (Third Rail) Track Construction
@@ -156,6 +172,22 @@ STR_TRACK_THIRD_TOOLBAR_CAPTION                   :Light Rail (Third Rail) Track
 STR_TRACK_THIRD_BUILD_VEHICLE_CAPTION             :New Light Rail (Third Rail) Vehicles
 STR_TRACK_THIRD_NEW_ENGINE                        :Light Rail (Third Rail) Vehicle
 STR_TRACK_THIRD_AUTOREPLACE                       :Light Rail (Third Rail) Vehicles
+
+# Automated Guideway Track
+STR_TRACK_AGT_NAME                                :Light Rail (Automated Guideway) Tracks
+STR_TRACK_AGT_DROPDOWN_MENU                       :Light Rail (Automated Guideway) Track Construction
+STR_TRACK_AGT_TOOLBAR_CAPTION                     :Light Rail (Automated Guideway) Track Construction
+STR_TRACK_AGT_BUILD_VEHICLE_CAPTION               :New Light Rail (Automated Guideway) Vehicles
+STR_TRACK_AGT_NEW_ENGINE                          :Light Rail (Automated Guideway) Vehicle
+STR_TRACK_AGT_AUTOREPLACE                         :Light Rail (Automated Guideway) Vehicles
+
+# Monorail
+STR_TRACK_MONORAIL_NAME                           :Light Rail (Monorail) Tracks
+STR_TRACK_MONORAIL_DROPDOWN_MENU                  :Light Rail (Monorail) Track Construction
+STR_TRACK_MONORAIL_TOOLBAR_CAPTION                :Light Rail (Monorail) Track Construction
+STR_TRACK_MONORAIL_BUILD_VEHICLE_CAPTION          :New Light Rail (Monorail) Vehicles
+STR_TRACK_MONORAIL_NEW_ENGINE                     :Light Rail (Monorail) Vehicle
+STR_TRACK_MONORAIL_AUTOREPLACE                    :Light Rail (Monorail) Vehicles
 
 # Railbed
 STR_TRACK_RAILBED_NAME                            :Railbed
@@ -181,8 +213,10 @@ STR_OBJECT_DEPOT_METRO_DESC                       :Seoul Metro Chang-dong Train 
 STR_OBJECT_BUFFERS_NAME							  :Korean Track Set Buffers
 STR_OBJECT_BUFFER_NARROW_762_NAME				  :762mm Narrow Gauge Track Buffer
 STR_OBJECT_BUFFER_LOW_SPEED_NAME				  :Low Speed Track Buffer
+STR_OBJECT_BUFFER_LOW_SPEED_ELEC_NAME			  :Low Speed (Elec) Track Buffer
 STR_OBJECT_BUFFER_LOW_SPEED_URBAN_NAME			  :Low Speed (Urban) Track Buffer
 STR_OBJECT_BUFFER_STANDARD_SPEED_NAME			  :Stradard Speed Track Buffer
+STR_OBJECT_BUFFER_STANDARD_SPEED_ELEC_NAME		  :Stradard Speed (Elec) Track Buffer
 STR_OBJECT_BUFFER_STANDARD_SPEED_URBAN_NAME		  :Stradard Speed (Urban) Track Buffer
 STR_OBJECT_BUFFER_SEMI_HIGH_SPEED_NAME			  :Semi High Speed Track Buffer
 STR_OBJECT_BUFFER_HIGH_SPEED_NAME				  :High Speed Track Buffer
