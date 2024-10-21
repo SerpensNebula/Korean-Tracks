@@ -1,11 +1,10 @@
-
     grf {
         grfid                              :"KT01"; 
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
         url                                :string(STR_GRF_URL);
-        version                            :240519;
-        min_compatible_version             :0;
+        version                            :241021;
+        min_compatible_version             :240520;
 
         // Parameters
             // speed limit parameters
@@ -343,13 +342,32 @@
             [ x+176,  y,      20,      20,       0,       0]   // tunnel
             [ x+208,  y,      20,      18,       0,       0]   // convert
             [ x+240,  y,      20,      29,       0,       0]   // ↕ cursor
-            [ x+272,  y,      26,      28,       0,       0]   // ↗ cursor
+            [ x+272,  y,      26,      31,       0,       0]   // ↗ cursor
             [ x+304,  y,      27,      28,       0,       0]   // ↔ cursor
             [ x+336,  y,      26,      31,       0,       0]   // ↘ cursor
             [ x+368,  y,      26,      31,       0,       0]   // x cursor
             [ x+400,  y,      32,      32,       0,       0]   // depot cursor
             [ x+445,  y,      27,      32,       0,       0]   // tunnel cursor
             [ x+480,  y,      29,      29,       0,       0]   // convert cursor
+        }
+
+        template tmpl_gui_subway (x, y) {
+            [ x,      y,      20,      16,       0,       0]   // ↕
+            [ x+25,   y,      20,      20,       0,       0]   // ↗
+            [ x+50,   y,      20,      20,       0,       0]   // ↔
+            [ x+75,   y,      20,      20,       0,       0]   // ↘
+            [ x+100,  y,      20,      20,       0,       0]   // x
+            [ x+125,  y,      20,      20,       0,       0]   // depot
+            [ x+150,  y,      20,      20,       0,       0]   // tunnel
+            [ x+175,  y,      32,      34,       0,       0]   // convert
+            [ x+210,  y,      32,      34,       0,       0]   // ↕ cursor
+            [ x+245,  y,      32,      34,       0,       0]   // ↗ cursor
+            [ x+280,  y,      32,      34,       0,       0]   // ↔ cursor
+            [ x+315,  y,      32,      34,       0,       0]   // ↘ cursor
+            [ x+350,  y,      32,      34,       0,       0]   // x cursor
+            [ x+385,  y,      32,      34,       0,       0]   // depot cursor
+            [ x+420,  y,      32,      34,       0,       0]   // tunnel cursor
+            [ x+455,  y,      32,      34,       0,       0]   // convert cursor
         }
 
     // Overlay
@@ -386,6 +404,25 @@
             [ x+1050, y,      64,      31,     -31,       0]   // combi all
         }
 
+        template tmpl_underlay_railbed (x, y) {
+            [ x,      y,   64,   31,  -31,    0]   // ↗↙
+            [ x+70,   y,   64,   31,  -31,    0]   // ↖↘
+            [ x+140,  y,   64,   31,  -31,    0]   // ↔U
+            [ x+210,  y,   64,   31,  -31,    0]   // ↔D
+            [ x+280,  y,   64,   31,  -31,    0]   // ↕R
+            [ x+350,  y,   64,   31,  -31,    0]   // ↕L
+            [ x+420,  y,   64,   39,  -31,   -8]   // ↗ slope up
+            [ x+490,  y,   64,   23,  -31,    0]   // ↘ slope up 
+            [ x+560,  y,   64,   23,  -31,    0]   // ↙ slope up
+            [ x+630,  y,   64,   39,  -31,   -8]   // ↖ slope up
+            [ x,      y,   64,   31,  -31,    0]   // +
+            [ x+70,   y,   64,   31,  -31,    0]   // combi SW
+            [ x+70,   y,   64,   31,  -31,    0]   // combi NE
+            [ x,      y,   64,   31,  -31,    0]   // combi SE
+            [ x,      y,   64,   31,  -31,    0]   // combi NW
+            [ x,      y,   64,   31,  -31,    0]   // combi all
+        }
+
     // Tunnel
         template tmpl_tunnel_underlay (x, y) {
             [ x,      y,      64,      39,     -31,      -8]   // ↙
@@ -419,6 +456,25 @@
             [ x+210,  y,      32,      17,      -2,      -7]
             [ x+250,  y,      32,      35,     -30,     -17]
             [ x+290,  y,      32,      35,      -2,     -17]
+        }
+
+        template tmpl_fence_transparent (x, y) {
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
+            [   0,    0,    1,    1,    0,    0]
         }
 
     // Depot
@@ -490,6 +546,37 @@
             [ x+120,  y+120,  16,      13,      15,       2]
         }
 
+        template tmpl_catenary_wire_subway (x, y) {
+            [ x,      y,      64,      39,     -45,      -5]  // one tile
+            [ x+70,   y,      64,      39,     -17,      -5]
+            [ x+140,  y,      64,      39,     -17,     -13]
+            [ x+210,  y,      64,      39,     -31,      -6]
+            [ x,      y+50,   64,      55,     -45,     -14]
+            [ x+70,   y+50,   64,      39,     -17,      -4]
+            [ x+140,  y+50,   64,      39,     -45,      -4]
+            [ x+210,  y+50,   64,      55,     -17,     -14]
+            [ x,      y,      64,      39,     -45,      -5]  // two tiles 1st
+            [ x+70,   y,      64,      39,     -17,      -5]
+            [ x+140,  y,      64,      39,     -17,     -13]
+            [ x+210,  y,      64,      39,     -31,      -6]
+            [ x,      y+50,   64,      55,     -45,     -14]
+            [ x+70,   y+50,   64,      39,     -17,      -4]
+            [ x+140,  y+50,   64,      39,     -45,      -4]
+            [ x+210,  y+50,   64,      55,     -17,     -14]
+            [ x,      y,      64,      39,     -45,      -5]  // two tiles 2nd
+            [ x+70,   y,      64,      39,     -17,      -5]
+            [ x+140,  y,      64,      39,     -17,     -13]
+            [ x+210,  y,      64,      39,     -31,      -6]
+            [ x,      y+50,   64,      55,     -45,     -14]
+            [ x+70,   y+50,   64,      39,     -17,      -4]
+            [ x+140,  y+50,   64,      39,     -45,      -4]
+            [ x+210,  y+50,   64,      55,     -17,     -14]
+            [ x,      y,       1,       1,       0,       0]  // short lines
+            [ x,      y,       1,       1,       0,       0]
+            [ x,      y,       1,       1,       0,       0]
+            [ x,      y,       1,       1,       0,       0]
+        }
+
         template tmpl_catenary_pylons (x, y) {
             [ x,      y,      11,      26,     -10,     -18]  // ↙
             [ x+20,   y,      11,      26,       0,     -21]  // ↗
@@ -499,6 +586,17 @@
             [ x+100,  y,      11,      26,       0,     -22]  // ↑
             [ x+120,  y,      11,      26,       0,     -18]  // →
             [ x+140,  y,      11,      26,      -9,     -18]  // ←
+        }
+
+        template tmpl_catenary_pylons_subway (x, y) {
+            [ x,      y,     1,       1,       0,       0]  // ↙
+            [ x,      y,     1,       1,       0,       0]  // ↗
+            [ x,      y,     1,       1,       0,       0]  // ↘
+            [ x,      y,     1,       1,       0,       0]  // ↖
+            [ x,      y,     1,       1,       0,       0]  // ↓
+            [ x,      y,     1,       1,       0,       0]  // ↑
+            [ x,      y,     1,       1,       0,       0]  // →
+            [ x,      y,     1,       1,       0,       0]  // ←
         }
 
     // Level Crossing
@@ -565,23 +663,8 @@
         } 
 
     // Fences // transparent
-        spriteset(set_TRANSPARENT_fences, "./Korean_Tracks/gfx/NARROW_762.png") {
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
+        spriteset(set_TRANSPARENT_fences, "./Korean_Tracks/gfx/FENCE.png") {
+            tmpl_fence_transparent (0, 0)
         }
 
     // Depot
@@ -854,9 +937,9 @@
                 sort_order:                     01;
 
                 railtype_flags:                 bitmask();
-                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
-                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
-                powered_railtype_list:          ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
+                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -906,9 +989,9 @@
                 sort_order:                     02;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1052,7 +1135,7 @@
             sw_LOW_SPEED_URBAN_track_level_crossing;
         }
 
-    // Define LOW_SPEED URBAN ELECTRIFIED
+    // Define LOW_SPEED_URBAN_ELECTRIFIED
         item(FEAT_RAILTYPES, track_LOW_SPEED_URBAN, 03) {
             property {
                 label:                          "KLSU";
@@ -1072,9 +1155,9 @@
                 sort_order:                     03;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
-                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
-                powered_railtype_list:          ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB"];
+                alternative_railtype_list:      ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUB","KSUP"];
+                compatible_railtype_list:       ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUB","KSUP"];
+                powered_railtype_list:          ["RAIL","KLSE","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUB","KSUP"];
             }
 
             graphics {
@@ -1245,9 +1328,9 @@
                 sort_order:                     04;
 
                 railtype_flags:                 bitmask();
-                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["RAIL","KLSE","KLSU","KDS_","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1298,9 +1381,9 @@
                 sort_order:                     05;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1453,9 +1536,9 @@
                 sort_order:                     06;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1590,9 +1673,9 @@
                 sort_order:                     07;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1725,9 +1808,9 @@
                 sort_order:                     08;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["KLSE","KLSU","ELRL","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1898,9 +1981,9 @@
                 sort_order:                     09;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
-                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
-                powered_railtype_list:          ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR"];
+                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
             }
 
             graphics {
@@ -1918,6 +2001,217 @@
             }
         }
 
+// SUBWAY_LINE
+    // GUI
+        spriteset(set_SUBWAY_gui, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_gui_subway (0, 600)
+        }
+
+    // Catenary Wire
+        spriteset(set_SUBWAY_wire, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_catenary_wire_subway (700, 600)
+        }
+
+        spriteset(set_SUBWAY_wire_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_catenary_wire_subway (700, 1200)
+        }
+        
+    // Catenary Pylons
+        spriteset(set_SUBWAY_pylons, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_catenary_pylons_subway (700, 600) // empty
+        }
+        
+    // Depot
+        spriteset(set_SUBWAY_depot, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_depot (0, 710)
+        } 
+
+        spriteset(set_SUBWAY_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_depot (0, 1200)
+        }
+
+    // Tunnel Overlay
+        spriteset(set_SUBWAY_tunnel_overlay, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_tunnel_overlay (280, 650)
+        }
+
+        spriteset(set_SUBWAY_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_tunnel_overlay (0, 1270)
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_wire, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_wire;
+            TILETYPE_SNOW:                      set_SUBWAY_wire_SNOW;            
+            set_SUBWAY_wire;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_depot;
+            TILETYPE_SNOW:                      set_SUBWAY_depot_SNOW;            
+            set_SUBWAY_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_tunnel_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_tunnel_overlay;
+            TILETYPE_SNOW:                      set_SUBWAY_tunnel_overlay_SNOW;            
+            set_SUBWAY_tunnel_overlay;
+        }
+
+    // Define SUBWAY
+        item(FEAT_RAILTYPES, track_SUBWAY, 10) {
+            property {
+                label:                          "KSUB";
+                introduction_date:              date(0001, 1, 1);               
+                name:                           string(STR_TRACK_SUBWAY_NAME);
+                menu_text:                      string(STR_TRACK_SUBWAY_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_SUBWAY_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_SUBWAY_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_SUBWAY_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_SUBWAY_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    para_speed_METRO km/h;
+                construction_cost:              para_construction_cost_METRO;
+                maintenance_cost:               para_maintenance_cost_METRO;
+                sort_order:                     10;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
+                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+            }
+
+            graphics {
+                gui:                            set_SUBWAY_gui;
+                track_overlay:                  set_METRO_overlay;
+                underlay:                       set_METRO_underlay;
+                tunnels:                        set_METRO_tunnel_underlay;
+                tunnel_overlay:                 sw_SUBWAY_tunnel_overlay;
+                depots:                         sw_SUBWAY_depot;
+                bridge_surfaces:                set_METRO_bridge;
+                catenary_wire:                  sw_SUBWAY_wire;
+                catenary_pylons:                set_SUBWAY_pylons;
+                fences:                         set_TRANSPARENT_fences;
+            }
+        }
+
+// SUBWAY_PARK_LINE
+    // GUI
+        spriteset(set_SUBWAY_PARK_gui, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_gui_subway (0, 780)
+        }
+
+    // Catenary Wire
+        spriteset(set_SUBWAY_PARK_wire_A, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_catenary_wire_subway (700, 780)
+        }
+
+        spriteset(set_SUBWAY_PARK_wire_A_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_catenary_wire_subway (700, 1310)
+        }
+
+        spriteset(set_SUBWAY_PARK_wire_B, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_catenary_wire_subway (700, 890)
+        }
+
+        spriteset(set_SUBWAY_PARK_wire_B_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_catenary_wire_subway (700, 1420)
+        }
+        
+    // Catenary Pylons
+        spriteset(set_SUBWAY_PARK_pylons, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_catenary_pylons_subway (700, 780) // empty
+        }
+        
+    // Depot
+        spriteset(set_SUBWAY_PARK_depot, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_depot (0, 890)
+        } 
+
+        spriteset(set_SUBWAY_PARK_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_depot (0, 1310)
+        }
+
+    // Tunnel Overlay
+        spriteset(set_SUBWAY_PARK_tunnel_overlay, "./Korean_Tracks/gfx/METRO.png") {
+            tmpl_tunnel_overlay (280, 830)
+        }
+
+        spriteset(set_SUBWAY_PARK_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_tunnel_overlay (0, 1310)
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_PARK_wire_A, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_PARK_wire_A;
+            TILETYPE_SNOW:                      set_SUBWAY_PARK_wire_A_SNOW;            
+            set_SUBWAY_PARK_wire_A;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_PARK_wire_B, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_PARK_wire_B;
+            TILETYPE_SNOW:                      set_SUBWAY_PARK_wire_B_SNOW;            
+            set_SUBWAY_PARK_wire_B;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_PARK_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_PARK_depot;
+            TILETYPE_SNOW:                      set_SUBWAY_PARK_depot_SNOW;            
+            set_SUBWAY_PARK_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_SUBWAY_PARK_tunnel_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_SUBWAY_PARK_tunnel_overlay;
+            TILETYPE_SNOW:                      set_SUBWAY_PARK_tunnel_overlay_SNOW;            
+            set_SUBWAY_PARK_tunnel_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_random_SUBWAY_PARK_wire, random_bits % 2) {  
+                1: sw_SUBWAY_PARK_wire_A;
+                sw_SUBWAY_PARK_wire_B;
+            }
+
+    // Define SUBWAY_PARK
+        item(FEAT_RAILTYPES, track_SUBWAY_PARK, 11) {
+            property {
+                label:                          "KSUP";
+                introduction_date:              date(0001, 1, 1);               
+                name:                           string(STR_TRACK_SUBWAY_PARK_NAME);
+                menu_text:                      string(STR_TRACK_SUBWAY_PARK_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_SUBWAY_PARK_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_SUBWAY_PARK_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_SUBWAY_PARK_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_SUBWAY_PARK_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    para_speed_METRO km/h;
+                construction_cost:              para_construction_cost_METRO;
+                maintenance_cost:               para_maintenance_cost_METRO;
+                sort_order:                     11;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
+                alternative_railtype_list:      ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                compatible_railtype_list:       ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+                powered_railtype_list:          ["RAIL","KLSE","KLSU","KLSU","ELRL","KDS_","KDSU","KSSU","KHS_","KMTR","KSUB","KSUP"];
+            }
+
+            graphics {
+                gui:                            set_SUBWAY_PARK_gui;
+                track_overlay:                  set_METRO_overlay;
+                underlay:                       set_METRO_underlay;
+                tunnels:                        set_METRO_tunnel_underlay;
+                tunnel_overlay:                 sw_SUBWAY_PARK_tunnel_overlay;
+                depots:                         sw_SUBWAY_PARK_depot;
+                bridge_surfaces:                set_METRO_bridge;
+                catenary_wire:                  sw_random_SUBWAY_PARK_wire;
+                catenary_pylons:                set_SUBWAY_PARK_pylons;
+                fences:                         set_TRANSPARENT_fences;
+            }
+        }
+
 // THIRD RAIL
     // GUI
         spriteset(set_THIRD_gui, "./Korean_Tracks/gfx/THIRD.png") {
@@ -1930,7 +2224,7 @@
         } 
 
         spriteset(set_THIRD_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_overlay (0, 1200)
+            tmpl_overlay (0, 1540)
         } 
 
     // Tracks underlay
@@ -1939,7 +2233,7 @@
         } 
 
         spriteset(set_THIRD_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_underlay (0, 1240)
+            tmpl_underlay (0, 1580)
         } 
 
     // Tunnels
@@ -1948,7 +2242,7 @@
         } 
 
         spriteset(set_THIRD_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_tunnel_underlay (700, 1280)
+            tmpl_tunnel_underlay (700, 1620)
         } 
 
     // Depot
@@ -1957,7 +2251,7 @@
         } 
 
         spriteset(set_THIRD_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_depot (0, 1280)
+            tmpl_depot (0, 1620)
         } 
 
     // Fences
@@ -1971,7 +2265,7 @@
         }
 
         spriteset(set_THIRD_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
-            tmpl_tunnel_overlay (700, 1200)
+            tmpl_tunnel_overlay (700, 1540)
         }
 
     // Bridge surfaces
@@ -2011,7 +2305,7 @@
         }
 
     // Define THIRD_RAIL
-        item(FEAT_RAILTYPES, track_THIRD, 10) {
+        item(FEAT_RAILTYPES, track_THIRD, 20) {
             property {
                 label:                          "KL3L";
                 introduction_date:              date(0001, 1, 1);               
@@ -2027,12 +2321,12 @@
                 speed_limit:                    para_speed_LIGHT_RAIL km/h;
                 construction_cost:              para_construction_cost_LIGHT_RAIL;
                 maintenance_cost:               para_maintenance_cost_LIGHT_RAIL;
-                sort_order:                     10;
+                sort_order:                     20;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-                alternative_railtype_list:      ["KL3L","KRLR"];
-                compatible_railtype_list:       ["KL3L","KRLR"];
-                powered_railtype_list:          ["KL3L","KRLR"];
+                alternative_railtype_list:      ["KLAG","KL3L","KRLR","KLMN"];
+                compatible_railtype_list:       ["KLAG","KL3L","KRLR","KLMN"];
+                powered_railtype_list:          ["KLAG","KL3L","KRLR","KLMN"];
 
             }
 
@@ -2045,6 +2339,236 @@
                 depots:                         sw_THIRD_depot;
                 bridge_surfaces:                set_THIRD_bridge;
                 fences:                         set_THIRD_fences;
+            }
+        }
+
+// AUTOMATED GUIDEWAY
+    // GUI
+        spriteset(set_AGT_gui, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_gui (0, 0) 
+        }
+
+    // Tracks overlay
+        spriteset(set_AGT_overlay, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_overlay (0, 40)
+        }
+
+        spriteset(set_AGT_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_overlay (0, 1690)
+        }
+
+    // Tracks underlay
+        spriteset(set_AGT_underlay, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_underlay (0, 80)
+        }
+
+        spriteset(set_AGT_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_underlay (0, 1730)
+        }
+
+    // Tunnels
+        spriteset(set_AGT_tunnel_underlay, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_tunnel_underlay (0, 120)
+        } 
+
+        spriteset(set_AGT_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_tunnel_underlay (700, 1770)
+        }
+
+    // Depot
+        spriteset(set_AGT_depot, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_depot (0, 220)
+        } 
+
+        spriteset(set_AGT_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_depot (0, 1770)
+        }
+
+    // Tunnel overlay
+        spriteset(set_AGT_tunnel_overlay, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_tunnel_overlay (0, 170)
+        }
+
+        spriteset(set_AGT_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_tunnel_overlay (700, 1690)
+        }
+
+    // Bridge surfaces
+        spriteset(set_AGT_bridge, "./Korean_Tracks/gfx/AGT.png") {
+            tmpl_bridge_surface (700, 270)
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_AGT_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_AGT_overlay;
+            TILETYPE_SNOW:                      set_AGT_overlay_SNOW;            
+            set_AGT_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_AGT_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_AGT_underlay;
+            TILETYPE_SNOW:                      set_AGT_underlay_SNOW;            
+            set_AGT_underlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_AGT_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_AGT_depot;
+            TILETYPE_SNOW:                      set_AGT_depot_SNOW;            
+            set_AGT_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_AGT_tunnel_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_AGT_tunnel_overlay;
+            TILETYPE_SNOW:                      set_AGT_tunnel_overlay_SNOW;            
+            set_AGT_tunnel_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_AGT_tunnel_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_AGT_tunnel_underlay;
+            TILETYPE_SNOW:                      set_AGT_tunnel_underlay_SNOW;            
+            set_AGT_tunnel_underlay;    
+        }
+
+    // Define AGT_RAIL
+        item(FEAT_RAILTYPES, track_AGT, 21) {
+            property {
+                label:                          "KLAG";
+                introduction_date:              date(0001, 1, 1);               
+                name:                           string(STR_TRACK_AGT_NAME);
+                menu_text:                      string(STR_TRACK_AGT_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_AGT_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_AGT_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_AGT_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_AGT_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    para_speed_LIGHT_RAIL km/h;
+                construction_cost:              para_construction_cost_LIGHT_RAIL;
+                maintenance_cost:               para_maintenance_cost_LIGHT_RAIL;
+                sort_order:                     21;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+                alternative_railtype_list:      ["KLAG","KL3L","KRLR","KLMN"];
+                compatible_railtype_list:       ["KLAG","KL3L","KRLR","KLMN"];
+                powered_railtype_list:          ["KLAG","KL3L","KRLR","KLMN"];
+
+            }
+
+            graphics {
+                gui:                            set_AGT_gui;
+                track_overlay:                  sw_AGT_overlay;
+                underlay:                       sw_AGT_underlay;
+                tunnels:                        sw_AGT_tunnel_underlay;
+                tunnel_overlay:                 sw_AGT_tunnel_overlay;
+                depots:                         sw_AGT_depot;
+                bridge_surfaces:                set_AGT_bridge;
+                fences:                         set_TRANSPARENT_fences;
+            }
+        }
+
+// MONORAIL
+    // GUI
+        spriteset(set_MONORAIL_gui, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_gui (0, 0) 
+        }
+
+    // Tracks overlay
+        spriteset(set_MONORAIL_overlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_overlay (0, 40)
+        }
+
+    // Tracks underlay
+        spriteset(set_MONORAIL_underlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_underlay (0, 80)
+        }
+
+    // Tunnels
+        spriteset(set_MONORAIL_tunnel_underlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_tunnel_underlay (0, 120)
+        }
+
+        spriteset(set_MONORAIL_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_tunnel_underlay (700, 1890)
+        } 
+
+    // Depot
+        spriteset(set_MONORAIL_depot, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_depot (0, 220)
+        }
+
+        spriteset(set_MONORAIL_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_depot (0, 1840)
+        }
+
+    // Tunnel overlay
+        spriteset(set_MONORAIL_tunnel_overlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_tunnel_overlay (0, 170)
+        }
+
+        spriteset(set_MONORAIL_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            tmpl_tunnel_overlay (700, 1840)
+        }
+
+    // Bridge surfaces
+        spriteset(set_MONORAIL_bridge, "./Korean_Tracks/gfx/MONORAIL.png") {
+            tmpl_bridge_surface (700, 270)
+        }
+
+    // Graphic for terrain
+        switch(FEAT_RAILTYPES, SELF, sw_MONORAIL_depot, terrain_type) {
+            TILETYPE_NORMAL:                    set_MONORAIL_depot;
+            TILETYPE_SNOW:                      set_MONORAIL_depot_SNOW;            
+            set_MONORAIL_depot;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_MONORAIL_tunnel_overlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_MONORAIL_tunnel_overlay;
+            TILETYPE_SNOW:                      set_MONORAIL_tunnel_overlay_SNOW;            
+            set_MONORAIL_tunnel_overlay;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_MONORAIL_tunnel_underlay, terrain_type) {
+            TILETYPE_NORMAL:                    set_MONORAIL_tunnel_underlay;
+            TILETYPE_SNOW:                      set_MONORAIL_tunnel_underlay_SNOW;            
+            set_MONORAIL_tunnel_underlay;    
+        }
+
+    // Define MONORAIL_RAIL
+        item(FEAT_RAILTYPES, track_MONORAIL, 22) {
+            property {
+                label:                          "KLMN";
+                introduction_date:              date(0001, 1, 1);               
+                name:                           string(STR_TRACK_MONORAIL_NAME);
+                menu_text:                      string(STR_TRACK_MONORAIL_DROPDOWN_MENU);
+                toolbar_caption:                string(STR_TRACK_MONORAIL_TOOLBAR_CAPTION);
+                build_window_caption:           string(STR_TRACK_MONORAIL_BUILD_VEHICLE_CAPTION);
+                new_engine_text:                string(STR_TRACK_MONORAIL_NEW_ENGINE);
+                autoreplace_text:               string(STR_TRACK_MONORAIL_AUTOREPLACE);
+
+                station_graphics:               RAILTYPE_STATION_NORMAL;
+                acceleration_model:             ACC_MODEL_RAIL;
+                speed_limit:                    para_speed_LIGHT_RAIL km/h;
+                construction_cost:              para_construction_cost_LIGHT_RAIL;
+                maintenance_cost:               para_maintenance_cost_LIGHT_RAIL;
+                sort_order:                     22;
+
+                railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+                alternative_railtype_list:      ["KL3L","KRLR","KLMN"];
+                compatible_railtype_list:       ["KL3L","KRLR","KLMN"];
+                powered_railtype_list:          ["KL3L","KRLR","KLMN"];
+
+            }
+
+            graphics {
+                gui:                            set_MONORAIL_gui;
+                track_overlay:                  set_MONORAIL_overlay;
+                underlay:                       set_MONORAIL_underlay;
+                tunnels:                        sw_MONORAIL_tunnel_underlay;
+                tunnel_overlay:                 sw_MONORAIL_tunnel_overlay;
+                depots:                         sw_MONORAIL_depot;
+                bridge_surfaces:                set_MONORAIL_bridge;
+                fences:                         set_TRANSPARENT_fences;
             }
         }
 
@@ -2069,56 +2593,25 @@
         }
 
     // Tracks underlay
-        spriteset(set_RAILBED_underlay, "./Korean_Tracks/gfx/RAILBED.png") {
-            [   0,   40,   64,   31,  -31,    0]   // ↗↙
-            [  70,   40,   64,   31,  -31,    0]   // ↖↘
-            [ 140,   40,   64,   31,  -31,    0]   // ↔U
-            [ 210,   40,   64,   31,  -31,    0]   // ↔D
-            [ 280,   40,   64,   31,  -31,    0]   // ↕R
-            [ 350,   40,   64,   31,  -31,    0]   // ↕L
-            [ 420,   40,   64,   39,  -31,   -8]   // ↗ slope up
-            [ 490,   40,   64,   23,  -31,    0]   // ↘ slope up 
-            [ 560,   40,   64,   23,  -31,    0]   // ↙ slope up
-            [ 630,   40,   64,   39,  -31,   -8]   // ↖ slope up
-            [   0,   40,   64,   31,  -31,    0]   // +
-            [  70,   40,   64,   31,  -31,    0]   // combi SW
-            [  70,   40,   64,   31,  -31,    0]   // combi NE
-            [   0,   40,   64,   31,  -31,    0]   // combi SE
-            [   0,   40,   64,   31,  -31,    0]   // combi NW
-            [   0,   40,   64,   31,  -31,    0]   // combi all
+        spriteset(set_RAILBED_underlay_A, "./Korean_Tracks/gfx/RAILBED.png") {
+            tmpl_underlay_railbed (0, 40)
+        }
+
+        spriteset(set_RAILBED_underlay_B, "./Korean_Tracks/gfx/RAILBED.png") {
+            tmpl_underlay_railbed (0, 80)
         }
 
         spriteset(set_RAILBED_underlay_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { // transparent
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
+            tmpl_underlay_railbed (0, 120)
         }
 
     // Bridge surfaces
         spriteset(set_RAILBED_bridge, "./Korean_Tracks/gfx/RAILBED.png") {
-            tmpl_bridge_surface (0, 80)
+            tmpl_bridge_surface (0, 160)
         }
 
-        spriteset(set_RAILBED_bridge_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { // transparent
-            [   0,    0,    1,    1,    0,    0]            
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
-            [   0,    0,    1,    1,    0,    0]
+        spriteset(set_RAILBED_bridge_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { 
+            tmpl_bridge_surface (0, 200)
         }
 
     // Fences
@@ -2127,10 +2620,16 @@
         }
 
     // Graphic for terrain
-        switch(FEAT_RAILTYPES, SELF, sw_RAILBED_underlay, terrain_type) {
-            TILETYPE_NORMAL:                    set_RAILBED_underlay;
+        switch(FEAT_RAILTYPES, SELF, sw_RAILBED_underlay_A, terrain_type) {
+            TILETYPE_NORMAL:                    set_RAILBED_underlay_A;
             TILETYPE_SNOW:                      set_RAILBED_underlay_SNOW;            
-            set_RAILBED_underlay;
+            set_RAILBED_underlay_A;
+        }
+
+        switch(FEAT_RAILTYPES, SELF, sw_RAILBED_underlay_B, terrain_type) {
+            TILETYPE_NORMAL:                    set_RAILBED_underlay_B;
+            TILETYPE_SNOW:                      set_RAILBED_underlay_SNOW;            
+            set_RAILBED_underlay_B;
         }
 
         switch(FEAT_RAILTYPES, SELF, sw_RAILBED_bridge, terrain_type) {
@@ -2139,8 +2638,13 @@
             set_RAILBED_bridge;
         }
 
+        switch(FEAT_RAILTYPES, SELF, sw_random_RAILBED_underlay, random_bits % 2) {  
+                1: sw_RAILBED_underlay_A;
+                sw_RAILBED_underlay_B;
+            }
+
     // Define RAILBED
-        item(FEAT_RAILTYPES, track_RAILBED, 16) {
+        item(FEAT_RAILTYPES, track_RAILBED, 30) {
             property {
                 label:                          "KRBD";
                 introduction_date:              date(0001, 1, 1);               
@@ -2154,9 +2658,9 @@
                 station_graphics:               RAILTYPE_STATION_NORMAL;
                 acceleration_model:             ACC_MODEL_RAIL;
                 speed_limit:                    0 km/h;
-                construction_cost:              8;
+                construction_cost:              4;
                 maintenance_cost:               4;
-                sort_order:                     16;
+                sort_order:                     30;
 
                 railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
             }
@@ -2164,7 +2668,7 @@
             graphics {
                 gui:                            set_RAILBED_gui;
                 track_overlay:                  set_RAILBED_overlay;
-                underlay:                       sw_RAILBED_underlay;
+                underlay:                       sw_random_RAILBED_underlay;
                 bridge_surfaces:                sw_RAILBED_bridge;
                 fences:                         set_RAILBED_fences;
             }
@@ -3462,6 +3966,10 @@
             spriteset(set_object_NARROW_762, "./Korean_Tracks/gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 0)
             }
+
+            spriteset(set_object_NARROW_762_DESERT, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 0)
+            }
               
             spriteset(set_object_NARROW_762_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 0)
@@ -3523,6 +4031,70 @@
 
                 building {
                     sprite:                          set_object_NARROW_762 (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_SW_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_DESERT (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_NW_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_DESERT (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_NE_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_DESERT (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_NARROW_762_SE_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_NARROW_762_DESERT (3);
                     xextent:                         16; // default
                     yextent:                         16;
                     zextent:                         16; 
@@ -3604,6 +4176,13 @@
                 sply_object_NARROW_762_SE;
             }
 
+            switch(FEAT_OBJECTS, SELF, sw_object_NARROW_762_DESERT, view) {
+                1: sply_object_NARROW_762_SW_DESERT;
+                2: sply_object_NARROW_762_NW_DESERT;
+                3: sply_object_NARROW_762_NE_DESERT;
+                sply_object_NARROW_762_SE_DESERT;
+            }
+
             switch(FEAT_OBJECTS, SELF, sw_object_NARROW_762_SNOW, view) {
                 1: sply_object_NARROW_762_SW_SNOW;
                 2: sply_object_NARROW_762_NW_SNOW;
@@ -3613,7 +4192,8 @@
 
             switch(FEAT_OBJECTS, SELF, sw_set_object_NARROW_762, terrain_type) {
                 TILETYPE_NORMAL:                    sw_object_NARROW_762;
-                TILETYPE_SNOW:                      sw_object_NARROW_762_SNOW;            
+                TILETYPE_DESERT:                    sw_object_NARROW_762_DESERT;
+                TILETYPE_SNOW:                      sw_object_NARROW_762_SNOW;
                 sw_object_NARROW_762;
             }
 
@@ -3643,6 +4223,10 @@
     // Buffer Low Speed
         // Spritesets 
             spriteset(set_object_low_speed, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 60)
+            }
+
+            spriteset(set_object_low_speed_DESERT, "./Korean_Tracks/gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 60)
             }
               
@@ -3706,6 +4290,70 @@
 
                 building {
                     sprite:                          set_object_low_speed (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_SW_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_DESERT (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_NW_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_DESERT (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_NE_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_DESERT (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_SE_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_DESERT (3);
                     xextent:                         16; // default
                     yextent:                         16;
                     zextent:                         16; 
@@ -3787,6 +4435,13 @@
                 sply_object_low_speed_SE;
             }
 
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed_DESERT, view) {
+                1: sply_object_low_speed_SW_DESERT;
+                2: sply_object_low_speed_NW_DESERT;
+                3: sply_object_low_speed_NE_DESERT;
+                sply_object_low_speed_SE_DESERT;
+            }
+
             switch(FEAT_OBJECTS, SELF, sw_object_low_speed_SNOW, view) {
                 1: sply_object_low_speed_SW_SNOW;
                 2: sply_object_low_speed_NW_SNOW;
@@ -3796,7 +4451,8 @@
 
             switch(FEAT_OBJECTS, SELF, sw_set_object_low_speed, terrain_type) {
                 TILETYPE_NORMAL:                    sw_object_low_speed;
-                TILETYPE_SNOW:                      sw_object_low_speed_SNOW;            
+                TILETYPE_DESERT:                      sw_object_low_speed_DESERT;
+                TILETYPE_SNOW:                      sw_object_low_speed_SNOW;
                 sw_object_low_speed;
             }
 
@@ -3823,14 +4479,197 @@
                 }
             }
 
-    // Buffer Low Speed (Urban)
+    // Buffer Low Speed (Elec)
         // Spritesets 
-            spriteset(set_object_low_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_elec, "./Korean_Tracks/gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 120)
             }
               
-            spriteset(set_object_low_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_elec_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 120)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_low_speed_elec_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_low_speed_elec_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_low_speed_elec_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed_elec, view) {
+                1: sply_object_low_speed_elec_SW;
+                2: sply_object_low_speed_elec_NW;
+                3: sply_object_low_speed_elec_NE;
+                sply_object_low_speed_elec_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_low_speed_elec_SNOW, view) {
+                1: sply_object_low_speed_elec_SW_SNOW;
+                2: sply_object_low_speed_elec_NW_SNOW;
+                3: sply_object_low_speed_elec_NE_SNOW;
+                sply_object_low_speed_elec_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_low_speed_elec, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_low_speed_elec;
+                TILETYPE_SNOW:                      sw_object_low_speed_elec_SNOW;            
+                sw_object_low_speed_elec;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_low_speed_elec) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_LOW_SPEED_ELEC_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_LOW_SPEED_ELEC/2;
+                    remove_cost_multiplier:          para_construction_cost_LOW_SPEED_ELEC/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_low_speed_elec;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Buffer Low Speed (Urban)
+        // Spritesets 
+            spriteset(set_object_low_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 180)
+            }
+              
+            spriteset(set_object_low_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 180)
             }
               
         // Spritelayouts 
@@ -4009,11 +4848,11 @@
     // Buffer Standard Speed
         // Spritesets 
             spriteset(set_object_standard_speed, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (0, 180)
+                tmpl_buffer_object (0, 240)
             }
               
             spriteset(set_object_standard_speed_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (280, 180)
+                tmpl_buffer_object (280, 240)
             }
               
         // Spritelayouts 
@@ -4068,6 +4907,70 @@
             spritelayout sply_object_standard_speed_SE {
                 ground {
                     sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_SW_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_NW_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_NE_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_SE_DESERT {
+                ground {
+                    sprite:                          GROUNDSPRITE_DESERT;
                 }
 
                 building {
@@ -4153,6 +5056,13 @@
                 sply_object_standard_speed_SE;
             }
 
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_DESERT, view) {
+                1: sply_object_standard_speed_SW_DESERT;
+                2: sply_object_standard_speed_NW_DESERT;
+                3: sply_object_standard_speed_NE_DESERT;
+                sply_object_standard_speed_SE_DESERT;
+            }
+
             switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_SNOW, view) {
                 1: sply_object_standard_speed_SW_SNOW;
                 2: sply_object_standard_speed_NW_SNOW;
@@ -4162,7 +5072,8 @@
 
             switch(FEAT_OBJECTS, SELF, sw_set_object_standard_speed, terrain_type) {
                 TILETYPE_NORMAL:                    sw_object_standard_speed;
-                TILETYPE_SNOW:                      sw_object_standard_speed_SNOW;            
+                TILETYPE_DESERT:                    sw_object_standard_speed_DESERT;
+                TILETYPE_SNOW:                      sw_object_standard_speed_SNOW;
                 sw_object_standard_speed;
             }
 
@@ -4189,14 +5100,197 @@
                 }
             }
 
+    // Buffer Standard Speed (Elec)
+        // Spritesets 
+            spriteset(set_object_standard_speed_elec, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (0, 300)
+            }
+              
+            spriteset(set_object_standard_speed_elec_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+                tmpl_buffer_object (280, 300)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_standard_speed_elec_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_standard_speed_elec_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_standard_speed_elec_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_elec, view) {
+                1: sply_object_standard_speed_elec_SW;
+                2: sply_object_standard_speed_elec_NW;
+                3: sply_object_standard_speed_elec_NE;
+                sply_object_standard_speed_elec_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_standard_speed_elec_SNOW, view) {
+                1: sply_object_standard_speed_elec_SW_SNOW;
+                2: sply_object_standard_speed_elec_NW_SNOW;
+                3: sply_object_standard_speed_elec_NE_SNOW;
+                sply_object_standard_speed_elec_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_standard_speed_elec, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_standard_speed_elec;
+                TILETYPE_SNOW:                      sw_object_standard_speed_elec_SNOW;            
+                sw_object_standard_speed_elec;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_standard_speed_elec) {
+                property {
+                    class:                           "KOBF";
+                    classname:                       string(STR_OBJECT_BUFFERS_NAME);
+                    name:                            string(STR_OBJECT_BUFFER_STANDARD_SPEED_ELEC_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_MAIN_LINE_ELEC/2;
+                    remove_cost_multiplier:          para_construction_cost_MAIN_LINE_ELEC/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_standard_speed_elec;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
     // Buffer Standard Speed (Urban)
         // Spritesets 
             spriteset(set_object_standard_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (0, 240)
+                tmpl_buffer_object (0, 360)
             }
               
             spriteset(set_object_standard_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (280, 240)
+                tmpl_buffer_object (280, 360)
             }
               
         // Spritelayouts 
@@ -4375,11 +5469,11 @@
     // Buffer Semi High Speed
         // Spritesets 
             spriteset(set_object_SEMI_HIGH_SPEED, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (0, 300)
+                tmpl_buffer_object (0, 420)
             }
               
             spriteset(set_object_SEMI_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (280, 300)
+                tmpl_buffer_object (280, 420)
             }
               
         // Spritelayouts 
@@ -4558,11 +5652,11 @@
     // Buffer High Speed
         // Spritesets 
             spriteset(set_object_HIGH_SPEED, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (0, 360)
+                tmpl_buffer_object (0, 480)
             }
               
             spriteset(set_object_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (280, 360)
+                tmpl_buffer_object (280, 480)
             }
               
         // Spritelayouts 
@@ -4741,11 +5835,11 @@
     // Buffer Metro
         // Spritesets 
             spriteset(set_object_metro, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (0, 420)
+                tmpl_buffer_object (0, 540)
             }
               
             spriteset(set_object_metro_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (280, 420)
+                tmpl_buffer_object (280, 540)
             }
               
         // Spritelayouts 
@@ -4924,11 +6018,11 @@
     // Buffer THIRD
         // Spritesets 
             spriteset(set_object_THIRD, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (0, 480)
+                tmpl_buffer_object (0, 600)
             }
               
             spriteset(set_object_THIRD_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
-                tmpl_buffer_object (280, 480)
+                tmpl_buffer_object (280, 600)
             }
               
         // Spritelayouts 
