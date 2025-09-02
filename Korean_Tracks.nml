@@ -3,7 +3,7 @@
         name                               :string(STR_GRF_NAME);
         desc                               :string(STR_GRF_DESC);
         url                                :string(STR_GRF_URL);
-        version                            :241021;
+        version                            :250902;
         min_compatible_version             :240520;
 
         // Parameters
@@ -3958,6 +3958,372 @@
                     default:                         sw_set_object_depot_METRO;
                     tile_check:                      CB_RESULT_LOCATION_ALLOW;
                     additional_text:                 string(STR_OBJECT_DEPOT_METRO_DESC);
+                }
+            }
+
+    // Depot Subway
+        // Spritesets 
+            spriteset(set_object_depot_SUBWAY, "./Korean_Tracks/gfx/METRO.png") {
+                tmpl_depot_object (0, 710)
+            }
+              
+            spriteset(set_object_depot_SUBWAY_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                tmpl_depot_object (0, 1200)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_depot_SUBWAY_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_SUBWAY, view) {
+                1: sply_object_depot_SUBWAY_SW;
+                2: sply_object_depot_SUBWAY_NW;
+                3: sply_object_depot_SUBWAY_NE;
+                sply_object_depot_SUBWAY_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_SUBWAY_SNOW, view) {
+                1: sply_object_depot_SUBWAY_SW_SNOW;
+                2: sply_object_depot_SUBWAY_NW_SNOW;
+                3: sply_object_depot_SUBWAY_NE_SNOW;
+                sply_object_depot_SUBWAY_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_SUBWAY, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_SUBWAY;
+                TILETYPE_SNOW:                      sw_object_depot_SUBWAY_SNOW;            
+                sw_object_depot_SUBWAY;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_depot_SUBWAY) {
+                property {
+                    class:                           "KODT";
+                    classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                    name:                            string(STR_OBJECT_DEPOT_SUBWAY_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_METRO/2;
+                    remove_cost_multiplier:          para_construction_cost_METRO/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_depot_SUBWAY;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
+                }
+            }
+
+    // Depot Subway (with Park)
+        // Spritesets 
+            spriteset(set_object_depot_SUBWAY_PARK, "./Korean_Tracks/gfx/METRO.png") {
+                tmpl_depot_object (0, 890)
+            }
+              
+            spriteset(set_object_depot_SUBWAY_PARK_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+                tmpl_depot_object (0, 1310)
+            }
+              
+        // Spritelayouts 
+            spritelayout sply_object_depot_SUBWAY_PARK_SW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_NW {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_NE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_SE {
+                ground {
+                    sprite:                          GROUNDSPRITE_NORMAL;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_SW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK_SNOW (0);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_NW_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK_SNOW (1);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_NE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK_SNOW (2);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+            spritelayout sply_object_depot_SUBWAY_PARK_SE_SNOW {
+                ground {
+                    sprite:                          GROUNDSPRITE_SNOW;
+                }
+
+                building {
+                    sprite:                          set_object_depot_SUBWAY_PARK_SNOW (3);
+                    xextent:                         16; // default
+                    yextent:                         16;
+                    zextent:                         16; 
+                    xoffset:                         0; // from NE edge, default
+                    yoffset:                         0; // from NW edge
+                    zoffset:                         0;
+                }
+            }
+
+        // Switch
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_SUBWAY_PARK, view) {
+                1: sply_object_depot_SUBWAY_PARK_SW;
+                2: sply_object_depot_SUBWAY_PARK_NW;
+                3: sply_object_depot_SUBWAY_PARK_NE;
+                sply_object_depot_SUBWAY_PARK_SE;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_object_depot_SUBWAY_PARK_SNOW, view) {
+                1: sply_object_depot_SUBWAY_PARK_SW_SNOW;
+                2: sply_object_depot_SUBWAY_PARK_NW_SNOW;
+                3: sply_object_depot_SUBWAY_PARK_NE_SNOW;
+                sply_object_depot_SUBWAY_PARK_SE_SNOW;
+            }
+
+            switch(FEAT_OBJECTS, SELF, sw_set_object_depot_SUBWAY_PARK, terrain_type) {
+                TILETYPE_NORMAL:                    sw_object_depot_SUBWAY_PARK;
+                TILETYPE_SNOW:                      sw_object_depot_SUBWAY_PARK_SNOW;            
+                sw_object_depot_SUBWAY_PARK;
+            }
+
+        // Item Define
+            item(FEAT_OBJECTS, object_depot_SUBWAY_PARK) {
+                property {
+                    class:                           "KODT";
+                    classname:                       string(STR_OBJECT_DEPOTS_NAME);
+                    name:                            string(STR_OBJECT_DEPOT_SUBWAY_PARK_NAME);
+                    climates_available:              ALL_CLIMATES;
+                    size:                            [1,1];
+                    build_cost_multiplier:           para_construction_cost_METRO/2;
+                    remove_cost_multiplier:          para_construction_cost_METRO/2;
+                    introduction_date:               date(0001,1,1);
+                    end_of_life_date:                0xFFFFFFFF;
+                    object_flags:                    bitmask(OBJ_FLAG_ALLOW_BRIDGE, OBJ_FLAG_ANYTHING_REMOVE);
+                    height:                          1;
+                    num_views:                       4;
+                }
+
+                graphics {
+                    default:                         sw_set_object_depot_SUBWAY_PARK;
+                    tile_check:                      CB_RESULT_LOCATION_ALLOW;
                 }
             }
 
