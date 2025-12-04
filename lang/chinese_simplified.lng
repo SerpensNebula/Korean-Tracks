@@ -1,0 +1,226 @@
+##grflangid 0x56
+
+# GRF 名称与说明
+STR_GRF_NAME                                      :韩国轨道包 1.6.1
+STR_GRF_DESC                                      :{BLACK}添加韩国常见类型和外观的轨道。推荐与「韩国列车包」或「韩国早期列车包」一同使用。与其他列车包或轨道包不保证兼容。{}{}{YELLOW}建议将韩国轨道包放在韩国列车包及韩国早期列车包之后（或下方）加载。{}{}{BLACK}参考模组：{SILVER}Japan Set3: Tracks, NuTracks 2{}{}{BLACK}许可证：{SILVER}GNU GPL v3
+STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Tracks
+
+# 参数 - 速度限制
+STR_PARA_NAME_SPEED_NARROW_762                    :速度限制 - 762mm 窄轨 (km/h)
+STR_PARA_DESC_SPEED_NARROW_762                    :设置 762mm 窄轨轨道的限速。默认值为 70，设为 0 表示无限制。
+STR_PARA_NAME_SPEED_LOW_SPEED                     :速度限制 - 低速轨道 (km/h)
+STR_PARA_DESC_SPEED_LOW_SPEED                     :设置低速轨道与电气轨道的限速。默认值为 121，设为 0 表示无限制。
+STR_PARA_NAME_SPEED_MAIN_LINE                     :速度限制 - 普速轨道 (km/h)
+STR_PARA_DESC_SPEED_MAIN_LINE                     :设置普速、改良电气线与城市电气线的限速。默认值为 180，设为 0 表示无限制。
+STR_PARA_NAME_SPEED_SEMI_HIGH_SPEED               :速度限制 - 准高速线轨道 (km/h)
+STR_PARA_DESC_SPEED_SEMI_HIGH_SPEED               :设置准高速线轨道的限速。默认值为 261，设为 0 表示无限制。
+STR_PARA_NAME_SPEED_HIGH_SPEED                    :速度限制 - 高速线轨道 (km/h)
+STR_PARA_DESC_SPEED_HIGH_SPEED                    :设置高速线轨道的限速。默认值为 430，设为 0 表示无限制。
+STR_PARA_NAME_SPEED_METRO                         :速度限制 - 城市铁路轨道 (km/h)
+STR_PARA_DESC_SPEED_METRO                         :设置城市铁路轨道的限速。默认值为 180，设为 0 表示无限制。
+STR_PARA_NAME_SPEED_LIGHT                         :速度限制 - 轻轨轨道 (km/h)
+STR_PARA_DESC_SPEED_LIGHT                         :设置轻轨轨道的限速。默认值为 121，设为 0 表示无限制。
+
+# 参数 - 建设费用
+STR_PARA_NAME_CONST_COST_NARROW_762               :建设费用系数 - 762mm 窄轨
+STR_PARA_DESC_CONST_COST_NARROW_762               :设置 762mm 窄轨轨道的建设费用系数。默认值为 4。
+STR_PARA_NAME_CONST_COST_LOW_SPEED                :建设费用系数 - 低速轨道
+STR_PARA_DESC_CONST_COST_LOW_SPEED                :设置低速轨道的建设费用系数。默认值为 8。
+STR_PARA_NAME_CONST_COST_LOW_SPEED_ELEC           :建设费用系数 - 低速电气轨道
+STR_PARA_DESC_CONST_COST_LOW_SPEED_ELEC           :设置低速电气轨道的建设费用系数。默认值为 10。
+STR_PARA_NAME_CONST_COST_LOW_SPEED_URBAN          :建设费用系数 - 低速城市电气轨道
+STR_PARA_DESC_CONST_COST_LOW_SPEED_URBAN          :设置低速城市电气轨道的建设费用系数。默认值为 14。
+STR_PARA_NAME_CONST_COST_MAIN_LINE                :建设费用系数 - 普速轨道
+STR_PARA_DESC_CONST_COST_MAIN_LINE                :设置普速轨道的建设费用系数。默认值为 12。
+STR_PARA_NAME_CONST_COST_MAIN_LINE_ELEC           :建设费用系数 - 普速电气轨道
+STR_PARA_DESC_CONST_COST_MAIN_LINE_ELEC           :设置普速电气轨道的建设费用系数。默认值为 16。
+STR_PARA_NAME_CONST_COST_MAIN_LINE_URBAN          :建设费用系数 - 普速城市电气轨道
+STR_PARA_DESC_CONST_COST_MAIN_LINE_URBAN          :设置普速城市电气轨道的建设费用系数。默认值为 18。
+STR_PARA_NAME_CONST_COST_SEMI_HIGH_SPEED          :建设费用系数 - 准高速线轨道
+STR_PARA_DESC_CONST_COST_SEMI_HIGH_SPEED          :设置准高速线轨道的建设费用系数。默认值为 48。
+STR_PARA_NAME_CONST_COST_HIGH_SPEED               :建设费用系数 - 高速线轨道
+STR_PARA_DESC_CONST_COST_HIGH_SPEED               :设置高速线轨道的建设费用系数。默认值为 96。
+STR_PARA_NAME_CONST_COST_METRO                    :建设费用系数 - 城市铁路轨道
+STR_PARA_DESC_CONST_COST_METRO                    :设置城市铁路轨道的建设费用系数。默认值为 18。
+STR_PARA_NAME_CONST_COST_LIGHT                    :建设费用系数 - 轻轨轨道
+STR_PARA_DESC_CONST_COST_LIGHT                    :设置轻轨轨道的建设费用系数。默认值为 16。
+
+# 参数 - 维护费用
+STR_PARA_NAME_MAINT_COST_NARROW_762               :维护费用系数 - 762mm 窄轨
+STR_PARA_DESC_MAINT_COST_NARROW_762               :设置 762mm 窄轨轨道的维护费用系数。默认值为 12。
+STR_PARA_NAME_MAINT_COST_LOW_SPEED                :维护费用系数 - 低速轨道
+STR_PARA_DESC_MAINT_COST_LOW_SPEED                :设置低速轨道的维护费用系数。默认值为 16。
+STR_PARA_NAME_MAINT_COST_LOW_SPEED_ELEC           :维护费用系数 - 低速电气轨道
+STR_PARA_DESC_MAINT_COST_LOW_SPEED_ELEC           :设置低速电气轨道的维护费用系数。默认值为 18。
+STR_PARA_NAME_MAINT_COST_LOW_SPEED_URBAN          :维护费用系数 - 低速城市电气轨道
+STR_PARA_DESC_MAINT_COST_LOW_SPEED_URBAN          :设置低速城市电气轨道的维护费用系数。默认值为 18。
+STR_PARA_NAME_MAINT_COST_MAIN_LINE                :维护费用系数 - 普速轨道
+STR_PARA_DESC_MAINT_COST_MAIN_LINE                :设置普速轨道的维护费用系数。默认值为 18。
+STR_PARA_NAME_MAINT_COST_MAIN_LINE_ELEC           :维护费用系数 - 普速电气轨道
+STR_PARA_DESC_MAINT_COST_MAIN_LINE_ELEC           :设置普速电气轨道的维护费用系数。默认值为 20。
+STR_PARA_NAME_MAINT_COST_MAIN_LINE_URBAN          :维护费用系数 - 普速城市电气轨道
+STR_PARA_DESC_MAINT_COST_MAIN_LINE_URBAN          :设置普速城市电气轨道的维护费用系数。默认值为 20。
+STR_PARA_NAME_MAINT_COST_SEMI_HIGH_SPEED          :维护费用系数 - 准高速线轨道
+STR_PARA_DESC_MAINT_COST_SEMI_HIGH_SPEED          :设置准高速线轨道的维护费用系数。默认值为 22。
+STR_PARA_NAME_MAINT_COST_HIGH_SPEED               :维护费用系数 - 高速线轨道
+STR_PARA_DESC_MAINT_COST_HIGH_SPEED               :设置高速线轨道的维护费用系数。默认值为 24。
+STR_PARA_NAME_MAINT_COST_METRO                    :维护费用系数 - 城市铁路轨道
+STR_PARA_DESC_MAINT_COST_METRO                    :设置城市铁路轨道的维护费用系数。默认值为 20。
+STR_PARA_NAME_MAINT_COST_LIGHT                    :维护费用系数 - 轻轨轨道
+STR_PARA_DESC_MAINT_COST_LIGHT                    :设置轻轨轨道的维护费用系数。默认值为 18。
+
+# 窄轨
+STR_NARROW_762_NAME                               :762mm 窄轨轨道
+STR_NARROW_762_DROPDOWN_MENU                      :建设 762mm 窄轨轨道
+STR_NARROW_762_TOOLBAR_CAPTION                    :建设 762mm 窄轨轨道
+STR_NARROW_762_BUILD_VEHICLE_CAPTION              :添加 762mm 窄轨列车
+STR_NARROW_762_NEW_ENGINE                         :762mm 窄轨列车
+STR_NARROW_762_AUTOREPLACE                        :762mm 窄轨列车
+
+# 低速 // 120
+STR_LOW_SPEED_TRACK_NAME                          :低速轨道
+STR_LOW_SPEED_TRACK_DROPDOWN_MENU                 :建设低速轨道
+STR_LOW_SPEED_TRACK_TOOLBAR_CAPTION               :建设低速轨道
+STR_LOW_SPEED_BUILD_VEHICLE_CAPTION               :添加低速列车
+STR_LOW_SPEED_NEW_ENGINE                          :低速列车
+STR_LOW_SPEED_AUTOREPLACE                         :低速列车
+
+# 电气低速 // 120
+STR_LOW_SPEED_ELEC_TRACK_NAME                     :低速电气轨道
+STR_LOW_SPEED_ELEC_TRACK_DROPDOWN_MENU            :建设低速电气轨道
+STR_LOW_SPEED_ELEC_TRACK_TOOLBAR_CAPTION          :建设低速电气轨道
+STR_LOW_SPEED_ELEC_BUILD_VEHICLE_CAPTION          :添加低速电气列车
+STR_LOW_SPEED_ELEC_NEW_ENGINE                     :低速电气列车
+STR_LOW_SPEED_ELEC_AUTOREPLACE                    :低速电气列车
+
+# 城市电气低速 // 120
+STR_LOW_SPEED_URBAN_TRACK_NAME                    :低速城市电气轨道
+STR_LOW_SPEED_URBAN_TRACK_DROPDOWN_MENU           :建设低速城市电气轨道
+STR_LOW_SPEED_URBAN_TRACK_TOOLBAR_CAPTION         :建设低速城市电气轨道
+STR_LOW_SPEED_URBAN_BUILD_VEHICLE_CAPTION         :添加低速电气列车
+STR_LOW_SPEED_URBAN_NEW_ENGINE                    :低速电气列车
+STR_LOW_SPEED_URBAN_AUTOREPLACE                   :低速电气列车
+
+# 普速 // 180
+STR_MAIN_LINE_TRACK_NAME                          :普速轨道
+STR_MAIN_LINE_TRACK_DROPDOWN_MENU                 :建设普速轨道
+STR_MAIN_LINE_TRACK_TOOLBAR_CAPTION               :建设普速轨道
+STR_MAIN_LINE_BUILD_VEHICLE_CAPTION               :添加普速列车
+STR_MAIN_LINE_NEW_ENGINE                          :普速列车
+STR_MAIN_LINE_AUTOREPLACE                         :普速列车
+
+# 电气普速 // 180
+STR_MAIN_LINE_ELEC_TRACK_NAME                     :普速电气轨道
+STR_MAIN_LINE_ELEC_TRACK_DROPDOWN_MENU            :建设普速电气轨道
+STR_MAIN_LINE_ELEC_TRACK_TOOLBAR_CAPTION          :建设普速电气轨道
+STR_MAIN_LINE_ELEC_BUILD_VEHICLE_CAPTION          :添加普速电气列车
+STR_MAIN_LINE_ELEC_NEW_ENGINE                     :普速电气列车
+STR_MAIN_LINE_ELEC_AUTOREPLACE                    :普速电气列车
+
+# 城市电气普速 // 180
+STR_MAIN_LINE_URBAN_TRACK_NAME                    :普速城市电气轨道
+STR_MAIN_LINE_URBAN_TRACK_DROPDOWN_MENU           :建设普速城市电气轨道
+STR_MAIN_LINE_URBAN_TRACK_TOOLBAR_CAPTION         :建设普速城市电气轨道
+STR_MAIN_LINE_URBAN_BUILD_VEHICLE_CAPTION         :添加普速电气列车
+STR_MAIN_LINE_URBAN_NEW_ENGINE                    :普速电气列车
+STR_MAIN_LINE_URBAN_AUTOREPLACE                   :普速电气列车
+
+# 准高速线 // 260
+STR_SEMI_HIGH_SPEED_TRACK_NAME                    :准高速线轨道
+STR_SEMI_HIGH_SPEED_TRACK_DROPDOWN_MENU           :建设准高速线轨道
+STR_SEMI_HIGH_SPEED_TRACK_TOOLBAR_CAPTION         :建设准高速线轨道
+STR_SEMI_HIGH_SPEED_BUILD_VEHICLE_CAPTION         :添加准高速列车
+STR_SEMI_HIGH_SPEED_NEW_ENGINE                    :准高速列车
+STR_SEMI_HIGH_SPEED_AUTOREPLACE                   :准高速列车
+
+# 高速线 // 430
+STR_HIGH_SPEED_TRACK_NAME                         :高速线轨道
+STR_HIGH_SPEED_TRACK_DROPDOWN_MENU                :建设高速线轨道
+STR_HIGH_SPEED_TRACK_TOOLBAR_CAPTION              :建设高速线轨道
+STR_HIGH_SPEED_BUILD_VEHICLE_CAPTION              :添加高速列车
+STR_HIGH_SPEED_NEW_ENGINE                         :高速列车
+STR_HIGH_SPEED_AUTOREPLACE                        :高速列车
+
+# 地面地铁
+STR_TRACK_METRO_NAME                              :城市铁路（地面）轨道
+STR_TRACK_METRO_DROPDOWN_MENU                     :建设城市铁路（地面）轨道
+STR_TRACK_METRO_TOOLBAR_CAPTION                   :建设城市铁路（地面）轨道
+STR_TRACK_METRO_BUILD_VEHICLE_CAPTION             :添加城市铁路列车
+STR_TRACK_METRO_NEW_ENGINE                        :城市铁路列车
+STR_TRACK_METRO_AUTOREPLACE                       :城市铁路列车
+
+# 地下地铁
+STR_TRACK_SUBWAY_NAME                             :城市铁路（地下）轨道
+STR_TRACK_SUBWAY_DROPDOWN_MENU                    :建设城市铁路（地下）轨道
+STR_TRACK_SUBWAY_TOOLBAR_CAPTION                  :建设城市铁路（地下）轨道
+STR_TRACK_SUBWAY_BUILD_VEHICLE_CAPTION            :添加城市铁路列车
+STR_TRACK_SUBWAY_NEW_ENGINE                       :城市铁路列车
+STR_TRACK_SUBWAY_AUTOREPLACE                      :城市铁路列车
+
+# 地下地铁（公园）
+STR_TRACK_SUBWAY_PARK_NAME                        :城市铁路（地下·公园）轨道
+STR_TRACK_SUBWAY_PARK_DROPDOWN_MENU               :建设城市铁路（地下·公园）轨道
+STR_TRACK_SUBWAY_PARK_TOOLBAR_CAPTION             :建设城市铁路（地下·公园）轨道
+STR_TRACK_SUBWAY_PARK_BUILD_VEHICLE_CAPTION       :添加城市铁路列车
+STR_TRACK_SUBWAY_PARK_NEW_ENGINE                  :城市铁路列车
+STR_TRACK_SUBWAY_PARK_AUTOREPLACE                 :城市铁路列车
+
+# 第三轨
+STR_TRACK_THIRD_NAME                              :轻轨 第三轨轨道
+STR_TRACK_THIRD_DROPDOWN_MENU                     :建设轻轨 第三轨轨道
+STR_TRACK_THIRD_TOOLBAR_CAPTION                   :建设轻轨 第三轨轨道
+STR_TRACK_THIRD_BUILD_VEHICLE_CAPTION             :添加轻轨 第三轨列车
+STR_TRACK_THIRD_NEW_ENGINE                        :轻轨 第三轨列车
+STR_TRACK_THIRD_AUTOREPLACE                       :轻轨 第三轨列车
+
+# 橡胶轮轻轨
+STR_TRACK_AGT_NAME                                :轻轨 胶轮轨道
+STR_TRACK_AGT_DROPDOWN_MENU                       :建设轻轨 胶轮轨道
+STR_TRACK_AGT_TOOLBAR_CAPTION                     :建设轻轨 胶轮轨道
+STR_TRACK_AGT_BUILD_VEHICLE_CAPTION               :添加轻轨 胶轮列车
+STR_TRACK_AGT_NEW_ENGINE                          :轻轨 橡胶轮列车
+STR_TRACK_AGT_AUTOREPLACE                         :轻轨 橡胶轮列车
+
+# 单轨
+STR_TRACK_MONORAIL_NAME                           :轻轨 单轨轨道
+STR_TRACK_MONORAIL_DROPDOWN_MENU                  :建设轻轨 单轨轨道
+STR_TRACK_MONORAIL_TOOLBAR_CAPTION                :建设轻轨 单轨轨道
+STR_TRACK_MONORAIL_BUILD_VEHICLE_CAPTION          :添加轻轨 单轨列车
+STR_TRACK_MONORAIL_NEW_ENGINE                     :轻轨 单轨列车
+STR_TRACK_MONORAIL_AUTOREPLACE                    :轻轨 单轨列车
+
+# 路基
+STR_TRACK_RAILBED_NAME                            :轨道路基
+STR_TRACK_RAILBED_DROPDOWN_MENU                   :建设轨道路基
+STR_TRACK_RAILBED_TOOLBAR_CAPTION                 :建设轨道路基
+STR_TRACK_RAILBED_BUILD_VEHICLE_CAPTION           :.
+STR_TRACK_RAILBED_NEW_ENGINE                      :.
+STR_TRACK_RAILBED_AUTOREPLACE                     :.
+
+# 物体（车库与终点）
+STR_OBJECT_DEPOTS_NAME                            :韩国轨道包车辆基地
+STR_OBJECT_DEPOT_NARROW_762_NAME                  :762mm 窄轨车辆基地
+STR_OBJECT_DEPOT_LOW_SPEED_NAME                   :低速车辆基地
+STR_OBJECT_DEPOT_STANDARD_SPEED_NAME              :普速车辆基地
+STR_OBJECT_DEPOT_STANDARD_SPEED_DESC              :Korail 水色车辆基地（首尔特别市）
+STR_OBJECT_DEPOT_STANDARD_SPEED_URBAN_NAME        :普速车辆基地（城市）
+STR_OBJECT_DEPOT_SEMI_HIGH_SPEED_NAME             :准高速线车辆基地
+STR_OBJECT_DEPOT_HIGH_SPEED_NAME                  :高速线车辆基地
+STR_OBJECT_DEPOT_HIGH_SPEED_DESC                  :Korail 高阳车辆基地（京畿道高阳市）
+STR_OBJECT_DEPOT_METRO_NAME                       :城市铁路（地面）车辆基地
+STR_OBJECT_DEPOT_METRO_DESC                       :首尔地铁 昌洞车车辆基地（首尔特别市）
+STR_OBJECT_DEPOT_SUBWAY_NAME                      :城市铁路（地下）车辆基地
+STR_OBJECT_DEPOT_SUBWAY_PARK_NAME                 :城市铁路（地下·公园）车辆基地
+
+STR_OBJECT_BUFFERS_NAME                           :韩国轨道包缓冲器
+STR_OBJECT_BUFFER_NARROW_762_NAME                 :762mm 窄轨缓冲器
+STR_OBJECT_BUFFER_LOW_SPEED_NAME                  :低速缓冲器
+STR_OBJECT_BUFFER_LOW_SPEED_ELEC_NAME             :低速（电气）缓冲器
+STR_OBJECT_BUFFER_LOW_SPEED_URBAN_NAME            :低速（城市）缓冲器
+STR_OBJECT_BUFFER_STANDARD_SPEED_NAME             :普速缓冲器
+STR_OBJECT_BUFFER_STANDARD_SPEED_ELEC_NAME        :普速（电气）缓冲器
+STR_OBJECT_BUFFER_STANDARD_SPEED_URBAN_NAME       :普速（城市）缓冲器
+STR_OBJECT_BUFFER_SEMI_HIGH_SPEED_NAME            :准高速线缓冲器
+STR_OBJECT_BUFFER_HIGH_SPEED_NAME                 :高速线缓冲器
+STR_OBJECT_BUFFER_METRO_NAME                      :城市铁路缓冲器
+STR_OBJECT_BUFFER_THIRD_NAME                      :第三轨缓冲器

@@ -623,82 +623,82 @@
 
 // NARROW 762mm
     // GUI
-        spriteset(set_NARROW_762_gui, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_gui, "./gfx/NARROW_762.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_NARROW_762_overlay, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_overlay, "./gfx/NARROW_762.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_NARROW_762_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_NARROW_762_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 0)
         } 
 
     // Tracks underlay
-        spriteset(set_NARROW_762_underlay, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_underlay, "./gfx/NARROW_762.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_NARROW_762_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_NARROW_762_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 40)
         } 
 
     // Tunnels
-        spriteset(set_NARROW_762_tunnel_underlay, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_tunnel_underlay, "./gfx/NARROW_762.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_NARROW_762_tunnel_underlay_desert, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_tunnel_underlay_desert, "./gfx/NARROW_762.png") {
             tmpl_tunnel_underlay (0, 170)
         } 
 
-        spriteset(set_NARROW_762_tunnel_underlay_rain, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_tunnel_underlay_rain, "./gfx/NARROW_762.png") {
             tmpl_tunnel_underlay (0, 220)
         } 
 
-        spriteset(set_NARROW_762_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_tunnel_underlay_SNOW, "./gfx/NARROW_762.png") {
             tmpl_tunnel_underlay (0, 270)
         } 
 
     // Fences // transparent
-        spriteset(set_TRANSPARENT_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_TRANSPARENT_fences, "./gfx/FENCE.png") {
             tmpl_fence_transparent (0, 0)
         }
 
     // Depot
-        spriteset(set_NARROW_762_depot, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_depot, "./gfx/NARROW_762.png") {
             tmpl_depot (0, 320)
         } 
 
-        spriteset(set_NARROW_762_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_NARROW_762_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 80)
         } 
 
     // Bridge surfaces
-        spriteset(set_NARROW_762_bridge, "./Korean_Tracks/gfx/NARROW_762.png") {
+        spriteset(set_NARROW_762_bridge, "./gfx/NARROW_762.png") {
             tmpl_bridge_surface (700, 270)
         }
 
-        spriteset(set_NARROW_762_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_NARROW_762_bridge_SNOW, "./gfx/SNOW.png") {
             tmpl_bridge_surface_SNOW (0, 40)
         }
 
     // Level crossing
-        spriteset(set_NARROW_762_level_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_NARROW_762_level_crossing_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 0)
         }
 
-        spriteset(set_NARROW_762_level_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_NARROW_762_level_crossing_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 60)
         }
 
-        spriteset(set_NARROW_762_level_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_NARROW_762_level_crossing_close_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 0)
         }
 
-        spriteset(set_NARROW_762_level_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_NARROW_762_level_crossing_open_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 60)
         }
 
@@ -791,77 +791,77 @@
 
 // LOW SPEED
     // GUI
-        spriteset(set_LOW_SPEED_gui, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_gui, "./gfx/LOW_SPEED.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_LOW_SPEED_track_overlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_overlay, "./gfx/LOW_SPEED.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_LOW_SPEED_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_track_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 150)
         } 
 
     // Tracks underlay
-        spriteset(set_LOW_SPEED_track_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_underlay, "./gfx/LOW_SPEED.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_LOW_SPEED_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_track_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 190)
         } 
 
     // Tunnels
-        spriteset(set_LOW_SPEED_track_tunnel_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_tunnel_underlay, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_LOW_SPEED_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_tunnel_underlay_desert, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_underlay (0, 170)
         } 
 
-        spriteset(set_LOW_SPEED_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_tunnel_underlay_rain, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_underlay (0, 220)
         } 
 
-        spriteset(set_LOW_SPEED_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_tunnel_underlay_SNOW, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_underlay (0, 270)
         } 
 
     // Depot
-        spriteset(set_LOW_SPEED_track_depot, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_depot, "./gfx/LOW_SPEED.png") {
             tmpl_depot (0, 320)
         } 
 
-        spriteset(set_LOW_SPEED_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_track_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 230)
         } 
 
     // Bridge surfaces
-        spriteset(set_LOW_SPEED_track_bridge, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_track_bridge, "./gfx/LOW_SPEED.png") {
             tmpl_bridge_surface (700, 270)
         }
 
-        spriteset(set_LOW_SPEED_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_track_bridge_SNOW, "./gfx/SNOW.png") {
             tmpl_bridge_surface_SNOW (0, 190)
         }
 
     // Level crossing
-        spriteset(set_LOW_SPEED_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_track_crossing_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 120)
         }
 
-        spriteset(set_LOW_SPEED_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_track_crossing_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 180)
         }
 
-        spriteset(set_LOW_SPEED_track_crossing_SNOW_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_track_crossing_SNOW_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 120)
         }
 
-        spriteset(set_LOW_SPEED_track_crossing_SNOW_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_track_crossing_SNOW_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 180)
         }
 
@@ -955,17 +955,17 @@
 
 // LOW SPEED ELECTRIFIED
     // GUI
-        spriteset(set_LOW_SPEED_ELEC_gui, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_ELEC_gui, "./gfx/LOW_SPEED.png") {
             tmpl_gui (0, 390) 
         }
 
     // Catenary Wire
-        spriteset(set_LOW_SPEED_ELEC_track_wire, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_ELEC_track_wire, "./gfx/LOW_SPEED.png") {
             tmpl_catenary_wire (0, 430)
         }
 
     // Catenary Pylons
-        spriteset(set_LOW_SPEED_ELEC_track_pylons, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_ELEC_track_pylons, "./gfx/LOW_SPEED.png") {
             tmpl_catenary_pylons (0, 575)
         }
 
@@ -1009,79 +1009,79 @@
 
 // LOW SPEED URBAN ELECTRIFIED
     // GUI
-        spriteset(set_LOW_SPEED_URBAN_gui, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_gui, "./gfx/LOW_SPEED.png") {
             tmpl_gui (0, 620) 
         }
 
     // Tracks overlay
-        spriteset(set_LOW_SPEED_URBAN_track_overlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_overlay, "./gfx/LOW_SPEED.png") {
             tmpl_overlay (0, 660)
         } 
 
-        spriteset(set_LOW_SPEED_URBAN_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 300)
         } 
 
     // Tracks underlay
-        spriteset(set_LOW_SPEED_URBAN_track_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_underlay, "./gfx/LOW_SPEED.png") {
             tmpl_underlay (0, 700)
         } 
 
-        spriteset(set_LOW_SPEED_URBAN_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 340)
         } 
 
     // Tunnels
-        spriteset(set_LOW_SPEED_URBAN_track_tunnel_underlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_tunnel_underlay, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_underlay (0, 740)
         } 
 
-        spriteset(set_LOW_SPEED_URBAN_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_tunnel_underlay_SNOW, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_underlay (0, 890)
         } 
 
     // Fences
-        spriteset(set_LOW_SPEED_URBAN_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_LOW_SPEED_URBAN_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 50)
         }
 
     // Depot
-        spriteset(set_LOW_SPEED_URBAN_track_depot, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_depot, "./gfx/LOW_SPEED.png") {
             tmpl_depot (0, 940)
         } 
 
-        spriteset(set_LOW_SPEED_URBAN_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 530)
         } 
 
     // Bridge surfaces
-        spriteset(set_LOW_SPEED_URBAN_track_bridge, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_bridge, "./gfx/LOW_SPEED.png") {
             tmpl_bridge_surface (700, 270)
         }
 
     // Tunnel overlay
-        spriteset(set_LOW_SPEED_URBAN_track_tunnel_overlay, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_tunnel_overlay, "./gfx/LOW_SPEED.png") {
             tmpl_tunnel_overlay (280, 790)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (700, 600)
         }
 
     // Level crossing
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 240)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 300)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 240)
         }
 
-        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_LOW_SPEED_URBAN_track_crossing_SNOW_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 300)
         }
 
@@ -1177,82 +1177,82 @@
 
 // STANDARD SPEED
     // GUI
-        spriteset(set_MAIN_LINE_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_gui, "./gfx/MAIN_LINE.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_MAIN_LINE_track_overlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_overlay, "./gfx/MAIN_LINE.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_MAIN_LINE_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_track_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 450)
         } 
 
     // Tracks underlay
-        spriteset(set_MAIN_LINE_track_underlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_underlay, "./gfx/MAIN_LINE.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_MAIN_LINE_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_track_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 490)
         } 
 
     // Tunnels
-        spriteset(set_MAIN_LINE_track_tunnel_underlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_tunnel_underlay, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_MAIN_LINE_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_tunnel_underlay_desert, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_underlay (0, 170)
         } 
 
-        spriteset(set_MAIN_LINE_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_tunnel_underlay_rain, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_underlay (0, 220)
         } 
 
-        spriteset(set_MAIN_LINE_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_tunnel_underlay_SNOW, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_underlay (0, 270)
         } 
 
     // Fences
-        spriteset(set_MAIN_LINE_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_MAIN_LINE_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 0)
         }
 
     // Depot
-        spriteset(set_MAIN_LINE_track_depot, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_depot, "./gfx/MAIN_LINE.png") {
             tmpl_depot (0, 320)
         } 
 
-        spriteset(set_MAIN_LINE_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_track_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 530)
         } 
 
     // Bridge surfaces
-        spriteset(set_MAIN_LINE_track_bridge, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_track_bridge, "./gfx/MAIN_LINE.png") {
             tmpl_bridge_surface (700, 270)
         }
 
-        spriteset(set_MAIN_LINE_track_bridge_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_track_bridge_SNOW, "./gfx/SNOW.png") {
             tmpl_bridge_surface_SNOW (0, 490)
         }
 
     // Level crossing
-        spriteset(set_MAIN_LINE_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_track_crossing_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 360)
         }
 
-        spriteset(set_MAIN_LINE_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_track_crossing_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 420)
         }
 
-        spriteset(set_MAIN_LINE_track_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_track_crossing_close_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 360)
         }
 
-        spriteset(set_MAIN_LINE_track_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_track_crossing_open_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 420)
         }
 
@@ -1347,17 +1347,17 @@
 
 // STANDARD SPEED ELECTRIFIED
     // GUI
-        spriteset(set_MAIN_LINE_ELEC_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_ELEC_gui, "./gfx/MAIN_LINE.png") {
             tmpl_gui (0, 400) 
         }
 
     // Catenary Wire
-        spriteset(set_MAIN_LINE_ELEC_track_wire, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_ELEC_track_wire, "./gfx/MAIN_LINE.png") {
             tmpl_catenary_wire (0, 445)
         }
         
     // Catenary Pylons
-        spriteset(set_MAIN_LINE_ELEC_track_pylons, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_ELEC_track_pylons, "./gfx/MAIN_LINE.png") {
             tmpl_catenary_pylons (0, 590)
         }
         
@@ -1402,67 +1402,67 @@
 
 // STANDARD SPEED URBAN ELECTRIFIED
     // GUI
-        spriteset(set_MAIN_LINE_URBAN_gui, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_URBAN_gui, "./gfx/MAIN_LINE.png") {
             tmpl_gui (0, 640) 
         }
 
     // Tracks overlay
-        spriteset(set_MAIN_LINE_URBAN_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 600)
         } 
 
     // Tracks underlay
-        spriteset(set_MAIN_LINE_URBAN_track_underlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_underlay, "./gfx/MAIN_LINE.png") {
             tmpl_underlay (0, 720)
         } 
 
-        spriteset(set_MAIN_LINE_URBAN_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 640)
         } 
 
     // Tunnels
-        spriteset(set_MAIN_LINE_URBAN_track_tunnel_underlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_tunnel_underlay, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_underlay (0, 760)
         } 
 
-        spriteset(set_MAIN_LINE_URBAN_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_tunnel_underlay_SNOW, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_underlay (0, 910)
         } 
 
     // Depot
-        spriteset(set_MAIN_LINE_URBAN_track_depot, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_depot, "./gfx/MAIN_LINE.png") {
             tmpl_depot (0, 960)
         } 
 
-        spriteset(set_MAIN_LINE_URBAN_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 680)
         } 
 
     // Fences
-        spriteset(set_MAIN_LINE_URBAN_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_MAIN_LINE_URBAN_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 50)
         }
 
     // Tunnel overlay
-        spriteset(set_MAIN_LINE_URBAN_track_tunnel_overlay, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_tunnel_overlay, "./gfx/MAIN_LINE.png") {
             tmpl_tunnel_overlay (280, 810)
         }
 
-        spriteset(set_MAIN_LINE_URBAN_track_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (700, 600)
         }
 
     // Level crossing
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 480)
         }
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 540)
         }
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_close_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 480)
         }
-        spriteset(set_MAIN_LINE_URBAN_track_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_MAIN_LINE_URBAN_track_crossing_open_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 540)
         }
 
@@ -1558,71 +1558,71 @@
 
 // SEMI_HIGH_SPEED
     // GUI
-        spriteset(set_SEMI_HIGH_SPEED_gui, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_gui, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_SEMI_HIGH_SPEED_track_overlay, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_overlay, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_SEMI_HIGH_SPEED_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 750)
         } 
 
     // Tracks underlay
-        spriteset(set_SEMI_HIGH_SPEED_track_underlay, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_underlay, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_SEMI_HIGH_SPEED_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 790)
         } 
 
     // Tunnels
-        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay_desert, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 170)
         } 
 
-        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay_rain, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 220)
         } 
 
-        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_tunnel_underlay_SNOW, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 270)
         } 
 
     // Catenary Wire
-        spriteset(set_SEMI_HIGH_SPEED_track_wire, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_wire, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_catenary_wire (0, 400)
         }
         
     // Catenary Pylons
-        spriteset(set_SEMI_HIGH_SPEED_track_pylons, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_pylons, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_catenary_pylons (0, 545)
         }
         
     // Depot
-        spriteset(set_SEMI_HIGH_SPEED_track_depot, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_depot, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_depot (0, 320)
         } 
 
-        spriteset(set_SEMI_HIGH_SPEED_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 830)
         } 
 
     // Fences
-        spriteset(set_SEMI_HIGH_SPEED_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_SEMI_HIGH_SPEED_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 100)
         }
 
     // Bridge surfaces
-        spriteset(set_SEMI_HIGH_SPEED_track_bridge, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+        spriteset(set_SEMI_HIGH_SPEED_track_bridge, "./gfx/SEMI_HIGH_SPEED.png") {
             tmpl_bridge_surface (700, 270)
         }
 
@@ -1693,71 +1693,71 @@
 
 // HIGH_SPEED
     // GUI
-        spriteset(set_HIGH_SPEED_gui, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_gui, "./gfx/HIGH_SPEED.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_HIGH_SPEED_track_overlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_overlay, "./gfx/HIGH_SPEED.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_HIGH_SPEED_track_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_HIGH_SPEED_track_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 900)
         } 
 
     // Tracks underlay
-        spriteset(set_HIGH_SPEED_track_underlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_underlay, "./gfx/HIGH_SPEED.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_HIGH_SPEED_track_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_HIGH_SPEED_track_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 940)
         } 
 
     // Tunnels
-        spriteset(set_HIGH_SPEED_track_tunnel_underlay, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay, "./gfx/HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_HIGH_SPEED_track_tunnel_underlay_desert, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay_desert, "./gfx/HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 170)
         } 
 
-        spriteset(set_HIGH_SPEED_track_tunnel_underlay_rain, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay_rain, "./gfx/HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 220)
         } 
 
-        spriteset(set_HIGH_SPEED_track_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_tunnel_underlay_SNOW, "./gfx/HIGH_SPEED.png") {
             tmpl_tunnel_underlay (0, 270)
         } 
 
     // Catenary Wire
-        spriteset(set_HIGH_SPEED_track_wire, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_wire, "./gfx/HIGH_SPEED.png") {
             tmpl_catenary_wire (0, 400)
         }
         
     // Catenary Pylons
-        spriteset(set_HIGH_SPEED_track_pylons, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_pylons, "./gfx/HIGH_SPEED.png") {
             tmpl_catenary_pylons (0, 545)
         }
         
     // Depot
-        spriteset(set_HIGH_SPEED_track_depot, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_depot, "./gfx/HIGH_SPEED.png") {
             tmpl_depot (0, 320)
         } 
 
-        spriteset(set_HIGH_SPEED_track_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_HIGH_SPEED_track_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 980)
         } 
 
     // Fences
-        spriteset(set_HIGH_SPEED_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_HIGH_SPEED_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 100)
         }
 
     // Bridge surfaces
-        spriteset(set_HIGH_SPEED_track_bridge, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+        spriteset(set_HIGH_SPEED_track_bridge, "./gfx/HIGH_SPEED.png") {
             tmpl_bridge_surface (700, 270)
         }
 
@@ -1828,86 +1828,86 @@
 
 // METRO_LINE
     // GUI
-        spriteset(set_METRO_gui, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_gui, "./gfx/METRO.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_METRO_overlay, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_overlay, "./gfx/METRO.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_METRO_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_METRO_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 1050)
         } 
 
     // Tracks underlay
-        spriteset(set_METRO_underlay, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_underlay, "./gfx/METRO.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_METRO_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_METRO_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 1090)
         } 
 
     // Tunnels
-        spriteset(set_METRO_tunnel_underlay, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_tunnel_underlay, "./gfx/METRO.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_METRO_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_tunnel_underlay_SNOW, "./gfx/METRO.png") {
             tmpl_tunnel_underlay (0, 270)
         } 
 
     // Catenary Wire
-        spriteset(set_METRO_wire, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_wire, "./gfx/METRO.png") {
             tmpl_catenary_wire (0, 400)
         }
         
     // Catenary Pylons
-        spriteset(set_METRO_pylons, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_pylons, "./gfx/METRO.png") {
             tmpl_catenary_pylons (0, 545)
         }
         
     // Depot
-        spriteset(set_METRO_depot, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_depot, "./gfx/METRO.png") {
             tmpl_depot (0, 320)
         } 
 
-        spriteset(set_METRO_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_METRO_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 1130)
         } 
 
     // Fences
-        spriteset(set_METRO_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_METRO_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 100)
         }
 
     // Tunnel overlay
-        spriteset(set_METRO_tunnel_overlay, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_tunnel_overlay, "./gfx/METRO.png") {
             tmpl_tunnel_overlay (280, 170)
         }
 
-        spriteset(set_METRO_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_METRO_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (700, 600)
         }
 
     // Bridge surfaces
-        spriteset(set_METRO_bridge, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_METRO_bridge, "./gfx/METRO.png") {
             tmpl_bridge_surface (700, 270)
         }
 
     // Level crossing
-        spriteset(set_METRO_level_crossing_close, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_METRO_level_crossing_close, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 600)
         }
-        spriteset(set_METRO_level_crossing_open, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_METRO_level_crossing_open, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (0, 660)
         }
-        spriteset(set_METRO_level_crossing_close_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_METRO_level_crossing_close_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 600)
         }
-        spriteset(set_METRO_level_crossing_open_SNOW, "./Korean_Tracks/gfx/LEVEL_CROSSING.png") {
+        spriteset(set_METRO_level_crossing_open_SNOW, "./gfx/LEVEL_CROSSING.png") {
             tmpl_level_crossing (700, 660)
         }
 
@@ -2003,39 +2003,39 @@
 
 // SUBWAY_LINE
     // GUI
-        spriteset(set_SUBWAY_gui, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_gui, "./gfx/METRO.png") {
             tmpl_gui_subway (0, 600)
         }
 
     // Catenary Wire
-        spriteset(set_SUBWAY_wire, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_wire, "./gfx/METRO.png") {
             tmpl_catenary_wire_subway (700, 600)
         }
 
-        spriteset(set_SUBWAY_wire_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_wire_SNOW, "./gfx/SNOW.png") {
             tmpl_catenary_wire_subway (700, 1200)
         }
         
     // Catenary Pylons
-        spriteset(set_SUBWAY_pylons, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_pylons, "./gfx/METRO.png") {
             tmpl_catenary_pylons_subway (700, 600) // empty
         }
         
     // Depot
-        spriteset(set_SUBWAY_depot, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_depot, "./gfx/METRO.png") {
             tmpl_depot (0, 710)
         } 
 
-        spriteset(set_SUBWAY_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 1200)
         }
 
     // Tunnel Overlay
-        spriteset(set_SUBWAY_tunnel_overlay, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_tunnel_overlay, "./gfx/METRO.png") {
             tmpl_tunnel_overlay (280, 650)
         }
 
-        spriteset(set_SUBWAY_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (0, 1270)
         }
 
@@ -2099,47 +2099,47 @@
 
 // SUBWAY_PARK_LINE
     // GUI
-        spriteset(set_SUBWAY_PARK_gui, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_PARK_gui, "./gfx/METRO.png") {
             tmpl_gui_subway (0, 780)
         }
 
     // Catenary Wire
-        spriteset(set_SUBWAY_PARK_wire_A, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_PARK_wire_A, "./gfx/METRO.png") {
             tmpl_catenary_wire_subway (700, 780)
         }
 
-        spriteset(set_SUBWAY_PARK_wire_A_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_PARK_wire_A_SNOW, "./gfx/SNOW.png") {
             tmpl_catenary_wire_subway (700, 1310)
         }
 
-        spriteset(set_SUBWAY_PARK_wire_B, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_PARK_wire_B, "./gfx/METRO.png") {
             tmpl_catenary_wire_subway (700, 890)
         }
 
-        spriteset(set_SUBWAY_PARK_wire_B_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_PARK_wire_B_SNOW, "./gfx/SNOW.png") {
             tmpl_catenary_wire_subway (700, 1420)
         }
         
     // Catenary Pylons
-        spriteset(set_SUBWAY_PARK_pylons, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_PARK_pylons, "./gfx/METRO.png") {
             tmpl_catenary_pylons_subway (700, 780) // empty
         }
         
     // Depot
-        spriteset(set_SUBWAY_PARK_depot, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_PARK_depot, "./gfx/METRO.png") {
             tmpl_depot (0, 890)
         } 
 
-        spriteset(set_SUBWAY_PARK_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_PARK_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 1310)
         }
 
     // Tunnel Overlay
-        spriteset(set_SUBWAY_PARK_tunnel_overlay, "./Korean_Tracks/gfx/METRO.png") {
+        spriteset(set_SUBWAY_PARK_tunnel_overlay, "./gfx/METRO.png") {
             tmpl_tunnel_overlay (280, 830)
         }
 
-        spriteset(set_SUBWAY_PARK_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_SUBWAY_PARK_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (0, 1310)
         }
 
@@ -2214,62 +2214,62 @@
 
 // THIRD RAIL
     // GUI
-        spriteset(set_THIRD_gui, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_gui, "./gfx/THIRD.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_THIRD_overlay, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_overlay, "./gfx/THIRD.png") {
             tmpl_overlay (0, 40)
         } 
 
-        spriteset(set_THIRD_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_THIRD_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 1540)
         } 
 
     // Tracks underlay
-        spriteset(set_THIRD_underlay, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_underlay, "./gfx/THIRD.png") {
             tmpl_underlay (0, 80)
         } 
 
-        spriteset(set_THIRD_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_THIRD_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 1580)
         } 
 
     // Tunnels
-        spriteset(set_THIRD_tunnel_underlay, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_tunnel_underlay, "./gfx/THIRD.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_THIRD_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_THIRD_tunnel_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_underlay (700, 1620)
         } 
 
     // Depot
-        spriteset(set_THIRD_depot, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_depot, "./gfx/THIRD.png") {
             tmpl_depot (0, 220)
         } 
 
-        spriteset(set_THIRD_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_THIRD_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 1620)
         } 
 
     // Fences
-        spriteset(set_THIRD_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_THIRD_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 100)
         }
 
     // Tunnel overlay
-        spriteset(set_THIRD_tunnel_overlay, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_tunnel_overlay, "./gfx/THIRD.png") {
             tmpl_tunnel_overlay (0, 170)
         }
 
-        spriteset(set_THIRD_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_THIRD_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (700, 1540)
         }
 
     // Bridge surfaces
-        spriteset(set_THIRD_bridge, "./Korean_Tracks/gfx/THIRD.png") {
+        spriteset(set_THIRD_bridge, "./gfx/THIRD.png") {
             tmpl_bridge_surface (700, 270)
         }
 
@@ -2344,57 +2344,57 @@
 
 // AUTOMATED GUIDEWAY
     // GUI
-        spriteset(set_AGT_gui, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_gui, "./gfx/AGT.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_AGT_overlay, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_overlay, "./gfx/AGT.png") {
             tmpl_overlay (0, 40)
         }
 
-        spriteset(set_AGT_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_AGT_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_overlay (0, 1690)
         }
 
     // Tracks underlay
-        spriteset(set_AGT_underlay, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_underlay, "./gfx/AGT.png") {
             tmpl_underlay (0, 80)
         }
 
-        spriteset(set_AGT_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_AGT_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_underlay (0, 1730)
         }
 
     // Tunnels
-        spriteset(set_AGT_tunnel_underlay, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_tunnel_underlay, "./gfx/AGT.png") {
             tmpl_tunnel_underlay (0, 120)
         } 
 
-        spriteset(set_AGT_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_AGT_tunnel_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_underlay (700, 1770)
         }
 
     // Depot
-        spriteset(set_AGT_depot, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_depot, "./gfx/AGT.png") {
             tmpl_depot (0, 220)
         } 
 
-        spriteset(set_AGT_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_AGT_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 1770)
         }
 
     // Tunnel overlay
-        spriteset(set_AGT_tunnel_overlay, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_tunnel_overlay, "./gfx/AGT.png") {
             tmpl_tunnel_overlay (0, 170)
         }
 
-        spriteset(set_AGT_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_AGT_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (700, 1690)
         }
 
     // Bridge surfaces
-        spriteset(set_AGT_bridge, "./Korean_Tracks/gfx/AGT.png") {
+        spriteset(set_AGT_bridge, "./gfx/AGT.png") {
             tmpl_bridge_surface (700, 270)
         }
 
@@ -2469,49 +2469,49 @@
 
 // MONORAIL
     // GUI
-        spriteset(set_MONORAIL_gui, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_gui, "./gfx/MONORAIL.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay
-        spriteset(set_MONORAIL_overlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_overlay, "./gfx/MONORAIL.png") {
             tmpl_overlay (0, 40)
         }
 
     // Tracks underlay
-        spriteset(set_MONORAIL_underlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_underlay, "./gfx/MONORAIL.png") {
             tmpl_underlay (0, 80)
         }
 
     // Tunnels
-        spriteset(set_MONORAIL_tunnel_underlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_tunnel_underlay, "./gfx/MONORAIL.png") {
             tmpl_tunnel_underlay (0, 120)
         }
 
-        spriteset(set_MONORAIL_tunnel_underlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MONORAIL_tunnel_underlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_underlay (700, 1890)
         } 
 
     // Depot
-        spriteset(set_MONORAIL_depot, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_depot, "./gfx/MONORAIL.png") {
             tmpl_depot (0, 220)
         }
 
-        spriteset(set_MONORAIL_depot_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MONORAIL_depot_SNOW, "./gfx/SNOW.png") {
             tmpl_depot (0, 1840)
         }
 
     // Tunnel overlay
-        spriteset(set_MONORAIL_tunnel_overlay, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_tunnel_overlay, "./gfx/MONORAIL.png") {
             tmpl_tunnel_overlay (0, 170)
         }
 
-        spriteset(set_MONORAIL_tunnel_overlay_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+        spriteset(set_MONORAIL_tunnel_overlay_SNOW, "./gfx/SNOW.png") {
             tmpl_tunnel_overlay (700, 1840)
         }
 
     // Bridge surfaces
-        spriteset(set_MONORAIL_bridge, "./Korean_Tracks/gfx/MONORAIL.png") {
+        spriteset(set_MONORAIL_bridge, "./gfx/MONORAIL.png") {
             tmpl_bridge_surface (700, 270)
         }
 
@@ -2574,12 +2574,12 @@
 
 // RAILBED
     // GUI
-        spriteset(set_RAILBED_gui, "./Korean_Tracks/gfx/RAILBED.png") {
+        spriteset(set_RAILBED_gui, "./gfx/RAILBED.png") {
             tmpl_gui (0, 0) 
         }
 
     // Tracks overlay // transparent
-        spriteset(set_RAILBED_overlay, "./Korean_Tracks/gfx/RAILBED.png") {
+        spriteset(set_RAILBED_overlay, "./gfx/RAILBED.png") {
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
             [   0,    0,    1,    1,    0,    0]
@@ -2593,29 +2593,29 @@
         }
 
     // Tracks underlay
-        spriteset(set_RAILBED_underlay_A, "./Korean_Tracks/gfx/RAILBED.png") {
+        spriteset(set_RAILBED_underlay_A, "./gfx/RAILBED.png") {
             tmpl_underlay_railbed (0, 40)
         }
 
-        spriteset(set_RAILBED_underlay_B, "./Korean_Tracks/gfx/RAILBED.png") {
+        spriteset(set_RAILBED_underlay_B, "./gfx/RAILBED.png") {
             tmpl_underlay_railbed (0, 80)
         }
 
-        spriteset(set_RAILBED_underlay_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { // transparent
+        spriteset(set_RAILBED_underlay_SNOW, "./gfx/RAILBED.png") { // transparent
             tmpl_underlay_railbed (0, 120)
         }
 
     // Bridge surfaces
-        spriteset(set_RAILBED_bridge, "./Korean_Tracks/gfx/RAILBED.png") {
+        spriteset(set_RAILBED_bridge, "./gfx/RAILBED.png") {
             tmpl_bridge_surface (0, 160)
         }
 
-        spriteset(set_RAILBED_bridge_SNOW, "./Korean_Tracks/gfx/RAILBED.png") { 
+        spriteset(set_RAILBED_bridge_SNOW, "./gfx/RAILBED.png") { 
             tmpl_bridge_surface (0, 200)
         }
 
     // Fences
-        spriteset(set_RAILBED_fences, "./Korean_Tracks/gfx/FENCE.png") {
+        spriteset(set_RAILBED_fences, "./gfx/FENCE.png") {
             tmpl_fence (0, 100)
         }
 
@@ -2677,11 +2677,11 @@
 // OBJECTS
     // Depot Narrow 762mm
         // Spritesets 
-            spriteset(set_object_depot_narrow_762, "./Korean_Tracks/gfx/NARROW_762.png") {
+            spriteset(set_object_depot_narrow_762, "./gfx/NARROW_762.png") {
                 tmpl_depot_object (0, 320)
             }
                 
-            spriteset(set_object_depot_narrow_762_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_narrow_762_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 80)
             }
               
@@ -2860,11 +2860,11 @@
 
     // Depot Low Speed
         // Spritesets 
-            spriteset(set_object_depot_LOW_SPEED, "./Korean_Tracks/gfx/LOW_SPEED.png") {
+            spriteset(set_object_depot_LOW_SPEED, "./gfx/LOW_SPEED.png") {
                 tmpl_depot_object (0, 320)
             }
               
-            spriteset(set_object_depot_LOW_SPEED_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_LOW_SPEED_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 230)
             }
               
@@ -3043,11 +3043,11 @@
 
     // Depot Standard Speed
         // Spritesets 
-            spriteset(set_object_depot_mainline, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+            spriteset(set_object_depot_mainline, "./gfx/MAIN_LINE.png") {
                 tmpl_depot_object (0, 320)
             }
               
-            spriteset(set_object_depot_mainline_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_mainline_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 530)
             }
               
@@ -3227,11 +3227,11 @@
 
     // Depot Standard Speed Urban
         // Spritesets 
-            spriteset(set_object_depot_mainline_urban, "./Korean_Tracks/gfx/MAIN_LINE.png") {
+            spriteset(set_object_depot_mainline_urban, "./gfx/MAIN_LINE.png") {
                 tmpl_depot_object (0, 960)
             }              
 
-            spriteset(set_object_depot_mainline_urban_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_mainline_urban_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 680)
             }              
 
@@ -3411,11 +3411,11 @@
 
     // Depot Semi High Speed
         // Spritesets 
-            spriteset(set_object_depot_SEMI_HIGH_SPEED, "./Korean_Tracks/gfx/SEMI_HIGH_SPEED.png") {
+            spriteset(set_object_depot_SEMI_HIGH_SPEED, "./gfx/SEMI_HIGH_SPEED.png") {
                 tmpl_depot_object (0, 320)
             }
               
-            spriteset(set_object_depot_SEMI_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_SEMI_HIGH_SPEED_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 830)
             }
               
@@ -3595,11 +3595,11 @@
 
     // Depot High Speed
         // Spritesets 
-            spriteset(set_object_depot_HIGH_SPEED, "./Korean_Tracks/gfx/HIGH_SPEED.png") {
+            spriteset(set_object_depot_HIGH_SPEED, "./gfx/HIGH_SPEED.png") {
                 tmpl_depot_object (0, 320)
             }
               
-            spriteset(set_object_depot_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_HIGH_SPEED_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 980)
             }
               
@@ -3779,11 +3779,11 @@
 
     // Depot Metro
         // Spritesets 
-            spriteset(set_object_depot_METRO, "./Korean_Tracks/gfx/METRO.png") {
+            spriteset(set_object_depot_METRO, "./gfx/METRO.png") {
                 tmpl_depot_object (0, 320)
             }
               
-            spriteset(set_object_depot_METRO_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_METRO_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 1130)
             }
               
@@ -3963,11 +3963,11 @@
 
     // Depot Subway
         // Spritesets 
-            spriteset(set_object_depot_SUBWAY, "./Korean_Tracks/gfx/METRO.png") {
+            spriteset(set_object_depot_SUBWAY, "./gfx/METRO.png") {
                 tmpl_depot_object (0, 710)
             }
               
-            spriteset(set_object_depot_SUBWAY_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_SUBWAY_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 1200)
             }
               
@@ -4146,11 +4146,11 @@
 
     // Depot Subway (with Park)
         // Spritesets 
-            spriteset(set_object_depot_SUBWAY_PARK, "./Korean_Tracks/gfx/METRO.png") {
+            spriteset(set_object_depot_SUBWAY_PARK, "./gfx/METRO.png") {
                 tmpl_depot_object (0, 890)
             }
               
-            spriteset(set_object_depot_SUBWAY_PARK_SNOW, "./Korean_Tracks/gfx/SNOW.png") {
+            spriteset(set_object_depot_SUBWAY_PARK_SNOW, "./gfx/SNOW.png") {
                 tmpl_depot_object (0, 1310)
             }
               
@@ -4329,15 +4329,15 @@
 
     // Buffer NARROW 762mm
         // Spritesets 
-            spriteset(set_object_NARROW_762, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_NARROW_762, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 0)
             }
 
-            spriteset(set_object_NARROW_762_DESERT, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_NARROW_762_DESERT, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 0)
             }
               
-            spriteset(set_object_NARROW_762_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_NARROW_762_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 0)
             }
               
@@ -4588,15 +4588,15 @@
 
     // Buffer Low Speed
         // Spritesets 
-            spriteset(set_object_low_speed, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 60)
             }
 
-            spriteset(set_object_low_speed_DESERT, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_DESERT, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 60)
             }
               
-            spriteset(set_object_low_speed_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 60)
             }
               
@@ -4847,11 +4847,11 @@
 
     // Buffer Low Speed (Elec)
         // Spritesets 
-            spriteset(set_object_low_speed_elec, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_elec, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 120)
             }
               
-            spriteset(set_object_low_speed_elec_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_elec_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 120)
             }
               
@@ -5030,11 +5030,11 @@
 
     // Buffer Low Speed (Urban)
         // Spritesets 
-            spriteset(set_object_low_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_urban, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 180)
             }
               
-            spriteset(set_object_low_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_low_speed_urban_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 180)
             }
               
@@ -5213,11 +5213,11 @@
 
     // Buffer Standard Speed
         // Spritesets 
-            spriteset(set_object_standard_speed, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_standard_speed, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 240)
             }
               
-            spriteset(set_object_standard_speed_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_standard_speed_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 240)
             }
               
@@ -5468,11 +5468,11 @@
 
     // Buffer Standard Speed (Elec)
         // Spritesets 
-            spriteset(set_object_standard_speed_elec, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_standard_speed_elec, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 300)
             }
               
-            spriteset(set_object_standard_speed_elec_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_standard_speed_elec_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 300)
             }
               
@@ -5651,11 +5651,11 @@
 
     // Buffer Standard Speed (Urban)
         // Spritesets 
-            spriteset(set_object_standard_speed_urban, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_standard_speed_urban, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 360)
             }
               
-            spriteset(set_object_standard_speed_urban_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_standard_speed_urban_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 360)
             }
               
@@ -5834,11 +5834,11 @@
 
     // Buffer Semi High Speed
         // Spritesets 
-            spriteset(set_object_SEMI_HIGH_SPEED, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_SEMI_HIGH_SPEED, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 420)
             }
               
-            spriteset(set_object_SEMI_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_SEMI_HIGH_SPEED_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 420)
             }
               
@@ -6017,11 +6017,11 @@
 
     // Buffer High Speed
         // Spritesets 
-            spriteset(set_object_HIGH_SPEED, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_HIGH_SPEED, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 480)
             }
               
-            spriteset(set_object_HIGH_SPEED_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_HIGH_SPEED_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 480)
             }
               
@@ -6200,11 +6200,11 @@
 
     // Buffer Metro
         // Spritesets 
-            spriteset(set_object_metro, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_metro, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 540)
             }
               
-            spriteset(set_object_metro_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_metro_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 540)
             }
               
@@ -6383,11 +6383,11 @@
 
     // Buffer THIRD
         // Spritesets 
-            spriteset(set_object_THIRD, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_THIRD, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (0, 600)
             }
               
-            spriteset(set_object_THIRD_SNOW, "./Korean_Tracks/gfx/BUFFER.png") {
+            spriteset(set_object_THIRD_SNOW, "./gfx/BUFFER.png") {
                 tmpl_buffer_object (280, 600)
             }
               
